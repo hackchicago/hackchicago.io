@@ -3,7 +3,7 @@ header {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-color: #f6f9fe;
+  background-color: transparent;
 }
 
 .frontrow {
@@ -14,7 +14,7 @@ header {
   background-size: cover;
   background-position: right center;
   position: absolute;
-  z-index: 4;
+  z-index: -1;
 }
 
 .middlerow {
@@ -25,7 +25,7 @@ header {
   background-size: cover;
   background-position: left center;
   position: absolute;
-  z-index: 2;
+  z-index: -2;
 }
 
 .backrow {
@@ -36,7 +36,7 @@ header {
   background-size: cover;
   background-position: left center;
   position: absolute;
-  z-index: 1;
+  z-index: -3;
 }
 
 @media (max-width: 420px) {
@@ -206,4 +206,24 @@ header {
   margin: 0;
   margin-top: 11px;
   font-weight: 500;
+}
+
+.crossfade {
+  margin: 0;
+  padding: 0;
+  background-color: #bfd8f9;
+  background: -webkit-linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
+  background: linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
+  padding: 180px 20px 120px 20px;
+}
+
+.crossfade .calltoaction {
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  color: #2a2a2a;
 }
