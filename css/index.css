@@ -63,7 +63,7 @@ header {
   border: solid #5299D3 3px;
   height: 486px;
   top: 50vh;
-  margin-top: -243px;
+  margin-top: -246px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
@@ -144,7 +144,7 @@ header {
   text-transform: uppercase;
   position: relative;
   top: -2px;
-  right: -4px;
+  right: -5px;
   transition: all .3s;
 }
 
