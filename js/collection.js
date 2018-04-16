@@ -14,4 +14,5 @@ function pushData(){
   dataRef.set({
     value: data
   });
+  success();
 }
