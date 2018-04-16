@@ -3,14 +3,7 @@ header {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background: #0a7fe9;
-  /* background: -webkit-linear-gradient(to right, #1157DF, #03A9F4);
-  background: linear-gradient(to right, #1157DF, #03A9F4);
-  background: -webkit-linear-gradient(to right, #038ecd, #0e49bb);
-  background: linear-gradient(to right, #038ecd, #0e49bb); */
-
-  background: -webkit-linear-gradient(to right, #03A9F4, #1157DF);
-  background: linear-gradient(to right, #03A9F4, #1157DF);
+  background-color: #f6f9fe;
 }
 
 .frontrow {
@@ -63,66 +56,115 @@ header {
 
 .center {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
+  width: 380px;
   left: 50%;
-  top: 30%;
-  margin-left: -180px;
-  margin-top: -160px;
+  margin-left: -193px;
+  border: solid #5299D3 3px;
+  height: 486px;
+  top: 50vh;
+  margin-top: -243px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 .center img {
-  width: 360px;
+  width: 90%;
   height: auto;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 30px;
 }
 
-/*#0774F0*/
-
-.center .encase {
-  background-color: white;
-  border-radius: 23px;
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.25);
-  width: 330px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 44px;
-  cursor: default;
-  outline: none;
+.center h2 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0 20px 0 20px;
+  color: #5299D3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-top: 12px;
 }
 
 .center .date {
-  display: inline-block;
-  color: rgba(0, 0, 0, 0.75);
-  font-weight: 400;
   margin: 0;
-  font-size: 1.05em;
-  margin: 12px 0px 12px 17px;
-  text-align: left;
-}
-
-.encase button {
-  float: right;
-  margin: 0;
-  font-size: .95em;
-  color: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 1.5px;
-  border: none;
-  background-color: black;
-  padding: 13px 20px 13px 20px;
-  border-radius: 23px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: all .3s;
-  position: absolute;
-  width: 170px;
-  right: 15px;
-  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 6px;
+  color: #5299D3;
+  opacity: 0.85;
 }
 
-.topbutton:hover {
-  color: white;
-  width: 330px;
+.center sup {
+  vertical-align: text-top;
+  font-size: .85em;
+}
+
+.signup {
+  border: solid #5299D3 3px;
+  margin-top: 24px;
+  width: 320px;
+  height: 40px;
+  border-radius: 23px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup input {
+  background-color: transparent;
+  border: none;
+  font-size: .95em;
+  outline: none;
+  height: 38px;
+  color: #5299D3;
+  width: 190px;
+  position: relative;
+  left: 5px;
+}
+
+.signup a {
+
+}
+
+.signup button {
+  cursor: pointer;
+  background-color: transparent;
+  border: solid #5299D3 2px;
+  height: 36px;
+  width: 110px;
+  font-size: .8em;
+  font-weight: 500;
+  border-radius: 19px;
+  color: #5299D3;
+  text-transform: uppercase;
+  position: relative;
+  top: -2px;
+  right: -4px;
+  transition: all .3s;
+}
+
+.signup button:hover {
+  color: #f6f9fe;
+  background-color: #5299D3;
+}
+
+::-webkit-input-placeholder {
+  color: #5299D3;
+}
+
+::-moz-placeholder {
+  color: #5299D3;
+}
+
+:-ms-input-placeholder {
+  color: #5299D3;
+}
+
+:-moz-placeholder {
+  color: #5299D3;
 }
