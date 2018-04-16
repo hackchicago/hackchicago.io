@@ -19,5 +19,7 @@ $(document).ready( function() {
 });
 
 function success() {
-  
+  $('.signup').html('<p class="succ">Success!</p>');
+  $('.signup').css('width', '140px')
+  console.log('works');
 }
