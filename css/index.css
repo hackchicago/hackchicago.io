@@ -156,15 +156,46 @@ header {
 ::-webkit-input-placeholder {
   color: #5299D3;
 }
-
 ::-moz-placeholder {
   color: #5299D3;
 }
-
 :-ms-input-placeholder {
   color: #5299D3;
 }
-
 :-moz-placeholder {
   color: #5299D3;
+}
+
+@media (max-width: 405px) {
+.center {
+  border: none;
+  width: 100%;
+  left: 0;
+  height: auto;
+  top: 0;
+  margin: 0;
+}
+
+.center img {
+  width: 76%;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 40px;
+}
+
+.center h2 {
+  font-size: 1.15em;
+}
+
+.signup {
+  width: 290px;
+}
+
+.signup input {
+  width: 170px;
+}
+
+.signup button {
+  width: 100px;
+}
 }
