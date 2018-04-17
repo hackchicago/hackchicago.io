@@ -18,6 +18,7 @@ $(document).ready( function() {
 });
 
 function success() {
+  $('#fail').css('display', 'none');
   $('.signup').css('borderColor', '#5299D3');
   $('#emails').css('color', '#5299D3');
   $('#signupbutton').css('color', '#5299D3');
@@ -27,6 +28,7 @@ function success() {
 }
 
 function failure() {
+  $('#fail').css('display', 'block');
   $('.signup').css('borderColor', '#EA442B');
   $('#emails').css('color', '#EA442B');
   $('#signupbutton').css('color', '#EA442B');
