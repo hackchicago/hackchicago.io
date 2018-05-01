@@ -15,6 +15,35 @@ $(document).ready( function() {
     console.log(clientHeight);
   });*/
 
+  var clientWidth = $(window).width();
+  console.log(clientWidth);
+
+if (clientWidth >= 880) {
+  var divWidth1 = parseFloat($('#tleft').css('width'));
+  var divWidth2 = parseFloat($('#bright').css('width'));
+  var imgHeight = parseFloat($('#bround1').css('height'));
+  $('#tleft').css('width', divWidth1);
+  $('#bright').css('width', divWidth2);
+  $('#tleft').css('height', imgHeight);
+  $('#bright').css('height', imgHeight);
+  var imgHeight2 = (imgHeight) / 2;
+  $('#spic1').css('top', imgHeight2);
+  $('#spic2').css('top', imgHeight2);
+
+  $(window).resize(function() {
+    var divWidth1 = parseFloat($('#tleft').css('width'));
+    var divWidth2 = parseFloat($('#bright').css('width'));
+    var imgHeight = parseFloat($('#bround1').css('height'));
+    $('#tleft').css('width', divWidth1);
+    $('#bright').css('width', divWidth2);
+    $('#tleft').css('height', imgHeight);
+    $('#bright').css('height', imgHeight);
+    var imgHeight2 = (imgHeight) / 2;
+    $('#spic1').css('top', imgHeight2);
+    $('#spic2').css('top', imgHeight2);
+  });
+}
+
 });
 
 function success() {
