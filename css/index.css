@@ -276,6 +276,7 @@ header {
   margin: 1%;
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  max-width: 100vw;
 }
 
 .top-left h3 {
@@ -330,6 +331,7 @@ header {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   background: linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
   background: -webkit-linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
+  max-width: 100vw;
 }
 
 .bot-right h3 {
