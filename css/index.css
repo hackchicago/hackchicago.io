@@ -471,7 +471,7 @@ header {
   max-width: 330px;
   background-color: white;
   padding: 16px;
-  height: 210px;
+  height: 240px;
   margin: 15px;
   display: inline-block;
   overflow: hidden;
@@ -531,7 +531,7 @@ header {
   .faq {
     margin: 12px;
     width: 300px;
-    height: 230px;
+    height: 240px;
   }
 }
 
