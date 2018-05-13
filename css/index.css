@@ -718,22 +718,27 @@ button.signup:hover {
 
 @media (max-width: 875px) {
   .splitscreen {
-    height: 0vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     width: 100vw;
     transition: all 0;
     opacity: 0;
+    pointer-events: none; 
   }
 
   .splitscreen.show {
-    display: block;
     opacity: 1;
     width: 100vw;
     height: 100vh;
     transition: all .3s ease;
+    pointer-events: auto;
   }
 
   .split-overlay {
     display: none;
+    pointer-events: none; 
   }
 
 }
