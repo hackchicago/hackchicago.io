@@ -2,8 +2,7 @@ var ref;
 var conversationalForm
 
 window.onload = function() {
-    //Promise
-    fillRef(getParam("ref")).then(loadForm);
+    fillRef(getParam("ref"));
 };
 
 var emailCheck = function(dto, success, error){
@@ -28,8 +27,10 @@ function fillRef(code) {
     if (code != "" && code != null) {
         $("#ref-fill").html('<input type="hidden" name="REF" id="refcode">"');
         $("#refcode").val(code);
+        loadForm();
     } else {
         $("#ref-fill").html('<input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name."/>');
+        loadForm();
     }
 }
 
