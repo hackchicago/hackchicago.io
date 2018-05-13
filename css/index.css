@@ -105,33 +105,8 @@ header {
   font-size: .85em;
 }
 
-.signup {
-  border: solid #5299D3 3px;
-  margin-top: 24px;
-  width: 320px;
-  height: 40px;
-  border-radius: 23px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: all .3s;
-}
-
-.signup input {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  font-size: .95em;
-  outline: none;
-  height: 40px;
-  color: #5299D3;
-  width: 190px;
-  position: relative;
-  left: 5px;
-  transition: all .3s;
-}
-
 button.signup {
-  margin: 20px;
+  margin-top: 20px;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
@@ -147,7 +122,6 @@ button.signup {
   transition: all .3s;
   outline: none;
   top: -1px;
-  right: -6px;
 }
 
 button.signup:hover {
@@ -776,4 +750,10 @@ button.signup:hover {
 
 body.noscroll {
   overflow: hidden;
+}
+
+.refBar {
+  display: block;
+  margin-top: 5px;
+  color: #5299D3;
 }

@@ -1,25 +1,9 @@
 var ref;
+var conversationalForm
 
 window.onload = function() {
-    var conversationalForm = window.cf.ConversationalForm.startTheConversation({
-        formEl: document.getElementById("signup"),
-        context: document.getElementById("cf-context"),
-        robotImage: "/img/orpheus.png",
-        preventAutoFocus: true,
-        userInterfaceOptions: { 
-            controlElementsInAnimationDelay: 250, 
-            robot: { 
-                robotResponseTime: 500,   
-                chainedResponseTime: 400 
-            }, 
-            user:{ 
-                showThinking: false, 
-                showThumb: false 
-            } 
-        } 
-    });
-
-    fillRef(getParam("ref"));
+    //Promise
+    fillRef(getParam("ref")).then(loadForm);
 };
 
 var emailCheck = function(dto, success, error){
@@ -41,7 +25,32 @@ function getParam(name, url) {
 }
 
 function fillRef(code) {
+    if (code != "" && code != null) {
+        $("#ref-fill").html('<input type="hidden" name="REF" id="refcode">"');
+        $("#refcode").val(code);
+    } else {
+        $("#ref-fill").html('<input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name."/>');
+    }
+}
 
-    $("#refcode").val(code);
-
+//Form will only load when the appropriate referral code section
+//has been inserted
+function loadForm() {
+    conversationalForm = window.cf.ConversationalForm.startTheConversation({
+        formEl: document.getElementById("signup"),
+        context: document.getElementById("cf-context"),
+        robotImage: "/img/orpheus.png",
+        preventAutoFocus: true,
+        userInterfaceOptions: { 
+            controlElementsInAnimationDelay: 250, 
+            robot: { 
+                robotResponseTime: 500,   
+                chainedResponseTime: 400 
+            }, 
+            user:{ 
+                showThinking: false, 
+                showThumb: false 
+            } 
+        } 
+    });
 }
