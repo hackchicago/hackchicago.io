@@ -5,6 +5,7 @@ window.onload = function() {
         formEl: document.getElementById("signup"),
         context: document.getElementById("cf-context"),
         robotImage: "/img/orpheus.png",
+        preventAutoFocus: true,
         userInterfaceOptions: { 
             controlElementsInAnimationDelay: 250, 
             robot: { 

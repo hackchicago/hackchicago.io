@@ -72,5 +72,10 @@ function toggleSignup() {
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
+  $('body').toggleClass('yieldFocus');
 
 }
+
+$('.yieldFocus').click(function(){
+  $('#signup-frame').focus();
+});

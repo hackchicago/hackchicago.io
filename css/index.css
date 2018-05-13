@@ -2,12 +2,12 @@ header {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: transparent;
 }
 
 .frontrow {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url('../img/frontrow.png');
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ header {
 }
 
 .middlerow {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url('../img/middlerow.png');
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@ header {
 }
 
 .backrow {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url('../img/backrow.png');
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@ header {
   margin-left: -193px;
   border: solid #5299D3 3px;
   height: 486px;
-  top: 50vh;
+  top: 50%;
   margin-top: -246px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -105,10 +105,33 @@ header {
   font-size: .85em;
 }
 
-button.signup {
-  margin: 20px;
+.signup {
+  border: solid #5299D3 3px;
+  margin-top: 24px;
+  width: 320px;
+  height: 40px;
+  border-radius: 23px;
   margin-left: auto;
   margin-right: auto;
+  transition: all .3s;
+}
+
+.signup input {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: .95em;
+  outline: none;
+  height: 40px;
+  color: #5299D3;
+  width: 190px;
+  position: relative;
+  left: 5px;
+  transition: all .3s;
+}
+
+button.signup {
+  margin: 20px;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
@@ -125,10 +148,6 @@ button.signup {
   outline: none;
   top: -1px;
   right: -6px;
-}
-
-.signup-link {
-  text-decoration: none;
 }
 
 button.signup:hover {
@@ -257,7 +276,7 @@ button.signup:hover {
   margin: 1%;
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .top-left h3 {
@@ -312,7 +331,7 @@ button.signup:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   background: linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
   background: -webkit-linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .bot-right h3 {
@@ -681,7 +700,7 @@ button.signup:hover {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   width: 1px;
   z-index: 10000000;
   transition: all 0;
@@ -691,9 +710,28 @@ button.signup:hover {
 .splitscreen.show {
   display: block;
   opacity: 1;
-  width: 50vw;
-  height: 100vh;
+  width: 50%;
+  height: 100%;
   transition: all .3s ease;
+}
+
+
+@media (max-width: 875px) {
+  .splitscreen {
+    width: 100%!important;
+    height: 100%!important;
+    transition: all 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .splitscreen.show {
+    display: block;
+    opacity: 1;
+    transition: all .3s ease;
+    pointer-events: auto;
+  }
+
 }
 
 .splitscreen iframe {
@@ -705,8 +743,8 @@ button.signup:hover {
 
 .split-overlay {
   position: fixed;
-  width: 105vw;
-  height: 105vh;
+  width: 105%;
+  height: 105%;
   top: -5px;
   left: -5px;
   opacity: 0;
@@ -730,22 +768,12 @@ button.signup:hover {
     left: 15px;
     font-size: 25px;
     cursor: pointer;
+    z-index: 100000000;
+    width: 15px;
+    height: 15px; 
+    pointer-events: auto;
 }
 
 body.noscroll {
   overflow: hidden;
-}
-
-.signup.mobile {
-  display: none;
-}
-
-@media (max-width: 875px) {
-  .signup.mobile {
-    display: block;
-  }
-
-  .signup.desktop {
-    display: none;
-  }
 }
