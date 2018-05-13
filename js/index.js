@@ -65,3 +65,12 @@ function failure() {
   $('#signupbutton').css('backgroundColor', 'transparent');
   $('.signup').effect("shake", {times:3, distance:60}, 500);
 }
+
+function toggleSignup() {
+
+  $('#signup-frame').attr('src', 'apply.html');
+  $('.splitscreen').toggleClass('show');
+  $('.split-overlay').toggleClass('show');
+  $('body').toggleClass('noscroll');
+
+}

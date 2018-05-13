@@ -50,14 +50,19 @@
       <img src="img/bluelogo.svg" alt="Hack Chicago">
         <h2>The Midwest's Largest High School Hackathon</h2>
           <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
-          <div class="signup">
-            <input type="email" id="emails" placeholder="Enter email for Updates">
-            <button id="signupbutton" onclick="pushData()">Sign-Up</button>
-          </div>
-          <p id="fail">Oops, Invalid Email Address!</p>
+          
+          <button class="signup" onclick="toggleSignup()">Sign Up</button>
     </div>
 
   </header>
+
+  <div class="splitscreen">
+    <a class="splitscreen-close" onclick="toggleSignup()"></a>
+    <iframe id="signup-frame" onclick="toggleSignup()"></iframe>
+  </div>
+
+  <div class="split-overlay"></div>
+</svg>
 
   <div class="crossfade">
     <img src="img/peopleblue3.svg" alt="icon of students">
