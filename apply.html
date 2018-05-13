@@ -15,6 +15,7 @@
 
 <body>
     <form name="signup" method="POST" id="signup" netlify cf-form>
+        <input type="hidden" name="REF" id="refcode">
         <label for="radio">
             <input 
             cf-questions="Hi there! I'm Orpheus, the last coding dinosaur on earth. You're almost coming to Hack Chicago! I'm super excited to assist you with the application process 🚀<br /><br />During this friendly conversation of ours, you may tap any of your previous responses to modify them! Are you ready to start?" 
@@ -92,7 +93,7 @@
     <div id="cf-context" class="hack-theme" role="cf-context" cf-context></div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@0.9.80/dist/conversational-form.min.js" crossorigin></script>
+    <script src="js/cf.min.js"></script>
     
     <script src="js/apply.js"></script>
     

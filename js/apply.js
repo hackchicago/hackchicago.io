@@ -26,3 +26,4 @@ var emailCheck = function(dto, success, error){
     return success();
     return error();
 };
+
