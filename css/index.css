@@ -1,14 +1,14 @@
 header {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: transparent;
 }
 
 .frontrow {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: url('../img/frontrow.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,8 +18,8 @@ header {
 }
 
 .middlerow {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: url('../img/middlerow.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,8 +29,8 @@ header {
 }
 
 .backrow {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: url('../img/backrow.png');
   background-repeat: no-repeat;
   background-size: cover;
