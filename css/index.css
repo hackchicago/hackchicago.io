@@ -105,33 +105,10 @@ header {
   font-size: .85em;
 }
 
-.signup {
-  border: solid #5299D3 3px;
-  margin-top: 24px;
-  width: 320px;
-  height: 40px;
-  border-radius: 23px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: all .3s;
-}
-
-.signup input {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  font-size: .95em;
-  outline: none;
-  height: 40px;
-  color: #5299D3;
-  width: 190px;
-  position: relative;
-  left: 5px;
-  transition: all .3s;
-}
-
 button.signup {
   margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
@@ -148,6 +125,10 @@ button.signup {
   outline: none;
   top: -1px;
   right: -6px;
+}
+
+.signup-link {
+  text-decoration: none;
 }
 
 button.signup:hover {
@@ -715,34 +696,6 @@ button.signup:hover {
   transition: all .3s ease;
 }
 
-
-@media (max-width: 875px) {
-  .splitscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: all 0;
-    opacity: 0;
-    pointer-events: none; 
-  }
-
-  .splitscreen.show {
-    opacity: 1;
-    width: 100vw;
-    height: 100vh;
-    transition: all .3s ease;
-    pointer-events: auto;
-  }
-
-  .split-overlay {
-    display: none;
-    pointer-events: none; 
-  }
-
-}
-
 .splitscreen iframe {
   width: 100%;
   height: 100%;
@@ -781,4 +734,18 @@ button.signup:hover {
 
 body.noscroll {
   overflow: hidden;
+}
+
+.signup.mobile {
+  display: none;
+}
+
+@media (max-width: 875px) {
+  .signup.mobile {
+    display: block;
+  }
+
+  .signup.desktop {
+    display: none;
+  }
 }
