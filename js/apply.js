@@ -1,10 +1,9 @@
+var ref;
+
 window.onload = function() {
     var conversationalForm = window.cf.ConversationalForm.startTheConversation({
         formEl: document.getElementById("signup"),
         context: document.getElementById("cf-context"),
-        submitCallback: function() {
-            conversationalForm.addRobotChatResponse("Amazing! Your application has been submitted - we'll follow up with you via email as soon as possible! Meanwhile... Wanna check out our <a href=\"/onboard\">Ambassador Program</a>?"); 
-        },
         robotImage: "/img/orpheus.png",
         userInterfaceOptions: { 
             controlElementsInAnimationDelay: 250, 
@@ -18,6 +17,8 @@ window.onload = function() {
             } 
         } 
     });
+
+    fillRef(getParam("ref"));
 };
 
 var emailCheck = function(dto, success, error){
@@ -27,3 +28,19 @@ var emailCheck = function(dto, success, error){
     return error();
 };
 
+//Get Parameter
+function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function fillRef(code) {
+
+    $("#refcode").val(code);
+
+}
