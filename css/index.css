@@ -715,6 +715,29 @@ button.signup:hover {
   transition: all .3s ease;
 }
 
+
+@media (max-width: 875px) {
+  .splitscreen {
+    height: 0vh;
+    width: 100vw;
+    transition: all 0;
+    opacity: 0;
+  }
+
+  .splitscreen.show {
+    display: block;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    transition: all .3s ease;
+  }
+
+  .split-overlay {
+    display: none;
+  }
+
+}
+
 .splitscreen iframe {
   width: 100%;
   height: 100%;
