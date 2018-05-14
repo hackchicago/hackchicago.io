@@ -48,14 +48,6 @@ $(document).ready( function() {
  
 });
 
-function checkRef(ref) {
-  if (ref != null && ref != "" && ref != "null")
-    fillRef(ref);
-  else {
-    Cookies.set('ref', fillRef(getParam("ref")), { expires: 180 })
-  }
-}
-
 function success() {
   $('#fail').css('display', 'none');
   $('.signup').css('borderColor', '#5299D3');
@@ -78,7 +70,7 @@ function failure() {
 
 function toggleSignup(ref) {
   
-  $('#signup-frame').attr('src', 'apply.html');
+  $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
@@ -99,6 +91,14 @@ function getParam(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function checkRef(ref) {
+  if (ref != null && ref != "" && ref != "null")
+    fillRef(ref);
+  else {
+    Cookies.set('ref', fillRef(getParam("ref")), { expires: 180 })
+  }
 }
 
 function fillRef(code) {
