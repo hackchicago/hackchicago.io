@@ -757,3 +757,10 @@ body.noscroll {
   margin-top: 5px;
   color: #5299D3;
 }
+
+#signup-success {
+  color: #5299D3;
+  font-size: 17px;
+  display: none;
+  padding: 5px;
+}

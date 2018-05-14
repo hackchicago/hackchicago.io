@@ -110,3 +110,16 @@ function fillRef(code) {
 
   return code;
 }
+
+function finishSignupFlow() {
+
+  $('#signup-frame').attr('src', 'apply.html');
+  $('.splitscreen').toggleClass('show');
+  $('.split-overlay').toggleClass('show');
+  $('body').toggleClass('noscroll');
+  $('body').toggleClass('yieldFocus');
+
+  $('.signup').hide();
+  $('#signup-success').show();
+
+}
