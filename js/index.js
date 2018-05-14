@@ -59,10 +59,11 @@ function loadText() {
 
   if (now.isBefore(signupEnd)) {
     // before event & during signups
-    $('#signup_div').html('<button class="signup" onclick="toggleSignup()">Sign Up</button>');
     $('.date').html('July 21<sup>st</sup> to 22<sup>nd</sup>');
-  } else if (now.isBefore(hackChicagoStart)) {
+    $('#signup_div').html('<button class="signup" onclick="toggleSignup()">Sign Up</button>');
+  } else if (now.isBefore(hackChicagoEnd)) {
     // after signups close
+    $('.date').html('July 21<sup>st</sup> to 22<sup>nd</sup>');
     $('#signup_div').html('<button style="width:160px;" class="signup" disabled>Sign Ups Closed</button>');
   } else if (now.isAfter(hackChicagoEnd)) {
     // after event
