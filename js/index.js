@@ -69,8 +69,11 @@ function failure() {
 }
 
 function toggleSignup(ref) {
-  
-  $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+
+  if (ref)
+    $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+  else 
+    $('#signup-frame').attr('src', 'apply.html');
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
