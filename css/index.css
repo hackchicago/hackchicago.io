@@ -129,19 +129,6 @@ button.signup:hover {
   background-color: #5299D3;
 }
 
-::-webkit-input-placeholder {
-  color: #5299D3;
-}
-::-moz-placeholder {
-  color: #5299D3;
-}
-:-ms-input-placeholder {
-  color: #5299D3;
-}
-:-moz-placeholder {
-  color: #5299D3;
-}
-
 @media (max-width: 405px) {
   .center {
     border: none;
@@ -162,37 +149,6 @@ button.signup:hover {
   .center h2 {
     font-size: 1.15em;
   }
-
-  .signup {
-    width: 290px;
-  }
-
-  .signup input {
-    width: 170px;
-  }
-
-  .signup button {
-    width: 100px;
-  }
-}
-
-.succ {
-  text-align: center;
-  color: #5299D3;
-  text-transform: uppercase;
-  font-size: .95em;
-  margin: 0;
-  margin-top: 11px;
-  font-weight: 500;
-}
-
-#fail {
-  color: #EA442B;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  margin: 0;
-  margin-top: 6px;
-  display: none;
 }
 
 .crossfade {

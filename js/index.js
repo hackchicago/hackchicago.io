@@ -48,32 +48,13 @@ $(document).ready( function() {
  
 });
 
-function success() {
-  $('#fail').css('display', 'none');
-  $('.signup').css('borderColor', '#5299D3');
-  $('#emails').css('color', '#5299D3');
-  $('#signupbutton').css('color', '#5299D3');
-  $('#signupbutton').css('borderColor', '#5299D3');
-  $('.signup').html('<p class="succ">Success!</p>');
-  $('.signup').css('width', '140px');
-}
-
-function failure() {
-  $('#fail').css('display', 'block');
-  $('.signup').css('borderColor', '#EA442B');
-  $('#emails').css('color', '#EA442B');
-  $('#signupbutton').css('color', '#EA442B');
-  $('#signupbutton').css('borderColor', '#EA442B');
-  $('#signupbutton').css('backgroundColor', 'transparent');
-  $('.signup').effect("shake", {times:3, distance:60}, 500);
-}
-
 function toggleSignup(ref) {
 
   if (ref)
     $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
   else 
     $('#signup-frame').attr('src', 'apply.html');
+
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
