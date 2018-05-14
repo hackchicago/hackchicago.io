@@ -42,16 +42,16 @@ function loadForm() {
         context: document.getElementById("cf-context"),
         robotImage: "/img/orpheus.png",
         preventAutoFocus: true,
-        userInterfaceOptions: { 
-            controlElementsInAnimationDelay: 250, 
-            robot: { 
-                robotResponseTime: 500,   
-                chainedResponseTime: 400 
-            }, 
-            user:{ 
-                showThinking: false, 
-                showThumb: false 
-            } 
-        } 
+        userInterfaceOptions: {
+            controlElementsInAnimationDelay: 250,
+            robot: {
+                robotResponseTime: 500,
+                chainedResponseTime: 400
+            },
+            user:{
+                showThinking: false,
+                showThumb: false
+            }
+        }
     });
 }

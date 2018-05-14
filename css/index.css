@@ -129,6 +129,11 @@ button.signup:hover {
   background-color: #5299D3;
 }
 
+button.signup:disabled:hover {
+  color: #f6f9fe;
+  background-color: #696969;
+}
+
 @media (max-width: 405px) {
   .center {
     border: none;
@@ -688,7 +693,7 @@ button.signup:hover {
   left: -5px;
   opacity: 0;
   transition: opacity .1s ease-in-out;
-  
+
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 9999999;
   pointer-events: none;
@@ -709,7 +714,7 @@ button.signup:hover {
     cursor: pointer;
     z-index: 100000000;
     width: 15px;
-    height: 15px; 
+    height: 15px;
     pointer-events: auto;
 }
 
