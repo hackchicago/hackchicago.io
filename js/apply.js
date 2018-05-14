@@ -49,7 +49,7 @@ function loadForm() {
                 chainedResponseTime: 400 
             }, 
             user:{ 
-                showThinking: true, 
+                showThinking: false, 
                 showThumb: false 
             } 
         } 
