@@ -24,18 +24,7 @@
     <!--<meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">-->
     <meta name="theme-color" content="#1157DF">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/collection.js"></script>
-    <script>
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-    analytics.load("wVEX8meye3Oh38zsdy30FOcZDVWEIQ3H");
-    analytics.page();
-    }}();
-    </script>
     <title>Hack Chicago 2018</title>
   </head>
 
@@ -50,14 +39,24 @@
       <img src="img/bluelogo.svg" alt="Hack Chicago">
         <h2>The Midwest's Largest High School Hackathon</h2>
           <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
-          <div class="signup">
-            <input type="email" id="emails" placeholder="Enter email for Updates">
-            <button id="signupbutton" onclick="pushData()">Sign-Up</button>
+          
+          <div id="signup-section">
+            <button class="signup" onclick="toggleSignup()">Sign Up</button>
+            <p id="signup-success">Your application has been submitted!<br />We'll follow up via email soon!</p>
           </div>
-          <p id="fail">Oops, Invalid Email Address!</p>
+          <!-- Autofilling Referral Code-->
+          <sub class="refBar"><span id="referralCode"></span></sub>
     </div>
 
   </header>
+
+  <div class="splitscreen">
+    <a class="splitscreen-close" onclick="toggleSignup()"></a>
+    <iframe id="signup-frame" onclick="toggleSignup()"></iframe>
+  </div>
+
+  <div class="split-overlay"></div>
+</svg>
 
   <div class="crossfade">
     <img src="img/peopleblue3.svg" alt="icon of students">
@@ -185,7 +184,17 @@
       <a href="mentorclosed.html"><button class="closed">Mentor Registration Closed</button></a>
   </div>-->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/rellax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("wVEX8meye3Oh38zsdy30FOcZDVWEIQ3H");
+  analytics.page();
+  }}();
+  </script>
   <script>
     var rellax = new Rellax('.rellax');
   </script>

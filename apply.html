@@ -1,0 +1,104 @@
+<!-- 
+    
+    This page is for embedding only... It should not be loaded directly.
+    
+-->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/apply.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,600|Raleway:800" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+</head>
+
+<body>
+    <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup" cf-form>
+        <label for="radio">
+            <input 
+            cf-questions="Hi there! I'm Orpheus, the last coding dinosaur on earth. You're almost coming to Hack Chicago! I'm super excited to assist you with the application process 🚀<br /><br />During this friendly conversation of ours, you may tap any of your previous responses to modify them! Are you ready to start?" 
+                cf-label="I can't wait! Let's begin!" 
+                cf-error="Hit the button above to start your application!"
+                type="radio" value="0">
+            Start
+        </label>
+        <div id="ref-fill">
+        </div>
+        <input type="text" id="FNAME" name="FNAME" 
+                cf-questions="What is your first name, dear human being?"
+        />
+
+        <input type="text" name="LNAME" 
+                cf-questions="And what is your last name?"
+        />
+
+        <input type="email" name="EMAIL" 
+                cf-questions="Welcome, {FNAME}! What is your email address?" 
+                cf-validation="window.emailCheck"
+                cf-error="Oops! That doesn't look like an email address... Try again?"
+        />
+        
+        <select name="GRADE" 
+            cf-questions="What grade are you currently in (during the 2017-18 school year), {FNAME}?" 
+        />
+                <option value="8">8th (Class of '22)</option>
+                <option value="9">9th (Class of '21)</option>
+                <option value="10">10th (Class of '20)</option>
+                <option value="11">11th (Class of '19)</option>
+                <option value="11">12th (Class of '18)</option>
+        </select>
+              
+        <select name="GENDER" 
+            cf-questions="What gender do you identify as?" 
+        />
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Nonbinary">Nonbinary</option>
+        </select>
+
+        <input type="text" name="SCHOOL" 
+                cf-questions="What is the name of your school?"
+        />
+
+        <input type="text" name="CITY" 
+                cf-questions="Which city is your school in, {FNAME}?"
+        />
+
+        <input type="text" name="STATE" 
+                cf-questions="And what state is {CITY} in?<br /><br />If you are not from the United States, simply repond with “International”."
+        />
+
+        <select name="SHIRTSIZE" 
+            cf-questions="What is the preferred size of your shirt?" 
+        />
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+        </select>
+
+        <input
+            type="text"
+            name="DIETRES"
+            cf-questions="Do you have any dietary restrictions? I will try my best to provide alternatives for you. <br /><br />If not, simply respond with “no”."
+        /> 
+
+        <input
+            type="text"
+            name="NOTE"
+            cf-questions="Anything interesting or important that you would want me to pass on to the Hack Chicago team? We can answer your questions, address your concerns, or provide you with further assistance! "
+        />
+    </form>
+    
+    <div id="cf-context" class="hack-theme" role="cf-context" cf-context></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/cf.min.js"></script>
+    
+    <script src="js/apply.js"></script>
+    
+</body>
+</html>
