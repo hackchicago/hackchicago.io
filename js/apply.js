@@ -29,7 +29,7 @@ function fillRef(code) {
         $("#refcode").val(code);
         loadForm();
     } else {
-        $("#ref-fill").html('<input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name."/>');
+        $("#ref-fill").html('<input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name.<br />If you were not referred by anyone, simply reply \"no\"."/>');
         loadForm();
     }
 }
