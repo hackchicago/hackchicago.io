@@ -650,7 +650,7 @@ button.signup:hover {
   opacity: 1;
   width: 50%;
   height: 100%;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 
@@ -666,7 +666,7 @@ button.signup:hover {
   .splitscreen.show {
     display: block;
     opacity: 1;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
     pointer-events: auto;
   }
 
