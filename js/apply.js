@@ -41,7 +41,7 @@ function loadForm() {
         formEl: document.getElementById("signup"),
         context: document.getElementById("cf-context"),
         robotImage: "/img/orpheus.png",
-        preventAutoFocus: true,
+        preventAutoFocus: false,
         userInterfaceOptions: { 
             controlElementsInAnimationDelay: 250, 
             robot: { 
