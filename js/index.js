@@ -51,9 +51,9 @@ $(document).ready( function() {
 });
 
 function loadText() {
-  const signupEnd = moment('2018-06-14 0:00')
-  const hackChicagoStart = moment('2018-06-21 12:00')
-  const hackChicagoEnd = moment('2018-06-22 12:00')
+  const signupEnd = moment('2018-07-14 0:00')
+  const hackChicagoStart = moment('2018-07-21 12:00')
+  const hackChicagoEnd = moment('2018-07-22 12:00')
 
   const now = moment()
 
