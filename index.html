@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -39,10 +39,10 @@
     <div class="center">
       <img src="img/bluelogo.svg" alt="Hack Chicago">
         <h2>The Midwest's Largest High School Hackathon</h2>
-          <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
-          
+          <p class="date"></p>
+
           <div id="signup-section">
-            <button class="signup" onclick="toggleSignup()">Sign Up</button>
+            <div id="signup_div"></div>
             <p id="signup-success">Your application has been submitted!<br />We'll follow up via email soon!</p>
           </div>
           <!-- Autofilling Referral Code-->
@@ -189,7 +189,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/rellax.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="js/moment.min.js"></script>
   <script src="js/index.js"></script>
+  <!-- Segment analytics -->
   <script>
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
   analytics.load("wVEX8meye3Oh38zsdy30FOcZDVWEIQ3H");
