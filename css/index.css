@@ -155,6 +155,16 @@ button.signup:hover {
   }
 }
 
+.crossfade-reverse {
+  margin: 0;
+  padding: 0;
+  background-color: #bfd8f9;
+  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  padding: 70px 20px 70px 20px;
+  text-align: center;
+}
+
 .crossfade {
   margin: 0;
   padding: 0;
