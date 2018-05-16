@@ -5,7 +5,7 @@ $(document).ready( function() {
   $('.middlerow').css('height', clientHeight);
   $('.frontrow').css('height', clientHeight);
   /*$('.bottom').css('margin-top', clientHeight);*/
-  
+
   /*$(window).resize(function() {
     clientHeight = $(window).height();
     $('#parallax').css('height', clientHeight);
@@ -14,10 +14,10 @@ $(document).ready( function() {
     $('.frontrow').css('height', clientHeight);
     console.log(clientHeight);
   });*/
-  
+
   var clientWidth = $(window).width();
   console.log(clientWidth);
-  
+
   if (clientWidth >= 880) {
     var divWidth1 = parseFloat($('#tleft').css('width'));
     var divWidth2 = parseFloat($('#bright').css('width'));
@@ -29,7 +29,7 @@ $(document).ready( function() {
     var imgHeight2 = (imgHeight) / 2;
     $('#spic1').css('top', imgHeight2);
     $('#spic2').css('top', imgHeight2);
-    
+
     $(window).resize(function() {
       var divWidth1 = parseFloat($('#tleft').css('width'));
       var divWidth2 = parseFloat($('#bright').css('width'));
@@ -43,23 +43,27 @@ $(document).ready( function() {
       $('#spic2').css('top', imgHeight2);
     });
   }
-  
+
   checkRef(Cookies.get('ref'));
- 
+
+  if(Cookies.get('hasSignedUp') !== undefined) {
+    $('.signup').hide();
+    $('#signup-success').show();
+  } else {
+    $('#button-signup').html('<button class="signup" onclick="toggleSignup()">Sign Up</button>');
+  }
 });
 
 function toggleSignup(ref) {
-
   if (ref)
     $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
-  else 
+  else
     $('#signup-frame').attr('src', 'apply.html');
 
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
-  
 }
 
 $('.yieldFocus').click(function(){
@@ -86,7 +90,7 @@ function checkRef(ref) {
 }
 
 function fillRef(code) {
-  
+
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
     $(".signup").attr('onclick', 'toggleSignup("'+ code +'")')
@@ -105,5 +109,7 @@ function finishSignupFlow() {
 
   $('.signup').hide();
   $('#signup-success').show();
+
+  Cookies.set('hasSignedUp', 'true', { expires: 180 });
 
 }
