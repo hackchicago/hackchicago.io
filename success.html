@@ -1,13 +1,14 @@
-<!-- 
-    
+<!--
+
     This page is for embedding only... It should not be loaded directly.
-    
+
 -->
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
     <script>
         parent.finishSignupFlow();
+        Cookies.set('hasSignedUp', 'true', { expires: 180 });
     </script>
 </head>
 
