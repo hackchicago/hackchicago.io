@@ -5,7 +5,7 @@ $(document).ready( function() {
   $('.middlerow').css('height', clientHeight);
   $('.frontrow').css('height', clientHeight);
   /*$('.bottom').css('margin-top', clientHeight);*/
-
+  
   /*$(window).resize(function() {
     clientHeight = $(window).height();
     $('#parallax').css('height', clientHeight);
@@ -14,10 +14,10 @@ $(document).ready( function() {
     $('.frontrow').css('height', clientHeight);
     console.log(clientHeight);
   });*/
-
+  
   var clientWidth = $(window).width();
   console.log(clientWidth);
-
+  
   if (clientWidth >= 880) {
     var divWidth1 = parseFloat($('#tleft').css('width'));
     var divWidth2 = parseFloat($('#bright').css('width'));
@@ -29,7 +29,7 @@ $(document).ready( function() {
     var imgHeight2 = (imgHeight) / 2;
     $('#spic1').css('top', imgHeight2);
     $('#spic2').css('top', imgHeight2);
-
+    
     $(window).resize(function() {
       var divWidth1 = parseFloat($('#tleft').css('width'));
       var divWidth2 = parseFloat($('#bright').css('width'));
@@ -43,9 +43,9 @@ $(document).ready( function() {
       $('#spic2').css('top', imgHeight2);
     });
   }
-
+  
   checkRef(Cookies.get('ref'));
-
+  
   if(Cookies.get('hasSignedUp') !== undefined) {
     $('.signup').hide();
     $('#signup-success').show();
@@ -56,10 +56,10 @@ $(document).ready( function() {
 
 function toggleSignup(ref) {
   if (ref)
-    $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+  $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
   else
-    $('#signup-frame').attr('src', 'apply.html');
-
+  $('#signup-frame').attr('src', 'apply.html');
+  
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
@@ -83,33 +83,58 @@ function getParam(name, url) {
 
 function checkRef(ref) {
   if (ref != null && ref != "" && ref != "null")
-    fillRef(ref);
+  fillRef(ref);
   else {
     Cookies.set('ref', fillRef(getParam("ref")), { expires: 180 })
   }
 }
 
 function fillRef(code) {
-
+  
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
     $(".signup").attr('onclick', 'toggleSignup("'+ code +'")')
   }
-
+  
   return code;
 }
 
 function finishSignupFlow() {
-
+  
   $('#signup-frame').attr('src', 'apply.html');
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
-
+  
   $('.signup').hide();
   $('#signup-success').show();
-
+  
   Cookies.set('hasSignedUp', 'true', { expires: 180 });
-
+  
 }
+
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1200, function() {});
+    }
+  }
+});
