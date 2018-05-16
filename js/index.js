@@ -46,24 +46,24 @@ $(document).ready( function() {
 
   checkRef(Cookies.get('ref'));
 
+  if(Cookies.get('hasSignedUp') === undefined) {
+    $('.signup').hide();
+    $('#signup-success').show();
+  } else {
+    $('#button-signup').html('<button class="signup" onclick="toggleSignup()">Sign Up</button>');
+  }
 });
 
 function toggleSignup(ref) {
+  if (ref)
+    $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+  else
+    $('#signup-frame').attr('src', 'apply.html');
 
-  if(Cookies.get('hasSignedUp') !== null) {
-    if (ref)
-      $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
-    else
-      $('#signup-frame').attr('src', 'apply.html');
-
-    $('.splitscreen').toggleClass('show');
-    $('.split-overlay').toggleClass('show');
-    $('body').toggleClass('noscroll');
-    $('body').toggleClass('yieldFocus');
-  } else {
-    finishSignupFlow();
-  }
-
+  $('.splitscreen').toggleClass('show');
+  $('.split-overlay').toggleClass('show');
+  $('body').toggleClass('noscroll');
+  $('body').toggleClass('yieldFocus');
 }
 
 $('.yieldFocus').click(function(){
