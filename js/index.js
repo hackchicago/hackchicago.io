@@ -46,7 +46,7 @@ $(document).ready( function() {
 
   checkRef(Cookies.get('ref'));
 
-  if(Cookies.get('hasSignedUp') === undefined) {
+  if(Cookies.get('hasSignedUp') !== undefined) {
     $('.signup').hide();
     $('#signup-success').show();
   } else {
