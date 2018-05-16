@@ -110,4 +110,6 @@ function finishSignupFlow() {
   $('.signup').hide();
   $('#signup-success').show();
 
+  Cookies.set('hasSignedUp', 'true', { expires: 180 });
+
 }
