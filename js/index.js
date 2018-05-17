@@ -50,7 +50,7 @@ $(document).ready( function() {
     $('#signup').hide();
     $('#signup-success').show();
   } else {
-    $('#button-signup').html('<button class="button" id="#signup">Sign Up</button>');
+    $('#button-signup').html('<button class="button" id="signup">Sign Up</button>');
     $('#signup').click(function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
