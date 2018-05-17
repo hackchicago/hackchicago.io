@@ -1,3 +1,4 @@
+window.sr = ScrollReveal();
 $(document).ready( function() {
   var clientHeight = $(window).height();
   $('#parallax').css('height', clientHeight);
@@ -146,3 +147,7 @@ $('a[href*="#"]')
 $('.splitscreen-close').click(function() {
   toggleSignup();
 });
+
+sr.reveal('.card');
+sr.reveal('.sponsor');
+sr.reveal('.partner');
