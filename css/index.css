@@ -155,6 +155,16 @@ button.signup:hover {
   }
 }
 
+.crossfade-reverse {
+  margin: 0;
+  padding: 0;
+  background-color: #bfd8f9;
+  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  padding: 70px 20px 70px 20px;
+  text-align: center;
+}
+
 .crossfade {
   margin: 0;
   padding: 0;
@@ -407,7 +417,7 @@ button.signup:hover {
   padding: 16px;
   height: 240px;
   margin: 15px;
-  display: inline-block;
+  display: inline-table;
   overflow: hidden;
   text-align: left;
   border-radius: 5px 5px 9px 9px;
