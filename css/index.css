@@ -109,7 +109,7 @@ header {
   font-size: .85em;
 }
 
-button.signup {
+.button {
   margin-top: 20px;
   padding: 0;
   cursor: pointer;
@@ -128,7 +128,7 @@ button.signup {
   top: -1px;
 }
 
-button.signup:hover {
+.button:hover {
   color: #f6f9fe;
   background-color: #5299D3;
 }
