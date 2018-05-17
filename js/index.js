@@ -56,14 +56,30 @@ $(document).ready( function() {
       toggleSignup();
     });
   }
+  // attach function to mentor button
+  $('#mentor').click(function() {
+    startMentorSignup();
+  });
 });
 
 function toggleSignup(ref) {
-  if (ref)
+  if (ref) // load apply form with referral
   $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
-  else
+  else // load apply form
   $('#signup-frame').attr('src', 'apply.html');
 
+  // show/hide signup widget
+  toggleSignupWidget();
+}
+
+function startMentorSignup() {
+  // load mentor form
+  $('#signup-frame').attr('src', 'mentor.html');
+  toggleSignupWidget();
+}
+
+function toggleSignupWidget() {
+  // show/hide signup widget
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
@@ -144,5 +160,5 @@ $('a[href*="#"]')
 });
 
 $('.splitscreen-close').click(function() {
-  toggleSignup();
+  toggleSignupWidget();
 });
