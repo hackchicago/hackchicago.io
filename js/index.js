@@ -47,11 +47,11 @@ $(document).ready( function() {
   checkRef(Cookies.get('ref'));
 
   if(Cookies.get('hasSignedUp') !== undefined) {
-    $('.signup').hide();
+    $('#signup').hide();
     $('#signup-success').show();
   } else {
-    $('#button-signup').html('<button class="button">Sign Up</button>');
-    $('.signup').click(function() {
+    $('#button-signup').html('<button class="button" id="#signup">Sign Up</button>');
+    $('#signup').click(function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
@@ -113,7 +113,7 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").attr('onclick', 'toggleSignup("'+ code +'")')
+    $("#signup").attr('onclick', 'toggleSignup("'+ code +'")')
   }
 
   return code;
@@ -127,7 +127,7 @@ function finishSignupFlow() {
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
 
-  $('.signup').hide();
+  $('#signup').hide();
   $('#signup-success').show();
 
   Cookies.set('hasSignedUp', 'true', { expires: 180 });
