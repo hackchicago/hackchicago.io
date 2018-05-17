@@ -133,6 +133,16 @@ header {
   background-color: #5299D3;
 }
 
+.button.wide {
+  width: 250px;
+}
+
+.button.big {
+  height: 50px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
 @media (max-width: 405px) {
   .center {
     border: none;
@@ -619,26 +629,6 @@ header {
   color: #262626;
   font-size: 180%;
   margin-top: 0;
-}
-
-#prospectus button {
-  color: white;
-  background-color: #03A9F4;
-  border: none;
-  font-size: 120%;
-  cursor: pointer;
-  outline: none;
-  padding: 15px 25px 15px 25px;
-  border-radius: 8px;
-  border-bottom: solid #0275a8 5px;
-  transition: all .3s;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-#prospectus button:hover {
-  background-color: #2ebcfc;
 }
 
 #prospectus .closed {
