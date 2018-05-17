@@ -626,8 +626,9 @@ header {
 }
 
 #prospectus h3 {
-  color: #262626;
-  font-size: 180%;
+  color: #2a2a2a;
+  font-size: 1.7em;
+  font-weight: 500;
   margin-top: 0;
 }
 
