@@ -221,6 +221,7 @@ button.signup:hover {
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   max-width: 100%;
+  border-top: solid #5299D3 3px;
 }
 
 .top-left h3 {
@@ -775,8 +776,4 @@ div.scroll-indicator::before{
   100% {
     transform: translateY(0);
   }
-}
-
-#referralCode a {
-  color: #03A9F4;
 }
