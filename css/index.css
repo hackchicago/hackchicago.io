@@ -417,7 +417,7 @@ button.signup:hover {
   padding: 16px;
   height: 240px;
   margin: 15px;
-  display: inline-block;
+  display: inline-table;
   overflow: hidden;
   text-align: left;
   border-radius: 5px 5px 9px 9px;
