@@ -777,3 +777,7 @@ div.scroll-indicator::before{
     transform: translateY(0);
   }
 }
+
+#referralCode a {
+  color: #03A9F4;
+}
