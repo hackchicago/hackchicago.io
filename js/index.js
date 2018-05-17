@@ -50,7 +50,11 @@ $(document).ready( function() {
     $('.signup').hide();
     $('#signup-success').show();
   } else {
-    $('#button-signup').html('<button class="signup" onclick="toggleSignup()">Sign Up</button>');
+    $('#button-signup').html('<button class="signup">Sign Up</button>');
+    $('.signup').click(function() {
+      $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
+      toggleSignup();
+    });
   }
 });
 
@@ -137,4 +141,8 @@ $('a[href*="#"]')
       }, 1200, function() {});
     }
   }
+});
+
+$('.splitscreen-close').click(function() {
+  toggleSignup();
 });
