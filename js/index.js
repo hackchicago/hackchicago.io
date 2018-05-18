@@ -120,18 +120,17 @@ function fillRef(code) {
 }
 
 function finishSignupFlow() {
-
   //$('#signup-frame').attr('src', 'apply.html');
-  $('.splitscreen').toggleClass('show');
-  $('.split-overlay').toggleClass('show');
-  $('body').toggleClass('noscroll');
-  $('body').toggleClass('yieldFocus');
-
+  toggleSignupWidget();
   $('#signup').hide();
   $('#signup-success').show();
 
   Cookies.set('hasSignedUp', 'true', { expires: 180 });
+}
 
+function finishMentorSignupFlow() {
+  //$('#signup-frame').attr('src', 'mentor.html');
+  toggleSignupWidget();
 }
 
 $('a[href*="#"]')
