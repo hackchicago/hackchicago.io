@@ -152,7 +152,12 @@ $('.splitscreen-close').click(function() {
   toggleSignup();
 });
 
-sr.reveal('.center', {duration: 1500});
+sr.reveal('.center', {
+  duration: 1500,
+  afterReveal: function (domEl) {
+    $('#scroll-container').show();
+  }
+});
 sr.reveal('.card');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
