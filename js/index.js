@@ -158,6 +158,7 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
+sr.reveal('.row-wrapper');
 sr.reveal('.card');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
