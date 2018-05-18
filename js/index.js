@@ -121,7 +121,7 @@ function fillRef(code) {
 
 function finishSignupFlow() {
 
-  $('#signup-frame').attr('src', 'apply.html');
+  //$('#signup-frame').attr('src', 'apply.html');
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
