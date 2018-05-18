@@ -1,3 +1,8 @@
+window.sr = ScrollReveal({
+  reset: true,
+  viewFactor: 0.08,
+  scale: .8
+});
 $(document).ready( function() {
   var clientHeight = $(window).height();
   $('#parallax').css('height', clientHeight);
@@ -161,3 +166,13 @@ $('a[href*="#"]')
 $('.splitscreen-close').click(function() {
   toggleSignupWidget();
 });
+
+sr.reveal('.center', {
+  duration: 1500,
+  afterReveal: function (domEl) {
+    $('#scroll-container').show();
+  }
+});
+sr.reveal('.card');
+sr.reveal('.sponsor');
+sr.reveal('.partner');

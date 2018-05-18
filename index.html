@@ -49,7 +49,7 @@
           <!-- Autofilling Referral Code-->
           <sub class="refBar"><span id="referralCode"></span></sub>
     </div>
-    <a href="#join"><div class="scroll-indicator"></div></a>
+    <a id="scroll-container" href="#join"><div class="scroll-indicator"></div></a>
   </header>
 
   <div class="splitscreen">
@@ -94,69 +94,69 @@
   <div id="faq">
     <h2>FAQs</h2>
       <p class="desc">Have questions? Chances are you will find the answers in our FAQ section.</p>
-    <div class="faq-grid">
+    <div class="card faq-grid">
 
-      <div class="faq">
+      <div class="card faq">
         <h4>What is a hackathon?</h4>
           <p>A hackathon is an event where programmers come to learn and build cool things together. Students have been learning skills in school that they never put into use - hackathons are aimed to solve that problem. We’d love to see students converting ideas into apps and games, and it’s also a great time to learn new skills through various workshops.</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>What is Hack Chicago?</h4>
           <p>Hack Chicago is the premier high school hackathon that looks to gather 400+ high school programmers throughout the Midwest for 24 hours of fun! All you need to worry about is building something awesome, and we’ll provide the rest - including mentors, sponsors, workshops and a great number of resources. </p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Where is the hackathon?</h4>
           <p>We’re still looking for a venue for the event, but will let you know as soon as possible!</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Who can participate?</h4>
           <p>Any high school student! Including Class of 2018 graduates who may have graduated prior to the event date, as well as Class of 2022 incoming freshmen!</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>I don’t know how to code! Should I still come?</h4>
           <p>Yes!!! Our hackathon is the perfect place to learn about programming with all our different workshops we will offer at the event. Experienced mentors will also be there to help you throughout the event, so there’s nothing to worry about!</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Will there be security at the event?</h4>
           <p>There will be security for the entirety of the event to ensure the safety of all our attendees.</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>How much does your event cost?</h4>
           <p>Our event is entirely free! Food will be provided throughout the entire duration of the event. We will also be giving t-shirts to all attendees.</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>What should I bring?</h4>
           <p>Your laptop, any amenities you require, chargers, and your innovative spirit. Also a pillow in case you decide to sleep! We will require a valid student ID for attendance at the event.</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Will there be prizes?</h4>
           <p>Yes! We have many prizes available courtesy of our sponsors. Certain prizes will be awarded based on best in that category, and there will be many giveaways throughout the event!</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>What can I create?</h4>
           <p>Anything you want! However, we hope that there are projects that create an impact or cause social change. Also, your project must be entirely made during the hackathon, but you may come to the hackathon with an idea already in mind.</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Do you offer travel reimbursement?</h4>
           <p>At this moment we are unable to provide travel reimbursement, but check again later to see if this changes!</p>
       </div>
 
-      <div class="faq">
+      <div class="card faq">
         <h4>Have a question we didn't answer?</h4>
           <p>Send us an email at <a href="mailto:team@hackchicago.io">team@hackchicago.io</a> and we will get back to you as soon as possible!</p>
       </div>
 
-      <div class="faq" style="background: linear-gradient(135deg, #00c6fb, #005bea); background: -webkit-linear-gradient(135deg, #00c6fb, #005bea); border-top: none; border-radius: 9px;">
+      <div class="card faq" style="background: linear-gradient(135deg, #00c6fb, #005bea); background: -webkit-linear-gradient(135deg, #00c6fb, #005bea); border-top: none; border-radius: 9px;">
         <h4 style="color: white;">Interested in sponsoring?</h4>
           <p style="color: rgba(255, 255, 255, 0.7);">Contact us at <a href="mailto:team@hackchicago.io" style="color: white;">team@hackchicago.io</a> to learn how to sponsor our event!</p>
       </div>
@@ -172,8 +172,9 @@
 
     <h2>Sponsors</h2><hr>
       <div class="sponsor-div" id="big-div">
-        <a href="https://balsamiq.com/" target="_blank"><img class="sponsor-small" src="img/sponsors/balsamiq.svg" alt="Balsamiq"></a>
-        <a href="https://zapier.com/" target="_blank"><img class="sponsor-tiny" src="img/sponsors/zapier.svg" alt="Zapier"></a>
+        <a href="https://balsamiq.com/" target="_blank"><img class="sponsor sponsor-small" src="img/sponsors/balsamiq.svg" alt="Balsamiq"></a>
+        <a href="https://zapier.com/" target="_blank"><img class="sponsor sponsor-tiny" src="img/sponsors/zapier.svg" alt="Zapier"></a>
+        <a href="https://www.flexera.com/" target="_blank"><img class="sponsor sponsor-small" src="img/sponsors/flexera.svg" alt="Flexera"></a>
       </div>
       <!--<div class="sponsor-div">
         <a href="https://www.stickermule.com/" target="_blank"><img class="sponsor-small" src="img/sponsors/stickermule.png" alt="StickerMule"></a>
@@ -193,6 +194,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/rellax.min.js"></script>
+  <script src="js/scroll.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="js/index.js"></script>
   <script>
