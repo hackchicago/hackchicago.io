@@ -7,7 +7,25 @@
 <html lang="en">
 <head>
     <script>
-        parent.finishSignupFlow();
+        function getParam(name, url) {
+          console.log('getting param..')
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        console.log('role: '+getParam("role"))
+
+        if(getParam("role") === "mentor") {
+          parent.finishSignupFlow(false);
+        } else if(getParam("role") === "attendee") {
+          parent.finishSignupFlow(true);
+        } else {
+          document.body.innerHTML = "error: missing parameter 'role'";
+        }
     </script>
 </head>
 

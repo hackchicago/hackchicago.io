@@ -119,18 +119,18 @@ function fillRef(code) {
   return code;
 }
 
-function finishSignupFlow() {
-  $('#signup-frame').attr('src', 'apply.html');
-  toggleSignupWidget();
-  $('#signup').hide();
-  $('#signup-success').show();
-
-  Cookies.set('hasSignedUp', 'true', { expires: 180 });
-}
-
-function finishMentorSignupFlow() {
-  $('#signup-frame').attr('src', 'mentor.html');
-  toggleSignupWidget();
+function finishSignupFlow(isAttendee) {
+  if (!isAttendee) {
+    $('#signup-frame').attr('src', 'mentor.html');
+    toggleSignupWidget();
+  } else {
+    console.log('is attendee');
+    $('#signup-frame').attr('src', 'apply.html');
+    Cookies.set('hasSignedUp', 'true', { expires: 180 });
+    toggleSignupWidget();
+    $('#signup').hide();
+    $('#signup-success').show();
+  }
 }
 
 $('a[href*="#"]')
