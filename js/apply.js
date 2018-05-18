@@ -37,21 +37,21 @@ function fillRef(code) {
 //Form will only load when the appropriate referral code section
 //has been inserted
 function loadForm() {
-    conversationalForm = window.cf.ConversationalForm.startTheConversation({
-        formEl: document.getElementById("signup"),
-        context: document.getElementById("cf-context"),
-        robotImage: "/img/orpheus.png",
-        preventAutoFocus: false,
-        userInterfaceOptions: {
-            controlElementsInAnimationDelay: 250,
-            robot: {
-                robotResponseTime: 500,
-                chainedResponseTime: 400
-            },
-            user:{
-                showThinking: false,
-                showThumb: false
-            }
-        }
-    });
+  conversationalForm = window.cf.ConversationalForm.startTheConversation({
+    formEl: document.getElementById("signup"),
+      context: document.getElementById("cf-context"),
+      robotImage: "/img/orpheus.png",
+      preventAutoFocus: false,
+      userInterfaceOptions: {
+        controlElementsInAnimationDelay: 250,
+        robot: {
+          robotResponseTime: 500,
+          chainedResponseTime: 400
+        },
+        user:{
+          showThinking: false,
+          showThumb: false
+      }
+    }
+  });
 }
