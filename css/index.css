@@ -215,6 +215,7 @@ button.signup:hover {
 }
 
 .top-left {
+  position: relative;
   width: 54%;
   display: inline-block;
   vertical-align: top;
@@ -241,8 +242,12 @@ button.signup:hover {
   margin: 20px;
   margin-top: 6px;
   color: rgba(0, 0, 0, 0.7);
-  line-height: 135%;
+  line-height: 155%;
   font-size: .95em;
+}
+
+.top-left .corner-badge {
+  background-color: rgb(5,169,244);
 }
 
 .top-right {
@@ -270,13 +275,13 @@ button.signup:hover {
 }
 
 .bot-right {
+  position: relative;
   width: 54%;
   display: inline-block;
   margin: 1%;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  background: linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
-  background: -webkit-linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
+  border-top: solid #e42d42;
   max-width: 100%;
 }
 
@@ -285,7 +290,6 @@ button.signup:hover {
   text-align: left;
   margin: 20px;
   margin-bottom: 0;
-  color: white;
   font-size: 1.7em;
   font-weight: 500;
 }
@@ -295,9 +299,26 @@ button.signup:hover {
   text-align: left;
   margin: 20px;
   margin-top: 6px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 135%;
+  line-height: 200%;
   font-size: .95em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.bot-right a {
+  color: #e42d42;
+}
+
+.bot-right .corner-badge {
+  background-color: #e42d42;
+}
+
+.corner-badge {
+  position: absolute;
+  top: -2.5px;
+  right: 0;
+  padding: 0px 20px 0px 20px;
+  border-radius: 0px 8px 0px 10px;
+  color: #fff;
 }
 
 .background {
@@ -394,7 +415,7 @@ button.signup:hover {
   text-align: center;
 }
 
-#faq .desc {
+.desc {
   margin: 0;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 6px;
@@ -547,7 +568,7 @@ button.signup:hover {
 #sponsors .partner {
   box-sizing: border-box;
   display: block;
-  width: 350px;
+  width: 250px;
   height: auto;
   margin: 25px;
 }
@@ -783,6 +804,6 @@ div.scroll-indicator::before{
   }
 }
 
-#referralCode a {
+a {
   color: #03A9F4;
 }
