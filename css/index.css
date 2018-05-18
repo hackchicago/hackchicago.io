@@ -59,6 +59,7 @@ header {
 }
 
 .center {
+  visibility: hidden;
   position: absolute;
   z-index: 5;
   width: 380px;
@@ -769,6 +770,10 @@ div.scroll-indicator::before{
   animation: bounce 1s ease infinite;
 }
 
+#scroll-container {
+  display: none;
+}
+
 @keyframes bounce {
   50% {
     transform: translateY(-50%);
@@ -776,4 +781,8 @@ div.scroll-indicator::before{
   100% {
     transform: translateY(0);
   }
+}
+
+#referralCode a {
+  color: #03A9F4;
 }
