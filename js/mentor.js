@@ -12,6 +12,12 @@ var emailCheck = function(dto, success, error){
     return error();
 };
 
+var urlCheck = function(dto, success, error){
+    var re = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+    if(re.test(dto.text.toLowerCase()))
+    return success();
+    return error();
+};
 
 function loadForm() {
   conversationalForm = window.cf.ConversationalForm.startTheConversation({
