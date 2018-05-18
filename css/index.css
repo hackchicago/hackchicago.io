@@ -142,6 +142,8 @@ header {
   height: 50px;
   font-size: 1.1em;
   font-weight: 500;
+  margin-left: .75rem;
+  margin-right: .75rem;
 }
 
 @media (max-width: 405px) {
