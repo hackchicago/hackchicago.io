@@ -120,7 +120,7 @@ function fillRef(code) {
 }
 
 function finishSignupFlow() {
-  //$('#signup-frame').attr('src', 'apply.html');
+  $('#signup-frame').attr('src', 'apply.html');
   toggleSignupWidget();
   $('#signup').hide();
   $('#signup-success').show();
@@ -129,7 +129,7 @@ function finishSignupFlow() {
 }
 
 function finishMentorSignupFlow() {
-  //$('#signup-frame').attr('src', 'mentor.html');
+  $('#signup-frame').attr('src', 'mentor.html');
   toggleSignupWidget();
 }
 
