@@ -91,10 +91,6 @@ function toggleSignupWidget() {
   $('body').toggleClass('yieldFocus');
 }
 
-$('.yieldFocus').click(function(){
-  $('#signup-frame').focus();
-});
-
 //Get Parameter
 function getParam(name, url) {
   if (!url) url = window.location.href;
@@ -173,6 +169,7 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
+sr.reveal('.row-wrapper');
 sr.reveal('.card');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
