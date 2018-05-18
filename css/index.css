@@ -59,6 +59,7 @@ header {
 }
 
 .center {
+  visibility: hidden;
   position: absolute;
   z-index: 5;
   width: 380px;
