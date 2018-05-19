@@ -247,7 +247,7 @@ button.signup:hover {
 }
 
 .top-left .corner-badge {
-  background-color: rgb(5,169,244);
+  background-color: #009AF7;
 }
 
 .top-right {
@@ -309,7 +309,7 @@ button.signup:hover {
 }
 
 .bot-right .corner-badge {
-  background-color: #e42d42;
+  background-color: #F60032;
 }
 
 .corner-badge {
