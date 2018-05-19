@@ -1,5 +1,4 @@
 window.sr = ScrollReveal({
-  reset: true,
   viewFactor: 0.08,
   scale: .8
 });
