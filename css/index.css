@@ -223,7 +223,7 @@ button.signup:hover {
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   max-width: 100%;
-  border-top: solid #5299D3 3px;
+  border-top: solid #03a9f4 3px;
 }
 
 .top-left h3 {
@@ -247,7 +247,7 @@ button.signup:hover {
 }
 
 .top-left .corner-badge {
-  background-color: #009AF7;
+  background-color: #03a9f4;
 }
 
 .top-right {
