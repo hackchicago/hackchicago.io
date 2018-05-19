@@ -56,13 +56,13 @@ $(document).ready( function() {
     $('#signup-success').show();
   } else {
     $('#button-signup').html('<button class="button" id="signup">Sign Up</button>');
-    $('#signup').click(function() {
+    $('#signup').on('click touchstart', function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
   }
   // attach function to mentor button
-  $('#mentor').click(function() {
+  $('#mentor').on('click touchstart', function() {
     startMentorSignup();
   });
 });
@@ -114,7 +114,7 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $("#signup").attr('onclick', 'toggleSignup("'+ code +'")')
+    $("#signup").on('click touchstart', 'toggleSignup("'+ code +'")')
   }
 
   return code;
@@ -159,7 +159,7 @@ $('a[href*="#"]')
   }
 });
 
-$('.splitscreen-close').click(function() {
+$('.splitscreen-close').on('click', function() {
   toggleSignupWidget();
 });
 
