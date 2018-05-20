@@ -441,15 +441,24 @@ button:hover {
 }
 
 @media (max-width: 875px) {
-  .faq {
+  .faq, .ap-grid .tier {
     margin: 12px;
     width: 300px;
     height: 240px;
   }
+
+  #ambassador h2 {
+    font-size: 1.8em!important;
+  }
+
+  .link h3 {
+    font-size: 1em!important;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 740px) {
-  .faq {
+  .faq, .ap-grid .tier {
     width: auto;
     height: auto;
     padding: 20px;
@@ -458,7 +467,7 @@ button:hover {
 }
 
 @media (max-width: 500px) {
-  .faq {
+  .faq, .ap-grid .tier {
     margin: 15px;
     margin-bottom: 0;
   }
@@ -791,11 +800,25 @@ a:hover {
 
 
 @media (max-width: 875px) {
-  .social {
-    padding-left: 5%;
+  .footer {
+    display: block;
+    width: 100%;
+    float: none;
+    position: absolute;
+    left: 0;
   }
-  .footer-links {
-    padding-right: 5%;
+
+  .footer-links, .social {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .crossfade-reverse {
+    padding: 70px 0px 70px 0px!important;
   }
 }
 
@@ -839,7 +862,6 @@ a.social-icon {
 }
 
 .ap-grid .tier {
-  width: 330px;
   max-width: 330px;
   background-color: white;
   padding: 16px;
