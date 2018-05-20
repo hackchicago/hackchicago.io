@@ -853,8 +853,8 @@ a.social-icon {
   margin: 0;
   padding: 0;
   background-color: #bfd8f9;
-  background: url('/img/pattern.svg') repeat, -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  background: url('/img/pattern.svg') repeat, linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
   padding: 70px 20px 70px 20px;
   text-align: center;
   z-index: 0;
