@@ -1,5 +1,4 @@
 window.sr = ScrollReveal({
-  reset: true,
   viewFactor: 0.08,
   scale: .8
 });
@@ -56,7 +55,7 @@ $(document).ready( function() {
     $('#signup-success').show();
   } else {
     $('#button-signup').html('<button class="signup">Sign Up</button>');
-    $('.signup').click(function() {
+    $('.signup').on('click touchstart', function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
@@ -74,10 +73,6 @@ function toggleSignup(ref) {
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
 }
-
-$('.yieldFocus').click(function(){
-  $('#signup-frame').focus();
-});
 
 //Get Parameter
 function getParam(name, url) {
@@ -102,7 +97,7 @@ function fillRef(code) {
   
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").attr('onclick', 'toggleSignup("'+ code +'")')
+    $(".signup").on('click touchstart', 'toggleSignup("'+ code +'")')
   }
   
   return code;
@@ -148,7 +143,7 @@ $('a[href*="#"]')
   }
 });
 
-$('.splitscreen-close').click(function() {
+$('.splitscreen-close').on('click', function() {
   toggleSignup();
 });
 
@@ -158,7 +153,6 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
-sr.reveal('.row-wrapper');
 sr.reveal('.card');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
