@@ -888,7 +888,7 @@ a.social-icon {
 
 .ap-name, .ap-link {
   background-color: transparent;
-  padding: 0px 50px 0px 15px;
+  padding: 0px 15px 0px 15px;
   border-radius: 10px;
   font-size: .95em;
   outline: none;
@@ -906,18 +906,6 @@ a.social-icon {
 
 .ap-link {
   width: auto;
-}
-
-.copy-button {
-  margin-left: -45px;
-  height: 40px;
-  width: 50px;
-  border: none;
-  border-radius: 8px;
-}
-
-.copy-button:hover {
-  background-color: #bfbfbf;
 }
 
 .ap-reset {
