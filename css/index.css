@@ -455,10 +455,15 @@ button:hover {
     font-size: 1em!important;
     padding: 15px;
   }
+
+  .ap-link {
+    width: 80%!important;
+    margin: auto!important;
+  }
 }
 
 @media (max-width: 740px) {
-  .faq, .ap-grid .tier .ap-link {
+  .faq, .ap-grid .tier {
     width: auto;
     height: auto;
     padding: 20px;
@@ -914,7 +919,6 @@ a.social-icon {
   color: #5299D3;
   width: 220px;
   position: relative;
-  left: 5px;
   transition: all .3s;
   border: none;
   transition: all .2s ease-in-out;
@@ -923,12 +927,12 @@ a.social-icon {
   box-shadow: 0 0px 12px rgba(0,0,0,0.2);
 }
 
-.ap-link {
-  width: auto;
-}
-
 .ap-reset {
   cursor: pointer;
+}
+
+.ap-result {
+  margin-top: 15px;
 }
 
 .ap-grid.link {
