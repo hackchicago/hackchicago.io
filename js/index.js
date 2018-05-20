@@ -187,7 +187,8 @@ sr.reveal('.center', {
 sr.reveal('.row-wrapper', {
   scale: 1,
   viewFactor: 0.05,
-  distance: "50px"
+  distance: "50px",
+  mobile: false
 });
 sr.reveal('.card');
 sr.reveal('.tier');
