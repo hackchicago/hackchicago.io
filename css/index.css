@@ -156,16 +156,6 @@ button.signup:hover {
   }
 }
 
-.crossfade-reverse {
-  margin: 0;
-  padding: 0;
-  background-color: #bfd8f9;
-  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  padding: 70px 20px 70px 20px;
-  text-align: center;
-}
-
 .crossfade {
   margin: 0;
   padding: 0;
@@ -811,5 +801,65 @@ div.scroll-indicator::before{
 }
 
 a {
-  color: #03A9F4;
+  color: #5299d3;
+  transition: all 100ms linear;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4076bb;
+}
+
+.footer {
+  position: relative;
+  display: table;
+  float:left;
+  height:auto;
+}
+
+.social {
+  width: 50vw;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.footer-links {
+  width: 50vw;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10%;
+  color: #5299d3;
+}
+
+
+@media (max-width: 875px) {
+  .social {
+    padding-left: 5%;
+  }
+  .footer-links {
+    padding-right: 5%;
+  }
+}
+
+a.social-icon {
+  font-size: 2.5rem;
+  margin-right: 5px;
+}
+
+.crossfade-reverse {
+  margin: 0;
+  padding: 0;
+  background-color: #bfd8f9;
+  background: url('/img/pattern.svg') repeat, -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: url('/img/pattern.svg') repeat, linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  padding: 70px 20px 70px 20px;
+  text-align: center;
+  z-index: 0;
+}
+
+.coc {
+  margin-top: 15px;
 }
