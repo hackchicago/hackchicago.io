@@ -110,16 +110,16 @@ header {
   font-size: .85em;
 }
 
-button.signup {
+button {
   margin-top: 20px;
   padding: 0;
   cursor: pointer;
   background-color: transparent;
   border: solid #5299D3 2px;
-  height: 45px;
   width: 140px;
   font-size: 1em;
   font-weight: 500;
+  text-align: center;
   border-radius: 100px;
   color: #5299D3;
   text-transform: uppercase;
@@ -129,7 +129,15 @@ button.signup {
   top: -1px;
 }
 
-button.signup:hover {
+button.signup {
+  height: 45px;
+}
+
+button.generate {
+  height: 35px;
+}
+
+button:hover {
   color: #f6f9fe;
   background-color: #5299D3;
 }
@@ -154,16 +162,6 @@ button.signup:hover {
   .center h2 {
     font-size: 1.15em;
   }
-}
-
-.crossfade-reverse {
-  margin: 0;
-  padding: 0;
-  background-color: #bfd8f9;
-  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  padding: 70px 20px 70px 20px;
-  text-align: center;
 }
 
 .crossfade {
@@ -215,6 +213,7 @@ button.signup:hover {
 }
 
 .top-left {
+  position: relative;
   width: 54%;
   display: inline-block;
   vertical-align: top;
@@ -222,7 +221,7 @@ button.signup:hover {
   border-radius: 6px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   max-width: 100%;
-  border-top: solid #5299D3 3px;
+  border-top: solid #03a9f4 3px;
 }
 
 .top-left h3 {
@@ -241,8 +240,12 @@ button.signup:hover {
   margin: 20px;
   margin-top: 6px;
   color: rgba(0, 0, 0, 0.7);
-  line-height: 135%;
+  line-height: 155%;
   font-size: .95em;
+}
+
+.top-left .corner-badge {
+  background-color: #03a9f4;
 }
 
 .top-right {
@@ -270,13 +273,13 @@ button.signup:hover {
 }
 
 .bot-right {
+  position: relative;
   width: 54%;
   display: inline-block;
   margin: 1%;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  background: linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
-  background: -webkit-linear-gradient(48deg, rgb(235, 151, 99), rgb(228, 45, 66), rgb(206, 41, 60));
+  border-top: solid #e42d42;
   max-width: 100%;
 }
 
@@ -285,7 +288,6 @@ button.signup:hover {
   text-align: left;
   margin: 20px;
   margin-bottom: 0;
-  color: white;
   font-size: 1.7em;
   font-weight: 500;
 }
@@ -295,9 +297,32 @@ button.signup:hover {
   text-align: left;
   margin: 20px;
   margin-top: 6px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 135%;
+  line-height: 155%;
   font-size: .95em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.bot-right a {
+  color: #e42d42;
+}
+
+.bot-right .corner-badge {
+  background-color: #e42d42;
+}
+
+.corner-badge {
+  cursor: pointer!important;
+  position: absolute;
+  top: -2.5px;
+  right: 0;
+  padding: 0px 20px 0px 20px;
+  border-radius: 0px 8px 0px 10px;
+  color: #fff;
+  z-index: 10000;
+}
+
+.corner-badge img {
+  cursor: pointer;
 }
 
 .background {
@@ -305,34 +330,6 @@ button.signup:hover {
   margin: 0;
   border-radius: 6px;
   transition: all .3s;
-  filter: blur(0px);
-}
-
-.background:hover {
-  filter: blur(2px);
-}
-
-.smallpic {
-  width: 70px;
-  height: auto;
-  margin: 0;
-  position: absolute;
-  margin-left: -35px;
-  left: 50%;
-  top: 0;
-  margin-top: -35px;
-  border-radius: 5px;
-  opacity: 0;
-  transition: all .2s;
-  pointer-events: none;
-}
-
-.background:hover + .smallpic {
-  opacity: 1;
-  width: 90px;
-  margin-left: -45px;
-  margin-top: -45px;
-  border-radius: 8px;
 }
 
 @media (max-width: 880px) {
@@ -366,9 +363,6 @@ button.signup:hover {
   .background:hover {
     filter: blur(0px);
   }
-  .smallpic {
-    display: none;
-  }
 }
 
 @media (max-width: 485px) {
@@ -394,7 +388,7 @@ button.signup:hover {
   text-align: center;
 }
 
-#faq .desc {
+.desc {
   margin: 0;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 6px;
@@ -404,7 +398,7 @@ button.signup:hover {
   margin-right: 25px;
 }
 
-.faq-grid {
+.faq-grid, .ap-grid {
   text-align: center;
   max-width: 1350px;
   margin-left: auto;
@@ -428,7 +422,7 @@ button.signup:hover {
 }
 
 @media (max-width: 1030px) and (min-width: 750px) {
-.faq-grid {
+.faq-grid, .ap-grid {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -446,7 +440,7 @@ button.signup:hover {
 }
 
 @media (max-width: 1030px) and (min-width: 1020px) {
-  .faq-grid {
+  .faq-grid, .ap-grid {
     margin-left: 90px;
   }
 }
@@ -542,12 +536,17 @@ button.signup:hover {
 
 #sponsors a {
   box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}
+
+#sponsors a:hover {
+  transform: scale(1.05);
 }
 
 #sponsors .partner {
   box-sizing: border-box;
   display: block;
-  width: 350px;
+  width: 250px;
   height: auto;
   margin: 25px;
 }
@@ -783,6 +782,168 @@ div.scroll-indicator::before{
   }
 }
 
-#referralCode a {
-  color: #03A9F4;
+a {
+  color: #5299d3;
+  transition: all 100ms linear;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4076bb;
+}
+
+.footer {
+  position: relative;
+  display: table;
+  float:left;
+  height:auto;
+}
+
+.social {
+  width: 50vw;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.footer-links {
+  width: 50vw;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10%;
+  color: #5299d3;
+}
+
+
+@media (max-width: 875px) {
+  .social {
+    padding-left: 5%;
+  }
+  .footer-links {
+    padding-right: 5%;
+  }
+}
+
+a.social-icon {
+  font-size: 2.5rem;
+  margin-right: 5px;
+}
+
+.crossfade-reverse {
+  margin: 0;
+  padding: 0;
+  background-color: #bfd8f9;
+  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  padding: 70px 20px 70px 20px;
+  text-align: center;
+  z-index: 0;
+}
+
+.coc {
+  margin-top: 15px;
+}
+
+#ambassador {
+  background-color: white;
+  padding: 40px 0 40px 0;
+  display: none;
+}
+
+#ambassador h2 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 2.2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+#ambassador h3 {
+  margin-bottom: 0;
+  color: #1a1a1a;
+}
+
+.ap-grid .tier {
+  width: 330px;
+  max-width: 330px;
+  background-color: white;
+  padding: 16px;
+  height: 120px;
+  margin: 15px;
+  display: inline-table;
+  overflow: hidden;
+  text-align: middle;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px 5px 9px 9px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.ap-grid .tier p {
+  line-height: 1.5;
+}
+
+.ap-grid .tier p.reward {
+  font-weight: bold;
+}
+
+.ap-grid .tier h2 {
+  font-size: 1.75rem!important;
+}
+
+.ap-grid .tier.bronze {
+  border-top: solid #CD7F32 3px;
+}
+
+.ap-grid .tier.silver {
+  border-top: solid #C0C0C0 3px;
+}
+
+.ap-grid .tier.gold {
+  border-top: solid #FFD700 3px;
+}
+
+.link {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.ap-name, .ap-link {
+  background-color: transparent;
+  padding: 0px 15px 0px 15px;
+  border-radius: 10px;
+  font-size: .95em;
+  outline: none;
+  height: 40px;
+  color: #5299D3;
+  width: 220px;
+  position: relative;
+  left: 5px;
+  transition: all .3s;
+  border: none;
+  transition: all .2s ease-in-out;
+  margin-right: 20px;
+
+  box-shadow: 0 0px 12px rgba(0,0,0,0.2);
+}
+
+.ap-link {
+  width: auto;
+}
+
+.ap-reset {
+  cursor: pointer;
+}
+
+.ap-grid.link {
+  margin-top: 15px;
+}
+
+.ap-name:focus {
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.ap-reset-bar {
+  display: none;
 }

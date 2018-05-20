@@ -9,7 +9,7 @@ $(document).ready( function() {
   $('.middlerow').css('height', clientHeight);
   $('.frontrow').css('height', clientHeight);
   /*$('.bottom').css('margin-top', clientHeight);*/
-  
+
   /*$(window).resize(function() {
     clientHeight = $(window).height();
     $('#parallax').css('height', clientHeight);
@@ -18,10 +18,10 @@ $(document).ready( function() {
     $('.frontrow').css('height', clientHeight);
     console.log(clientHeight);
   });*/
-  
+
   var clientWidth = $(window).width();
   console.log(clientWidth);
-  
+
   if (clientWidth >= 880) {
     var divWidth1 = parseFloat($('#tleft').css('width'));
     var divWidth2 = parseFloat($('#bright').css('width'));
@@ -31,9 +31,7 @@ $(document).ready( function() {
     $('#tleft').css('height', imgHeight);
     $('#bright').css('height', imgHeight);
     var imgHeight2 = (imgHeight) / 2;
-    $('#spic1').css('top', imgHeight2);
-    $('#spic2').css('top', imgHeight2);
-    
+
     $(window).resize(function() {
       var divWidth1 = parseFloat($('#tleft').css('width'));
       var divWidth2 = parseFloat($('#bright').css('width'));
@@ -43,22 +41,26 @@ $(document).ready( function() {
       $('#tleft').css('height', imgHeight);
       $('#bright').css('height', imgHeight);
       var imgHeight2 = (imgHeight) / 2;
-      $('#spic1').css('top', imgHeight2);
-      $('#spic2').css('top', imgHeight2);
     });
   }
-  
+
   checkRef(Cookies.get('ref'));
-  
+
   if(Cookies.get('hasSignedUp') !== undefined) {
     $('.signup').hide();
     $('#signup-success').show();
+    $('.refBar').hide();
+    $('#ambassador').show();
   } else {
     $('#button-signup').html('<button class="signup">Sign Up</button>');
     $('.signup').on('click touchstart', function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
+  }
+
+  if(Cookies.get('ap-name') !== undefined) {
+    setAPLink(Cookies.get('ap-name'));
   }
 });
 
@@ -67,7 +69,7 @@ function toggleSignup(ref) {
   $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
   else
   $('#signup-frame').attr('src', 'apply.html');
-  
+
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
@@ -94,28 +96,29 @@ function checkRef(ref) {
 }
 
 function fillRef(code) {
-  
+
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
     $(".signup").on('click touchstart', 'toggleSignup("'+ code +'")')
   }
-  
+
   return code;
 }
 
 function finishSignupFlow() {
-  
+
   $('#signup-frame').attr('src', 'apply.html');
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
-  
+
   $('.signup').hide();
+  $('.refBar').hide();
   $('#signup-success').show();
-  
+
   Cookies.set('hasSignedUp', 'true', { expires: 180 });
-  
+
 }
 
 $('a[href*="#"]')
@@ -125,8 +128,8 @@ $('a[href*="#"]')
 .click(function(event) {
   // On-page links
   if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
     location.hostname == this.hostname
   ) {
     // Figure out element to scroll to
@@ -147,6 +150,35 @@ $('.splitscreen-close').on('click', function() {
   toggleSignup();
 });
 
+$('.generate').on('click', function() {
+  if ($('.ap-name').val() != "") {
+    Cookies.set("ap-name", setAPLink($('.ap-name').val()), { expires: 180 })
+  }
+});
+
+$('.ap-reset').on('click', function() {
+  resetAP();
+});
+
+function setAPLink(n) {
+  $('.ap-form').hide();
+  $('.ap-result').html("<p>Your unique link: <input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\"></p>")
+  $(".ap-link").on("click", function () {
+    $(this).select();
+ });
+  $('.ap-link').attr('size', $('.ap-link').val().length);
+  $('.ap-name-box').text(n);
+  $('.ap-reset-bar').show();
+  return n;
+}
+
+function resetAP() {
+  $('.ap-form').show();
+  $('.ap-result').html("");
+  $('.ap-reset-bar').hide();
+  Cookies.remove("ap-name");
+}
+
 sr.reveal('.center', {
   duration: 1500,
   afterReveal: function (domEl) {
@@ -154,5 +186,6 @@ sr.reveal('.center', {
   }
 });
 sr.reveal('.card');
+sr.reveal('.tier');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
