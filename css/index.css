@@ -907,11 +907,13 @@ a.social-icon {
 .ap-tooltip {
   display: none;
   width: 120px;
-  background-color: #555;
-  color: #fff;
+  background-color: #555555;
+  color: #ffffff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+  position: relative;
+  margin: auto;
 }
 
 .ap-link {
