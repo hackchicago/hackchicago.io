@@ -189,7 +189,7 @@ button:hover {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 500;
+  font-weight: 600;
   color: #2a2a2a;
 }
 
@@ -231,7 +231,7 @@ button:hover {
   margin-bottom: 0;
   color: #2a2a2a;
   font-size: 1.7em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .top-left p {
@@ -289,7 +289,7 @@ button:hover {
   margin: 20px;
   margin-bottom: 0;
   font-size: 1.7em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .bot-right p {
@@ -384,7 +384,7 @@ button:hover {
   margin: 0;
   color: #2a2a2a;
   font-size: 2.2em;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -447,11 +447,11 @@ button:hover {
 
 .faq h4 {
   color: #262626;
-  font-size: 130%;
+  font-size: 125%;
   margin: 0;
   text-align: left;
   line-height: 120%;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .faq p {
@@ -856,7 +856,7 @@ a.social-icon {
   margin: 0;
   color: #2a2a2a;
   font-size: 2.2em;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
