@@ -110,7 +110,7 @@ header {
   font-size: .85em;
 }
 
-button.signup {
+.button {
   margin-top: 20px;
   padding: 0;
   cursor: pointer;
@@ -129,9 +129,21 @@ button.signup {
   top: -1px;
 }
 
-button.signup:hover {
+.button:hover {
   color: #f6f9fe;
   background-color: #5299D3;
+}
+
+.button.wide {
+  width: 250px;
+}
+
+.button.big {
+  height: 50px;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-left: .75rem;
+  margin-right: .75rem;
 }
 
 @media (max-width: 405px) {
@@ -617,29 +629,10 @@ button.signup:hover {
 }
 
 #prospectus h3 {
-  color: #262626;
-  font-size: 180%;
+  color: #2a2a2a;
+  font-size: 1.7em;
+  font-weight: 500;
   margin-top: 0;
-}
-
-#prospectus button {
-  color: white;
-  background-color: #03A9F4;
-  border: none;
-  font-size: 120%;
-  cursor: pointer;
-  outline: none;
-  padding: 15px 25px 15px 25px;
-  border-radius: 8px;
-  border-bottom: solid #0275a8 5px;
-  transition: all .3s;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-}
-
-#prospectus button:hover {
-  background-color: #2ebcfc;
 }
 
 #prospectus .closed {

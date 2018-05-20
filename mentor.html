@@ -19,7 +19,7 @@
     <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/e9a1595af276" method="POST" id="signup" cf-form>
         <label for="radio">
             <input
-            cf-questions="Hi there! I'm Orpheus, the last coding dinosaur on earth. You're almost coming to Hack Chicago! I'm super excited to assist you with the application process 🚀<br /><br />During this friendly conversation of ours, you may tap any of your previous responses to modify them! Are you ready to start?"
+            cf-questions="Hi there! I'm Orpheus, the last coding dinosaur on earth. Thank you for your interest in becoming a mentor for Hack Chicago. You will be working with amazing students and staff members. I'm super excited to assist you with the application process 🚀<br /><br />During this friendly conversation of ours, you may tap any of your previous responses to modify them! Are you ready to start?"
                 cf-label="I can't wait! Let's begin!"
                 cf-error="Hit the button above to start your application!"
                 type="radio" value="0">
@@ -28,7 +28,7 @@
         <div id="ref-fill">
         </div>
         <input type="text" id="FNAME" name="FNAME"
-                cf-questions="What is your first name, dear human being?"
+                cf-questions="What is your first name?"
         />
 
         <input type="text" name="LNAME"
@@ -41,16 +41,6 @@
                 cf-error="Oops! That doesn't look like an email address... Try again?"
         />
 
-        <select name="GRADE"
-            cf-questions="What grade are you currently in (during the 2017-18 school year)?"
-        />
-                <option value="8">8th (Class of '22)</option>
-                <option value="9">9th (Class of '21)</option>
-                <option value="10">10th (Class of '20)</option>
-                <option value="11">11th (Class of '19)</option>
-                <option value="11">12th (Class of '18)</option>
-        </select>
-
         <select name="GENDER"
             cf-questions="What gender do you identify as?"
         />
@@ -60,16 +50,18 @@
                 <option value="Undefined">Prefer Not To Say</option>
         </select>
 
-        <input type="text" name="SCHOOL"
-                cf-questions="What is the name of your school?"
+        <input type="text" name="PORTFOLIO"
+                cf-questions="Can you link to your portfolio? i.e. website, résumé, LinkedIn"
+                cf-validation="window.urlCheck"
+                cf-error="Oops! That doesn't look like a URL... Try again?"
         />
 
-        <input type="text" name="CITY"
-                cf-questions="Which city is your school in? (I need the name of the city only - state is the next question!)"
+        <input type="text" name="FAVPROJECT"
+                cf-questions="What project are you most proud of? This can be anything, tech related or not."
         />
 
-        <input type="text" name="STATE"
-                cf-questions="And what state is {CITY} in?<br /><br />If you are not from the United States, please repond with “International”."
+        <input type="text" name="EXPERIENCE"
+                cf-questions="What mentorship experience have you had in the past? <br/><br/> If this is your first time, simply respond with “no”."
         />
 
         <select name="SHIRTSIZE"
@@ -90,7 +82,7 @@
         <input
             type="text"
             name="NOTE"
-            cf-questions="Anything interesting or important that you would want me to pass on to the Hack Chicago team? We can answer your questions, address your concerns, or provide you with further assistance! <br /><br />If not, simply respond with “no”."
+            cf-questions="Anything else you'd like the Hack Chicago team to know? <br /><br />If not, simply respond with “no”."
         />
     </form>
 
@@ -99,7 +91,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/cf.min.js"></script>
 
-    <script src="js/apply.js"></script>
+    <script src="js/mentor.js"></script>
 
 </body>
 </html>

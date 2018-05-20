@@ -9,7 +9,7 @@ $(document).ready( function() {
   $('.middlerow').css('height', clientHeight);
   $('.frontrow').css('height', clientHeight);
   /*$('.bottom').css('margin-top', clientHeight);*/
-  
+
   /*$(window).resize(function() {
     clientHeight = $(window).height();
     $('#parallax').css('height', clientHeight);
@@ -18,10 +18,10 @@ $(document).ready( function() {
     $('.frontrow').css('height', clientHeight);
     console.log(clientHeight);
   });*/
-  
+
   var clientWidth = $(window).width();
   console.log(clientWidth);
-  
+
   if (clientWidth >= 880) {
     var divWidth1 = parseFloat($('#tleft').css('width'));
     var divWidth2 = parseFloat($('#bright').css('width'));
@@ -33,7 +33,7 @@ $(document).ready( function() {
     var imgHeight2 = (imgHeight) / 2;
     $('#spic1').css('top', imgHeight2);
     $('#spic2').css('top', imgHeight2);
-    
+
     $(window).resize(function() {
       var divWidth1 = parseFloat($('#tleft').css('width'));
       var divWidth2 = parseFloat($('#bright').css('width'));
@@ -47,27 +47,43 @@ $(document).ready( function() {
       $('#spic2').css('top', imgHeight2);
     });
   }
-  
+
   checkRef(Cookies.get('ref'));
-  
+
   if(Cookies.get('hasSignedUp') !== undefined) {
-    $('.signup').hide();
+    $('#signup').hide();
     $('#signup-success').show();
   } else {
-    $('#button-signup').html('<button class="signup">Sign Up</button>');
-    $('.signup').on('click touchstart', function() {
+    $('#button-signup').html('<button class="button" id="signup">Sign Up</button>');
+    $('#signup').on('click touchstart', function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
   }
+  // attach function to mentor button
+  $('#mentor').on('click touchstart', function() {
+    startMentorSignup();
+  });
 });
 
 function toggleSignup(ref) {
-  if (ref)
+  if (ref) // load apply form with referral
   $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
-  else
+  else // load apply form
   $('#signup-frame').attr('src', 'apply.html');
-  
+
+  // show/hide signup widget
+  toggleSignupWidget();
+}
+
+function startMentorSignup() {
+  // load mentor form
+  $('#signup-frame').attr('src', 'mentor.html');
+  toggleSignupWidget();
+}
+
+function toggleSignupWidget() {
+  // show/hide signup widget
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
   $('body').toggleClass('noscroll');
@@ -94,28 +110,27 @@ function checkRef(ref) {
 }
 
 function fillRef(code) {
-  
+
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").on('click touchstart', 'toggleSignup("'+ code +'")')
+    $("#signup").on('click touchstart', 'toggleSignup("'+ code +'")')
   }
-  
+
   return code;
 }
 
-function finishSignupFlow() {
-  
-  $('#signup-frame').attr('src', 'apply.html');
-  $('.splitscreen').toggleClass('show');
-  $('.split-overlay').toggleClass('show');
-  $('body').toggleClass('noscroll');
-  $('body').toggleClass('yieldFocus');
-  
-  $('.signup').hide();
-  $('#signup-success').show();
-  
-  Cookies.set('hasSignedUp', 'true', { expires: 180 });
-  
+function finishSignupFlow(isAttendee) {
+  if (!isAttendee) {
+    $('#signup-frame').attr('src', 'mentor.html');
+    toggleSignupWidget();
+  } else {
+    console.log('is attendee');
+    $('#signup-frame').attr('src', 'apply.html');
+    Cookies.set('hasSignedUp', 'true', { expires: 180 });
+    toggleSignupWidget();
+    $('#signup').hide();
+    $('#signup-success').show();
+  }
 }
 
 $('a[href*="#"]')
@@ -125,8 +140,8 @@ $('a[href*="#"]')
 .click(function(event) {
   // On-page links
   if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
     location.hostname == this.hostname
   ) {
     // Figure out element to scroll to
@@ -144,7 +159,7 @@ $('a[href*="#"]')
 });
 
 $('.splitscreen-close').on('click', function() {
-  toggleSignup();
+  toggleSignupWidget();
 });
 
 sr.reveal('.center', {
