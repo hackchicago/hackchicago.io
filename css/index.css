@@ -370,9 +370,6 @@ button:hover {
     margin-left: 5%;
     margin-right: 5%;
   }
-  .top-left {
-    box-shadow: none;
-  }
 }
 
 #faq {
@@ -411,7 +408,7 @@ button:hover {
   max-width: 330px;
   background-color: white;
   padding: 16px;
-  height: 240px;
+  height: 250px;
   margin: 15px;
   display: inline-table;
   overflow: hidden;
@@ -419,30 +416,6 @@ button:hover {
   border-radius: 5px 5px 9px 9px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
   border-top: solid #5299D3 3px;
-}
-
-@media (max-width: 1030px) and (min-width: 750px) {
-.faq-grid, .ap-grid {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -webkit-box-pack: justify;
-  max-width: 900px;
-  margin: auto;
-  }
-
-  .faq {
-    display: block;
-  }
-}
-
-@media (max-width: 1030px) and (min-width: 1020px) {
-  .faq-grid, .ap-grid {
-    margin-left: 90px;
-  }
 }
 
 .faq h4 {
