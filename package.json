@@ -1,0 +1,22 @@
+{
+  "name": "hackchicago",
+  "version": "1.0.0",
+  "description": "The Midwest's largest high school hackathon",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackchicago/hackchicago.git"
+  },
+  "keywords": [
+    "hackathon",
+    "chicago",
+    "midwest"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackchicago/hackchicago/issues"
+  },
+  "homepage": "https://hackchicago.io"
+}
