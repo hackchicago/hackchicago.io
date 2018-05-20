@@ -153,9 +153,6 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
-sr.reveal('.row-wrapper',{
-  mobile: false
-});
 sr.reveal('.card');
 sr.reveal('.sponsor');
 sr.reveal('.partner');
