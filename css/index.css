@@ -909,6 +909,10 @@ a.social-icon {
   text-align: center;
 }
 
+.ap-name {
+  margin-right: 20px;
+}
+
 .ap-name, .ap-link {
   background-color: transparent;
   padding: 0px 50px 0px 15px;
