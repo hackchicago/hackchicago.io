@@ -161,7 +161,7 @@ $('.ap-reset').on('click', function() {
 
 function setAPLink(n) {
   $('.ap-form').hide();
-  $('.ap-result').html("<p>Your unique link: <input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\"></p>");
+  $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">");
   $(".ap-link").on("click", function () {
     if (!navigator.clipboard) {
       $(".ap-link").focus();
@@ -181,7 +181,7 @@ function setAPLink(n) {
       });
     }
   });
-  $('.ap-link').attr('size', $('.ap-link').val().length);
+  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length*8 + "px");
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
   return n;
@@ -204,6 +204,12 @@ sr.reveal('.center', {
   afterReveal: function (domEl) {
     $('#scroll-container').show();
   }
+});
+sr.reveal('.row-wrapper', {
+  scale: 1,
+  viewFactor: 0.05,
+  distance: "50px",
+  mobile: false
 });
 sr.reveal('.card');
 sr.reveal('.tier');
