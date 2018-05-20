@@ -1,5 +1,4 @@
 window.sr = ScrollReveal({
-  viewFactor: 0.08,
   scale: .8
 });
 $(document).ready( function() {
