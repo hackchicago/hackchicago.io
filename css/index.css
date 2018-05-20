@@ -559,6 +559,11 @@ button.signup:hover {
 
 #sponsors a {
   box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}
+
+#sponsors a:hover {
+  transform: scale(1.05);
 }
 
 #sponsors .partner {
