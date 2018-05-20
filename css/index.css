@@ -974,3 +974,7 @@ a.social-icon {
 .ap-name:focus {
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
+
+.ap-reset-bar {
+  display: none;
+}
