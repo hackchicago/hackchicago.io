@@ -184,6 +184,11 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
+sr.reveal('.row-wrapper', {
+  scale: 1,
+  viewFactor: 0.05,
+  distance: "50px"
+});
 sr.reveal('.card');
 sr.reveal('.tier');
 sr.reveal('.sponsor');
