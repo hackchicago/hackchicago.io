@@ -169,15 +169,15 @@ function setAPLink(n) {
       try {
         var successful = document.execCommand('copy');
         var msg = successful ? 'Copied!' : 'Press CTRL + C or CMD + C to copy';
-        $(".copy-button-result").text(msg);
+        tooltip(msg);
       } catch (err) {
-        $(".copy-button-result").text('Press CTRL + C or CMD + C to copy');
+        tooltip('Press CTRL + C or CMD + C to copy');
       }
     } else {
       navigator.clipboard.writeText($('.ap-link').val()).then(function() {
-        $(".copy-button-result").text('Copied!');
+        tooltip('Copied!');
       }, function(err) {
-        $(".copy-button-result").text('Press CTRL + C or CMD + C to copy');
+        tooltip('Press CTRL + C or CMD + C to copy');
       });
     }
   });
@@ -185,6 +185,11 @@ function setAPLink(n) {
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
   return n;
+}
+
+function tooltip(text) {
+  $(".ap-tooltip").text(text);
+  $(".ap-tooltip").fadeIn().delay(2000).fadeOut();
 }
 
 function resetAP() {
