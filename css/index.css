@@ -931,7 +931,8 @@ a.social-icon {
 }
 
 .ap-tooltip {
-  display: none;
+  display: inline;
+  opacity: 0;
   width: 120px;
   background-color: #555555;
   color: #ffffff;
@@ -942,6 +943,7 @@ a.social-icon {
 
 .ap-link {
   width: auto;
+  display: inline;
 }
 
 .ap-reset {
