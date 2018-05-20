@@ -167,6 +167,9 @@ $('.ap-reset').on('click', function() {
 function setAPLink(n) {
   $('.ap-form').hide();
   $('.ap-result').html("<p>Your unique link: <input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\"></p>")
+  $(".ap-link").on("click", function () {
+    $(this).select();
+ });
   $('.ap-link').attr('size', $('.ap-link').val().length);
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
