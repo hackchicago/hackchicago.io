@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hackchicago/hackchicago/issues"
   },
-  "homepage": "https://hackchicago.io"
+  "homepage": "https://hackchicago.io",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
 }
