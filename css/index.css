@@ -931,19 +931,19 @@ a.social-icon {
 }
 
 .ap-tooltip {
-  display: inline;
-  opacity: 0;
+  display: none;
   width: 120px;
   background-color: #555555;
   color: #ffffff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
+  position: relative;
+  margin: auto;
 }
 
 .ap-link {
   width: auto;
-  display: inline;
 }
 
 .ap-reset {
