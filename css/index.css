@@ -458,7 +458,7 @@ button:hover {
 }
 
 @media (max-width: 740px) {
-  .faq, .ap-grid .tier {
+  .faq, .ap-grid .tier .ap-link {
     width: auto;
     height: auto;
     padding: 20px;
