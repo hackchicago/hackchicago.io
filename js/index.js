@@ -180,7 +180,7 @@ function checkState() {
   if (Cookies.get('hasSignedUp') == undefined) {
     $('html, body').animate({
       scrollTop: $("#ambassador").offset().top
-    }, 4000);
+    }, 2800);
 
     Cookies.set('hasSignedUp', 'true', {
       expires: 180
