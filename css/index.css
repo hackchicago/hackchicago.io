@@ -924,7 +924,7 @@ a.social-icon {
 
 .ap-name, .ap-link {
   background-color: transparent;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px 5px 15px;
   border-radius: 10px;
   font-size: .95em;
   outline: none;
@@ -946,7 +946,7 @@ a.social-icon {
   color: #ffffff;
   text-align: center;
   border-radius: 6px;
-  padding-top: 15px;
+  padding: 5px 0px;
   position: relative;
   margin: auto;
 }
