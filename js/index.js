@@ -182,13 +182,6 @@ $('.ap-reset').on('click touchstart', function() {
 $('#forceState').on('click touchstart', checkState);
 $('#scrollToAP').on('click touchstart', scrollToAP);
 
-$('.alt-signup.attendee').on('click touchstart', function(){
-  $('html, body').animate({
-    scrollTop: $("body").offset().top
-  }, 1200);
-  $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
-  setTimeout(toggleSignup, 800);
-});
 $('.alt-signup.school').on('click touchstart', function() {
   $('html, body').animate({
     scrollTop: $("#school").offset().top
