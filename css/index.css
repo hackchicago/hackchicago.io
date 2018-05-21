@@ -918,6 +918,10 @@ a.social-icon {
   text-align: center;
 }
 
+.ap-name {
+  margin-right: 20px;
+}
+
 .ap-name, .ap-link {
   background-color: transparent;
   padding: 0px 15px 0px 15px;
@@ -931,9 +935,25 @@ a.social-icon {
   transition: all .3s;
   border: none;
   transition: all .2s ease-in-out;
-  margin-right: 20px;
+  margin-bottom: 5px;
 
   box-shadow: 0 0px 12px rgba(0,0,0,0.2);
+}
+
+.ap-tooltip {
+  display: none;
+  width: 120px;
+  background-color: #555555;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0px;
+  position: relative;
+  margin: auto;
+}
+
+.ap-link {
+  width: auto;
 }
 
 .ap-reset {

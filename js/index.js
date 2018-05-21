@@ -203,14 +203,36 @@ function scrollToAP() {
 
 function setAPLink(n) {
   $('.ap-form').hide();
-  $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">")
-  $(".ap-link").on("click", function() {
-    $(this).select();
+  $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">");
+  $(".ap-link").on("click", function () {
+    if (!navigator.clipboard) {
+      $(".ap-link").focus();
+      $(".ap-link").select();
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'Copied!' : 'Press CTRL + C or CMD + C to copy';
+        tooltip(msg);
+      } catch (err) {
+        tooltip('Press CTRL + C or CMD + C to copy');
+      }
+    } else {
+      navigator.clipboard.writeText($('.ap-link').val()).then(function() {
+        tooltip('Copied!');
+      }, function(err) {
+        tooltip('Press CTRL + C or CMD + C to copy');
+      });
+    }
   });
+  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length*8 + "px");
   $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
   return n;
+}
+
+function tooltip(text) {
+  $(".ap-tooltip").text(text);
+  $(".ap-tooltip").fadeIn().delay(2000).fadeOut();
 }
 
 function resetAP() {
