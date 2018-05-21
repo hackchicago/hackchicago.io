@@ -137,6 +137,13 @@ button.generate {
   height: 35px;
 }
 
+button.alt-signup {
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 button:hover {
   color: #f6f9fe;
   background-color: #5299D3;
@@ -862,10 +869,36 @@ a.social-icon {
   display: none;
 }
 
+#register-section {
+  background-color: white;
+  padding: 40px 0 40px 0;
+  text-align: center;
+}
+
+#register-section p {
+  color: #5299D3;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+}
+
+#register-section #button-group {
+  margin-top: 15px;
+}
+
 #ambassador h2 {
   margin: 0;
   color: #2a2a2a;
   font-size: 2.2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+#register-section h2 {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 1.8em;
   font-weight: 500;
   text-align: center;
 }
