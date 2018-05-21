@@ -42,6 +42,11 @@ $(document).ready( function() {
       var imgHeight2 = (imgHeight) / 2;
     });
   }
+  let counter = 0;
+  $("#bround2").on("click", function () {
+    counter++;
+    if(counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
+  });
 
   checkRef(Cookies.get('ref'));
 
