@@ -51,7 +51,7 @@ $(document).ready(function() {
   checkRef(Cookies.get('ref'));
 
   if (Cookies.get('hasSignedUp') !== undefined) {
-    $('.signup').hide();
+    $('#button-signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('#ambassador').show();
@@ -60,8 +60,7 @@ $(document).ready(function() {
 
     $('#forceState').on('click', checkState);
   } else {
-    $('#button-signup').html('<button class="signup">Sign Up</button>');
-    $('.signup').on('click touchstart', function() {
+    $('#button-signup').on('click touchstart', function() {
       $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
@@ -70,6 +69,13 @@ $(document).ready(function() {
   if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
   }
+
+  let scrollBottom = $(window).scrollTop() + $(window).height();
+  $('.general-signup').on('click touchstart', function() {
+    $('html, body').animate({
+      scrollTop: $("#register-section").offset().top
+    }, 2800);
+  });
 });
 
 function toggleSignup(ref) {
@@ -109,7 +115,7 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").on('click touchstart', 'toggleSignup("' + code + '")')
+    $("#button-signup").on('click touchstart', 'toggleSignup("' + code + '")')
   }
 
   return code;
@@ -123,7 +129,7 @@ function finishSignupFlow() {
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
 
-  $('.signup').hide();
+  $('#button-signup').hide();
   $('.refBar').hide();
   $('#signup-success').show();
 
@@ -208,7 +214,7 @@ function checkState() {
       expires: 180
     });
     $('#register-section').hide();
-    $('.signup').hide();
+    $('.general-signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
