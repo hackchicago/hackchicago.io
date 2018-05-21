@@ -66,7 +66,7 @@ header {
   left: 50%;
   margin-left: -193px;
   border: solid #5299D3 3px;
-  height: 486px;
+  height: 500px;
   top: 50%;
   margin-top: -246px;
   border-radius: 10px;
@@ -721,15 +721,24 @@ body.noscroll {
   overflow: hidden;
 }
 
-.refBar {
+.refBar, .forceState {
   display: block;
   margin-top: 5px;
   color: #5299D3;
 }
 
+.forceState, #scrollToAP {
+  cursor: pointer;
+}
+
+#scrollToAP {
+  border-bottom: 1px dotted #5299d3;
+  text-decoration: none;
+}
+
 #signup-success {
   color: #5299D3;
-  font-size: 17px;
+  font-size: 16px;
   display: none;
   padding: 5px;
 }
