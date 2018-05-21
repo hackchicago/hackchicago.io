@@ -1,7 +1,7 @@
 window.sr = ScrollReveal({
   scale: .8
 });
-$(document).ready( function() {
+$(document).ready(function() {
   var clientHeight = $(window).height();
   $('#parallax').css('height', clientHeight);
   $('.backrow').css('height', clientHeight);
@@ -43,18 +43,21 @@ $(document).ready( function() {
     });
   }
   let counter = 0;
-  $("#bround2").on("click", function () {
+  $("#bround2").on("click", function() {
     counter++;
-    if(counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
+    if (counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
   });
 
   checkRef(Cookies.get('ref'));
 
-  if(Cookies.get('hasSignedUp') !== undefined) {
+  if (Cookies.get('hasSignedUp') !== undefined) {
     $('.signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('#ambassador').show();
+    $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
+
+    $('#forceState').on('click', checkState);
   } else {
     $('#button-signup').html('<button class="signup">Sign Up</button>');
     $('.signup').on('click touchstart', function() {
@@ -63,16 +66,16 @@ $(document).ready( function() {
     });
   }
 
-  if(Cookies.get('ap-name') !== undefined) {
+  if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
   }
 });
 
 function toggleSignup(ref) {
   if (ref)
-  $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+    $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
   else
-  $('#signup-frame').attr('src', 'apply.html');
+    $('#signup-frame').attr('src', 'apply.html');
 
   $('.splitscreen').toggleClass('show');
   $('.split-overlay').toggleClass('show');
@@ -85,7 +88,7 @@ function getParam(name, url) {
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-  results = regex.exec(url);
+    results = regex.exec(url);
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
@@ -93,9 +96,11 @@ function getParam(name, url) {
 
 function checkRef(ref) {
   if (ref != null && ref != "" && ref != "null")
-  fillRef(ref);
+    fillRef(ref);
   else {
-    Cookies.set('ref', fillRef(getParam("ref")), { expires: 180 })
+    Cookies.set('ref', fillRef(getParam("ref")), {
+      expires: 180
+    })
   }
 }
 
@@ -103,7 +108,7 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").on('click touchstart', 'toggleSignup("'+ code +'")')
+    $(".signup").on('click touchstart', 'toggleSignup("' + code + '")')
   }
 
   return code;
@@ -121,34 +126,35 @@ function finishSignupFlow() {
   $('.refBar').hide();
   $('#signup-success').show();
 
-  Cookies.set('hasSignedUp', 'true', { expires: 180 });
+  Cookies.set('hasSignedUp', 'true', {
+    expires: 180
+  });
 
 }
 
 $('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#"]')
-.not('[href="#0"]')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-    &&
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1200, function() {});
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1200, function() {});
+      }
     }
-  }
-});
+  });
 
 $('.splitscreen-close').on('click', function() {
   toggleSignup();
@@ -156,7 +162,9 @@ $('.splitscreen-close').on('click', function() {
 
 $('.generate').on('click', function() {
   if ($('.ap-name').val() != "") {
-    Cookies.set("ap-name", setAPLink($('.ap-name').val()), { expires: 180 })
+    Cookies.set("ap-name", setAPLink($('.ap-name').val()), {
+      expires: 180
+    })
   }
 });
 
@@ -164,13 +172,38 @@ $('.ap-reset').on('click', function() {
   resetAP();
 });
 
+$('#forceState').on('click', checkState);
+
+function checkState() {
+
+  $('#ambassador').show();
+  if (Cookies.get('hasSignedUp') == undefined) {
+    $('html, body').animate({
+      scrollTop: $("#ambassador").offset().top
+    }, 4000);
+
+    Cookies.set('hasSignedUp', 'true', {
+      expires: 180
+    });
+    $('.signup').hide();
+    $('#signup-success').show();
+    $('.refBar').hide();
+    $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
+
+    $('#forceState').on('click', checkState);
+  } else {
+    Cookies.remove('hasSignedUp');
+    window.location.reload(false);
+  }
+}
+
 function setAPLink(n) {
   $('.ap-form').hide();
   $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">")
-  $(".ap-link").on("click", function () {
+  $(".ap-link").on("click", function() {
     $(this).select();
- });
-  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length*8 + "px");
+  });
+  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
   return n;
@@ -185,7 +218,7 @@ function resetAP() {
 
 sr.reveal('.center', {
   duration: 1500,
-  afterReveal: function (domEl) {
+  afterReveal: function(domEl) {
     $('#scroll-container').show();
   }
 });

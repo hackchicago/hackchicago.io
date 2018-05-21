@@ -66,7 +66,7 @@ header {
   left: 50%;
   margin-left: -193px;
   border: solid #5299D3 3px;
-  height: 486px;
+  height: 500px;
   top: 50%;
   margin-top: -246px;
   border-radius: 10px;
@@ -721,10 +721,14 @@ body.noscroll {
   overflow: hidden;
 }
 
-.refBar {
+.refBar, .forceState {
   display: block;
   margin-top: 5px;
   color: #5299D3;
+}
+
+.forceState {
+  cursor: pointer;
 }
 
 #signup-success {
