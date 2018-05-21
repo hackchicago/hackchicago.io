@@ -184,6 +184,10 @@ $('.ap-reset').on('click touchstart', function() {
 
 $('#forceState').on('click touchstart', checkState);
 $('#scrollToAP').on('click touchstart', scrollToAP);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59d18a3d53964fd9f3db3482f29ad88c2859bed1
 $('.alt-signup.school').on('click touchstart', function() {
   $('html, body').animate({
     scrollTop: $("#school").offset().top - 100
