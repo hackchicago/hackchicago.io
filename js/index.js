@@ -59,23 +59,19 @@ $(document).ready(function() {
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
     $('#forceState').on('click', checkState);
-  } else {
-    $('#button-signup').on('click touchstart', function() {
-      $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
-      toggleSignup();
-    });
-  }
+  } else {}
 
   if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
   }
 
   let scrollBottom = $(window).scrollTop() + $(window).height();
-  $('.general-signup').on('click touchstart', function() {
-    $('html, body').animate({
-      scrollTop: $("#register-section").offset().top
-    }, 2800);
-  });
+});
+
+$('.general-signup').on('click touchstart', function() {
+  $('html, body').animate({
+    scrollTop: $("#register-section").offset().top - 150
+  }, 1800);
 });
 
 function toggleSignup(ref) {
@@ -115,7 +111,14 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $("#button-signup").on('click touchstart', 'toggleSignup("' + code + '")')
+    $("#button-signup").on('click touchstart', function() {
+       toggleSignup(code);
+    });
+  } else {
+    $('#button-signup').on('click touchstart', function() {
+      $("#troubleshoot").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
+      toggleSignup();
+    });
   }
 
   return code;
@@ -181,28 +184,24 @@ $('.ap-reset').on('click touchstart', function() {
 
 $('#forceState').on('click touchstart', checkState);
 $('#scrollToAP').on('click touchstart', scrollToAP);
-
-$('.alt-signup.attendee').on('click touchstart', function(){
-  $('html, body').animate({
-    scrollTop: $("body").offset().top
-  }, 1200);
-  $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
-  setTimeout(toggleSignup, 800);
-});
 $('.alt-signup.school').on('click touchstart', function() {
   $('html, body').animate({
-    scrollTop: $("#school").offset().top
+    scrollTop: $("#school").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#school').effect("highlight", {color: 'rgba(82,153,211,.5)'}, 3500);
+    $('#school').effect("highlight", {
+      color: 'rgba(82,153,211,.5)'
+    }, 3500);
   }, 500);
 });
 $('.alt-signup.mentor').on('click touchstart', function() {
   $('html, body').animate({
-    scrollTop: $("#mentor").offset().top
+    scrollTop: $("#mentor").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#mentor').effect("highlight", {color: 'rgba(82,153,211,.5)'}, 3500);
+    $('#mentor').effect("highlight", {
+      color: 'rgba(82,153,211,.5)'
+    }, 3500);
   }, 500);
 });
 
@@ -235,7 +234,7 @@ function scrollToAP() {
 function setAPLink(n) {
   $('.ap-form').hide();
   $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">");
-  $(".ap-link").on("click", function () {
+  $(".ap-link").on("click", function() {
     if (!navigator.clipboard) {
       $(".ap-link").focus();
       $(".ap-link").select();
@@ -254,7 +253,7 @@ function setAPLink(n) {
       });
     }
   });
-  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length*8 + "px");
+  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();

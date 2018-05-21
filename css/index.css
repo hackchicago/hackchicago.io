@@ -177,7 +177,7 @@ button:hover {
   background-color: #bfd8f9;
   background: -webkit-linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
   background: linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
-  padding: 120px 20px 120px 20px;
+  padding: 120px 20px 45px 20px;
   text-align: center;
 }
 
