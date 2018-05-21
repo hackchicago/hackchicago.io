@@ -727,13 +727,13 @@ body.noscroll {
   color: #5299D3;
 }
 
-.forceState {
+.forceState, #scrollToAP {
   cursor: pointer;
 }
 
 #signup-success {
   color: #5299D3;
-  font-size: 17px;
+  font-size: 16px;
   display: none;
   padding: 5px;
 }

@@ -168,20 +168,18 @@ $('.generate').on('click', function() {
   }
 });
 
-$('.ap-reset').on('click', function() {
+$('.ap-reset').on('click touchstart', function() {
   resetAP();
 });
 
-$('#forceState').on('click', checkState);
+$('#forceState').on('click touchstart', checkState);
+$('#scrollToAP').on('click touchstart', scrollToAP);
 
 function checkState() {
 
   $('#ambassador').show();
   if (Cookies.get('hasSignedUp') == undefined) {
-    $('html, body').animate({
-      scrollTop: $("#ambassador").offset().top
-    }, 2800);
-
+    scrollToAP();
     Cookies.set('hasSignedUp', 'true', {
       expires: 180
     });
@@ -195,6 +193,12 @@ function checkState() {
     Cookies.remove('hasSignedUp');
     window.location.reload(false);
   }
+}
+
+function scrollToAP() {
+  $('html, body').animate({
+    scrollTop: $("#ambassador").offset().top
+  }, 2800);
 }
 
 function setAPLink(n) {
