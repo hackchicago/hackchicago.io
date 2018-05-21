@@ -285,6 +285,7 @@ sr.reveal('.row-wrapper', {
   distance: "50px",
   mobile: false
 });
+sr.reveal('.alt-signup');
 sr.reveal('.card');
 sr.reveal('.tier');
 sr.reveal('.sponsor');
