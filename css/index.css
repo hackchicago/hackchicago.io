@@ -731,6 +731,13 @@ body.noscroll {
   cursor: pointer;
 }
 
+#scrollToAP {
+    background-image: linear-gradient(to right, #5299d3 50%, transparent 50%);
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 3px 1px;
+}
+
 #signup-success {
   color: #5299D3;
   font-size: 16px;
