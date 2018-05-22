@@ -51,7 +51,7 @@ $(document).ready(function() {
   checkRef(Cookies.get('ref'));
 
   if (Cookies.get('hasSignedUp') !== undefined) {
-    $('#button-signup').hide();
+    $('.general-signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('#ambassador').show();
@@ -184,10 +184,6 @@ $('.ap-reset').on('click touchstart', function() {
 
 $('#forceState').on('click touchstart', checkState);
 $('#scrollToAP').on('click touchstart', scrollToAP);
-<<<<<<< HEAD
-=======
-
->>>>>>> 59d18a3d53964fd9f3db3482f29ad88c2859bed1
 $('.alt-signup.school').on('click touchstart', function() {
   $('html, body').animate({
     scrollTop: $("#school").offset().top - 100
@@ -231,7 +227,7 @@ function checkState() {
 
 function scrollToAP() {
   $('html, body').animate({
-    scrollTop: $("#ambassador").offset().top
+    scrollTop: $("#ambassador").offset().top - 50
   }, 2800);
 }
 
