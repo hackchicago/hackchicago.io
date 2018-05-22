@@ -192,6 +192,7 @@ $('.alt-signup.school').on('click touchstart', function() {
     $('#school').effect("highlight", {
       color: 'rgba(82,153,211,.5)'
     }, 3500);
+    $('#school').css('opacity', '1!important');
   }, 500);
 });
 $('.alt-signup.mentor').on('click touchstart', function() {
@@ -202,6 +203,7 @@ $('.alt-signup.mentor').on('click touchstart', function() {
     $('#mentor').effect("highlight", {
       color: 'rgba(82,153,211,.5)'
     }, 3500);
+    $('#mentor').css('opacity', '1!important');
   }, 500);
 });
 
