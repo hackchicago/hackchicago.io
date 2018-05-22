@@ -182,24 +182,6 @@ $('.ap-reset').on('click touchstart', function() {
   resetAP();
 });
 
-// https://stackoverflow.com/a/13106698
-jQuery.fn.highlight = function () {
-  $(this).each(function () {
-    var el = $(this);
-    $("<div/>")
-      .width(el.outerWidth())
-      .height(el.outerHeight())
-      .css({
-        "position": "absolute",
-        "left": el.offset().left,
-        "top": el.offset().top,
-        "background-color": "#5299d3",
-        "opacity": ".7",
-        "z-index": "9999999"
-      }).appendTo('body').fadeOut(3500).queue(function () { $(this).remove(); });
-  });
-}
-
 $('#forceState').on('click touchstart', checkState);
 $('#scrollToAP').on('click touchstart', scrollToAP);
 $('.alt-signup.school').on('click touchstart', function() {
@@ -207,7 +189,7 @@ $('.alt-signup.school').on('click touchstart', function() {
     scrollTop: $("#school").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#school').highlight();
+    $('#school .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
   }, 500);
 });
 $('.alt-signup.mentor').on('click touchstart', function() {
@@ -215,7 +197,7 @@ $('.alt-signup.mentor').on('click touchstart', function() {
     scrollTop: $("#mentor").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#mentor').highlight();
+    $('#mentor .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
   }, 500);
 });
 
