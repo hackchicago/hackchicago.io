@@ -508,7 +508,7 @@ button:hover {
   text-align: center;
 }
 
-#sponsors .sponsor-div {
+#sponsors .sponsor-div, #sponsor-major, #sponsor-minor {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -538,7 +538,7 @@ button:hover {
   margin: 25px;
 }
 
-#sponsors .sponsor-big {
+#sponsor-major .sponsor {
   box-sizing: border-box;
   display: block;
   width: 250px;
@@ -546,18 +546,10 @@ button:hover {
   margin: 25px;
 }
 
-#sponsors .sponsor-small {
+#sponsor-minor .sponsor {
   box-sizing: border-box;
   display: block;
   width: 170px;
-  height: auto;
-  margin: 25px;
-}
-
-#sponsors .sponsor-tiny {
-  box-sizing: border-box;
-  display: block;
-  width: 100px;
   height: auto;
   margin: 25px;
 }
