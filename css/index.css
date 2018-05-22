@@ -89,7 +89,7 @@ header {
   text-align: center;
   padding: 0 20px 0 20px;
   color: #5299D3;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
   margin: 0;
   margin-top: 12px;
@@ -420,7 +420,7 @@ button:hover {
 
 .faq h4 {
   color: #262626;
-  font-size: 130%;
+  font-size: 125%;
   margin: 0;
   text-align: left;
   line-height: 120%;
