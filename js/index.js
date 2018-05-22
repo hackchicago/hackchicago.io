@@ -229,7 +229,7 @@ function checkState() {
 
 function scrollToAP() {
   $('html, body').animate({
-    scrollTop: $("#ambassador").offset().top - 60
+    scrollTop: $("#ambassador").offset().top
   }, 2800);
 }
 
