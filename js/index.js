@@ -59,7 +59,7 @@ $(document).ready(function() {
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
     $('#forceState').on('click', checkState);
-  } else {}
+  }
 
   if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
@@ -227,7 +227,7 @@ function checkState() {
 
 function scrollToAP() {
   $('html, body').animate({
-    scrollTop: $("#ambassador").offset().top - 50
+    scrollTop: $("#ambassador").offset().top - 60
   }, 2800);
 }
 
