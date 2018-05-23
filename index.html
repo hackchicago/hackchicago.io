@@ -42,7 +42,7 @@
         <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
 
         <div id="signup-section">
-          <div id="button-signup"></div>
+          <div><button class="general-signup">Sign Up</button></div>
           <p id="signup-success">Your application has been submitted!<br />Be sure to check out the <a id="scrollToAP">Ambassadors Program!</a></p>
         </div>
         <!-- Autofilling Referral Code-->
@@ -63,6 +63,17 @@
   <div id="join" class="crossfade">
     <img src="img/peopleblue3.svg" alt="icon of students">
     <p class="calltoaction">Join us and over 400 other students to be a part of the Midwest's largest high school hackathon</p>
+  </div>
+
+  <div id="register-section">
+    <p>I am registering as a
+      <div id="button-group">
+        <button class="alt-signup attendee" id="button-signup">Student</button>
+        <button class="alt-signup mentor">Mentor</button>
+        <button class="alt-signup school">School</button>
+      </div>
+    </p>
+    <span id="troubleshoot"></span>
   </div>
 
   <div class="about">
@@ -168,12 +179,14 @@
         </p>
       </div>
 
-      <div class="card faq">
+      <div class="card faq" id="mentor">
+          <div class="highlight-block"></div>
           <h4>Interested in becoming a mentor?</h4>
           <p>Please fill out the mentor <a href="https://goo.gl/forms/wFkYEfD3PMNxIcux2" target="_blank">application form</a>, and we'll reach back to you via email!</p>
       </div>
 
-      <div class="card faq">
+      <div class="card faq" id="school">
+        <div class="highlight-block"></div>
         <h4>Registering for a school?</h4>
         <p>You may bring as many students as you like! To help us process your registration faster, please create a list of your students' information with our <a href="https://docs.google.com/spreadsheets/d/1yPw2Tv-_ZbD0fNkhuYnpSJ5tKL234hfxKLoz8j0UWBk/copy">template</a>
           (<a href="/docs/batch_template.xlsx">download</a>) and upload it to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScd4BGqUd_3G3Nz6aXk9OiLNKfchaBXc2kHrEOFS1wjXWEIOw/viewform">school registration form</a>. We'll get back to you via email

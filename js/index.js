@@ -1,6 +1,10 @@
 window.sr = ScrollReveal({
   scale: .8
 });
+
+//Mobile compatible touch event
+const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
+
 $(document).ready(function() {
   var clientHeight = $(window).height();
   $('#parallax').css('height', clientHeight);
@@ -51,24 +55,27 @@ $(document).ready(function() {
   checkRef(Cookies.get('ref'));
 
   if (Cookies.get('hasSignedUp') !== undefined) {
-    $('.signup').hide();
+    $('.general-signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('#ambassador').show();
+    $('#register-section').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
-    $('#forceState').on('click', checkState);
-  } else {
-    $('#button-signup').html('<button class="signup">Sign Up</button>');
-    $('.signup').on('click touchstart', function() {
-      $("#referralCode").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
-      toggleSignup();
-    });
+    $('#forceState').on(clickEvent, checkState);
   }
 
   if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
   }
+
+  let scrollBottom = $(window).scrollTop() + $(window).height();
+});
+
+$('.general-signup').on(clickEvent, function() {
+  $('html, body').animate({
+    scrollTop: $("#register-section").offset().top - 150
+  }, 1800);
 });
 
 function toggleSignup(ref) {
@@ -108,7 +115,14 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $(".signup").on('click touchstart', 'toggleSignup("' + code + '")')
+    $("#button-signup").on(clickEvent, function() {
+       toggleSignup(code);
+    });
+  } else {
+    $('#button-signup').on(clickEvent, function() {
+      $("#troubleshoot").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
+      toggleSignup();
+    });
   }
 
   return code;
@@ -122,7 +136,7 @@ function finishSignupFlow() {
   $('body').toggleClass('noscroll');
   $('body').toggleClass('yieldFocus');
 
-  $('.signup').hide();
+  $('#button-signup').hide();
   $('.refBar').hide();
   $('#signup-success').show();
 
@@ -156,11 +170,11 @@ $('a[href*="#"]')
     }
   });
 
-$('.splitscreen-close').on('click', function() {
+$('.splitscreen-close').on(clickEvent, function() {
   toggleSignup();
 });
 
-$('.generate').on('click', function() {
+$('.generate').on(clickEvent, function() {
   if ($('.ap-name').val() != "") {
     Cookies.set("ap-name", setAPLink($('.ap-name').val()), {
       expires: 180
@@ -168,27 +182,43 @@ $('.generate').on('click', function() {
   }
 });
 
-$('.ap-reset').on('click touchstart', function() {
+$('.ap-reset').on(clickEvent, function() {
   resetAP();
 });
 
-$('#forceState').on('click touchstart', checkState);
-$('#scrollToAP').on('click touchstart', scrollToAP);
+$('#forceState').on(clickEvent, checkState);
+$('#scrollToAP').on(clickEvent, scrollToAP);
+$('.alt-signup.school').on(clickEvent, function() {
+  $('html, body').animate({
+    scrollTop: $("#school").offset().top - 100
+  }, 1200);
+  setTimeout(function() {
+    $('#school .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
+  }, 500);
+});
+$('.alt-signup.mentor').on(clickEvent, function() {
+  $('html, body').animate({
+    scrollTop: $("#mentor").offset().top - 100
+  }, 1200);
+  setTimeout(function() {
+    $('#mentor .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
+  }, 500);
+});
 
 function checkState() {
-
-  $('#ambassador').show();
   if (Cookies.get('hasSignedUp') == undefined) {
+    $('#ambassador').show();
     scrollToAP();
     Cookies.set('hasSignedUp', 'true', {
       expires: 180
     });
-    $('.signup').hide();
+    $('#register-section').hide();
+    $('.general-signup').hide();
     $('#signup-success').show();
     $('.refBar').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
-    $('#forceState').on('click', checkState);
+    $('#forceState').on(clickEvent, checkState);
   } else {
     Cookies.remove('hasSignedUp');
     window.location.reload(false);
@@ -204,7 +234,7 @@ function scrollToAP() {
 function setAPLink(n) {
   $('.ap-form').hide();
   $('.ap-result').html("<span>Your unique link:</span>&ensp;<input class=\"ap-link\" value=\"https://hackchicago.io/?ref=" + n.replace(" ", "+") + "\">");
-  $(".ap-link").on("click", function () {
+  $(".ap-link").on("click", function() {
     if (!navigator.clipboard) {
       $(".ap-link").focus();
       $(".ap-link").select();
@@ -223,7 +253,7 @@ function setAPLink(n) {
       });
     }
   });
-  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length*8 + "px");
+  $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-link').attr('style', "width: " + $('.ap-link').val().length * 8 + "px");
   $('.ap-name-box').text(n);
   $('.ap-reset-bar').show();
@@ -254,6 +284,7 @@ sr.reveal('.row-wrapper', {
   distance: "50px",
   mobile: false
 });
+sr.reveal('.alt-signup');
 sr.reveal('.card');
 sr.reveal('.tier');
 sr.reveal('.sponsor');
