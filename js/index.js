@@ -1,6 +1,10 @@
 window.sr = ScrollReveal({
   scale: .8
 });
+
+//Mobile compatible touch event
+const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
+
 $(document).ready(function() {
   var clientHeight = $(window).height();
   $('#parallax').css('height', clientHeight);
@@ -68,7 +72,7 @@ $(document).ready(function() {
   let scrollBottom = $(window).scrollTop() + $(window).height();
 });
 
-$('.general-signup').on('click touchstart', function() {
+$('.general-signup').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#register-section").offset().top - 150
   }, 1800);
@@ -111,11 +115,11 @@ function fillRef(code) {
 
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
-    $("#button-signup").on('click touchstart', function() {
+    $("#button-signup").on(clickEvent, function() {
        toggleSignup(code);
     });
   } else {
-    $('#button-signup').on('click touchstart', function() {
+    $('#button-signup').on(clickEvent, function() {
       $("#troubleshoot").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
@@ -178,13 +182,13 @@ $('.generate').on('click', function() {
   }
 });
 
-$('.ap-reset').on('click touchstart', function() {
+$('.ap-reset').on(clickEvent, function() {
   resetAP();
 });
 
-$('#forceState').on('click touchstart', checkState);
-$('#scrollToAP').on('click touchstart', scrollToAP);
-$('.alt-signup.school').on('click touchstart', function() {
+$('#forceState').on(clickEvent, checkState);
+$('#scrollToAP').on(clickEvent, scrollToAP);
+$('.alt-signup.school').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#school").offset().top - 100
   }, 1200);
@@ -192,7 +196,7 @@ $('.alt-signup.school').on('click touchstart', function() {
     $('#school .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
   }, 500);
 });
-$('.alt-signup.mentor').on('click touchstart', function() {
+$('.alt-signup.mentor').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#mentor").offset().top - 100
   }, 1200);
