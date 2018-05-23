@@ -57,6 +57,12 @@ gulp.task('docs', function() {
         .pipe(reload({stream:true}))
 })
 
+gulp.task('static', function() {
+    gulp.src('static/**/*')
+        .pipe(gulp.dest('dist/'))
+        .pipe(reload({stream:true}))
+})
+
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -74,5 +80,5 @@ gulp.task('watch', function() {
   gulp.watch('fonts/**/*', ['fonts']);
 });
 
-gulp.task('default', ['browser-sync', 'html', 'js', 'css', 'img', 'fonts', 'docs', 'watch']);
-gulp.task('build', ['html', 'js', 'css', 'img', 'fonts', 'docs']);
+gulp.task('default', ['browser-sync', 'html', 'js', 'css', 'img', 'fonts', 'docs', 'static', 'watch']);
+gulp.task('build', ['html', 'js', 'css', 'img', 'fonts', 'static', 'docs']);
