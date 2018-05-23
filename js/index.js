@@ -62,7 +62,7 @@ $(document).ready(function() {
     $('#register-section').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
-    $('#forceState').on('click', checkState);
+    $('#forceState').on(clickEvent, checkState);
   }
 
   if (Cookies.get('ap-name') !== undefined) {
@@ -170,11 +170,11 @@ $('a[href*="#"]')
     }
   });
 
-$('.splitscreen-close').on('click', function() {
+$('.splitscreen-close').on(clickEvent, function() {
   toggleSignup();
 });
 
-$('.generate').on('click', function() {
+$('.generate').on(clickEvent, function() {
   if ($('.ap-name').val() != "") {
     Cookies.set("ap-name", setAPLink($('.ap-name').val()), {
       expires: 180
@@ -218,7 +218,7 @@ function checkState() {
     $('.refBar').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
-    $('#forceState').on('click', checkState);
+    $('#forceState').on(clickEvent, checkState);
   } else {
     Cookies.remove('hasSignedUp');
     window.location.reload(false);
