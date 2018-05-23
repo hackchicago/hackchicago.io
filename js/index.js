@@ -5,47 +5,13 @@ window.sr = ScrollReveal({
 //Mobile compatible touch event
 const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
 
+$(window).resize(function() {
+  resizeParallax();
+});
+
 $(document).ready(function() {
-  var clientHeight = $(window).height();
-  $('#parallax').css('height', clientHeight);
-  $('.backrow').css('height', clientHeight);
-  $('.middlerow').css('height', clientHeight);
-  $('.frontrow').css('height', clientHeight);
+  resizeParallax();
   /*$('.bottom').css('margin-top', clientHeight);*/
-
-  /*$(window).resize(function() {
-    clientHeight = $(window).height();
-    $('#parallax').css('height', clientHeight);
-    $('.backrow').css('height', clientHeight);
-    $('.middlerow').css('height', clientHeight);
-    $('.frontrow').css('height', clientHeight);
-    console.log(clientHeight);
-  });*/
-
-  var clientWidth = $(window).width();
-  console.log(clientWidth);
-
-  if (clientWidth >= 880) {
-    var divWidth1 = parseFloat($('#tleft').css('width'));
-    var divWidth2 = parseFloat($('#bright').css('width'));
-    var imgHeight = parseFloat($('#bround1').css('height'));
-    $('#tleft').css('width', divWidth1);
-    $('#bright').css('width', divWidth2);
-    $('#tleft').css('height', imgHeight);
-    $('#bright').css('height', imgHeight);
-    var imgHeight2 = (imgHeight) / 2;
-
-    $(window).resize(function() {
-      var divWidth1 = parseFloat($('#tleft').css('width'));
-      var divWidth2 = parseFloat($('#bright').css('width'));
-      var imgHeight = parseFloat($('#bround1').css('height'));
-      $('#tleft').css('width', divWidth1);
-      $('#bright').css('width', divWidth2);
-      $('#tleft').css('height', imgHeight);
-      $('#bright').css('height', imgHeight);
-      var imgHeight2 = (imgHeight) / 2;
-    });
-  }
   let counter = 0;
   $("#bround2").on("click", function() {
     counter++;
@@ -71,6 +37,23 @@ $(document).ready(function() {
 
   let scrollBottom = $(window).scrollTop() + $(window).height();
 });
+
+function resizeParallax() {
+  var clientWidth = $(window).width();
+  var clientHeight = $(window).height();
+  $('#parallax').css('height', clientHeight);
+  $('.backrow').css('height', clientHeight);
+  $('.middlerow').css('height', clientHeight);
+  $('.frontrow').css('height', clientHeight);
+  var divWidth1 = parseFloat($('#tleft').css('width'));
+  var divWidth2 = parseFloat($('#bright').css('width'));
+  var imgHeight = parseFloat($('#bround1').css('height'));
+  $('#tleft').css('width', divWidth1);
+  $('#bright').css('width', divWidth2);
+  $('#tleft').css('height', imgHeight);
+  $('#bright').css('height', imgHeight);
+  var imgHeight2 = (imgHeight) / 2;
+}
 
 $('.general-signup').on(clickEvent, function() {
   $('html, body').animate({
