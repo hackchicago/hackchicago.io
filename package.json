@@ -1,0 +1,30 @@
+{
+  "name": "@hackchicago/hackchicago",
+  "version": "1.0.0",
+  "description": "Hack Chicago's website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackchicago/hackchicago.git"
+  },
+  "author": "Hack Chicago Team <team@hackchicago.io>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/hackchicago/hackchicago/issues"
+  },
+  "homepage": "https://github.com/hackchicago/hackchicago#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0"
+  }
+}
