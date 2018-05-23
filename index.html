@@ -1,63 +1,50 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <meta name="description" content="Hack Chicago is the premier high school hackathon that looks to educate newer students on computer science while also helping the more advanced programmers excel. We look to encourage any students to come and grow their love for programming and create awesome projects. We strive to spread and educate students on computer science in the midwest region." />
+  <link rel="stylesheet" href="css/style.css" async />
+  <link rel="stylesheet" href="css/index.css" async />
+  <meta name="description" content="Hack Chicago is the premier high school hackathon that looks to educate newer students on computer science while also helping the more advanced programmers excel. We look to encourage any students to come and grow their love for programming and create awesome projects. We strive to spread and educate students on computer science in the midwest region."
+  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <!--<link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-    <link rel="manifest" href="img/icon/manifest.json"> -->
-    <meta name="msapplication-TileColor" content="#1157DF">
-    <!--<meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">-->
-    <meta name="theme-color" content="#1157DF">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="preload" href="apply.html" as="document">
-    <title>Hack Chicago 2018</title>
-  </head>
+  <meta name="msapplication-TileColor" content="#1157DF">
+  <meta name="theme-color" content="#1157DF">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  <link rel="preload" href="apply.html" as="document">
+  <title>Hack Chicago 2018</title>
+</head>
 
-  <body>
+<body>
+  <header id="parallax">
+    <div class="backrow rellax" data-rellax-speed="-8"></div>
+    <div class="middlerow rellax" data-rellax-speed="-5"></div>
+    <div class="frontrow rellax" data-rellax-speed="0"></div>
 
-    <header id="parallax">
-      <div class="backrow rellax" data-rellax-speed="-8"></div>
-      <div class="middlerow rellax" data-rellax-speed="-5"></div>
-      <div class="frontrow rellax" data-rellax-speed="0"></div>
+    <div class="center">
+      <img src="img/bluelogo.svg" alt="Hack Chicago">
+      <h2>The Midwest's Largest High School Hackathon</h2>
+      <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
 
-      <div class="center">
-        <img src="img/bluelogo.svg" alt="Hack Chicago">
-        <h2>The Midwest's Largest High School Hackathon</h2>
-        <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
-
-        <div id="signup-section">
-          <div><button class="general-signup">Sign Up</button></div>
-          <p id="signup-success">Your application has been submitted!<br />Be sure to check out the <a id="scrollToAP">Ambassadors Program!</a></p>
-        </div>
-        <!-- Autofilling Referral Code-->
-        <sub class="refBar"><span id="referralCode"></span></sub>
-        <sub class="forceState">Already registered? <a id="forceState">Refer Your Friends</a>!</sub>
+      <div id="signup-section">
+        <div><button class="general-signup">Sign Up</button></div>
+        <p id="signup-success">Your application has been submitted!<br />Be sure to check out the <a id="scrollToAP">Ambassadors Program!</a></p>
       </div>
-      <a id="scroll-container" href="#join"><div class="scroll-indicator"></div></a>
-    </header>
-
-    <div class="splitscreen">
-      <a class="splitscreen-close"></a>
-      <iframe id="signup-frame"></iframe>
+      <!-- Autofilling Referral Code-->
+      <sub class="refBar"><span id="referralCode"></span></sub>
+      <sub class="forceState">Already registered? <a id="forceState">Refer Your Friends</a>!</sub>
     </div>
+    <a id="scroll-container" href="#join">
+      <div class="scroll-indicator"></div>
+    </a>
+  </header>
 
-    <div class="split-overlay"></div>
+  <div class="splitscreen">
+    <a class="splitscreen-close"></a>
+    <iframe id="signup-frame"></iframe>
+  </div>
+
+  <div class="split-overlay"></div>
   </svg>
 
   <div id="join" class="crossfade">
@@ -86,7 +73,8 @@
             </span>
           </a>
           <h3>Last Year...</h3>
-          <p>We hosted <a href="http://chicagohacks.tech/" style="color: #03A9F4" target="_blank">Chicago Hacks</a>, Chicago’s largest high school hackathon. With over 130 attendees and over 30 projects presented, it would be an understatement to call that just a success. We saw passionate hackers collaborate and build amazing things in 24 hours. Through workshops and mentorships, beginners and veteran programmers created awesome projects. </p>
+          <p>We hosted <a href="http://chicagohacks.tech/" style="color: #03A9F4" target="_blank">Chicago Hacks</a>, Chicago’s largest high school hackathon. With over 130 attendees and over 30 projects presented, it would be an understatement to call that
+            just a success. We saw passionate hackers collaborate and build amazing things in 24 hours. Through workshops and mentorships, beginners and veteran programmers created awesome projects. </p>
         </div>
         <div class="top-right">
           <img src="img/chihacks-big.jpg" alt="Students working at Chicago Hacks 2017" class="background" id="bround1">
@@ -104,7 +92,8 @@
             </span>
           </a>
           <h3>This Year...</h3>
-          <p>We are striving to improve the event by making it bigger and better. Through a partnership with <a href="https://hackclub.com/" target="_blank">Hack Club</a>, we will be bringing an even larger event to the the Midwest. With more attendees, activities, prizes, and hackers, we expect this year to be a blast!</p>
+          <p>We are striving to improve the event by making it bigger and better. Through a partnership with <a href="https://hackclub.com/" target="_blank">Hack Club</a>, we will be bringing an even larger event to the the Midwest. With more attendees,
+            activities, prizes, and hackers, we expect this year to be a blast!</p>
         </div>
       </div>
     </div>
@@ -117,12 +106,14 @@
 
       <div class="card faq">
         <h4>What is a hackathon?</h4>
-        <p>A hackathon is an event where programmers come to learn and build cool things together. Students have been learning skills in school that they never put into use - hackathons are aimed to solve that problem. We’d love to see students converting ideas into apps and games, and it’s also a great time to learn new skills through various workshops.</p>
+        <p>A hackathon is an event where programmers come to learn and build cool things together. Students have been learning skills in school that they never put into use - hackathons are aimed to solve that problem. We’d love to see students converting
+          ideas into apps and games, and it’s also a great time to learn new skills through various workshops.</p>
       </div>
 
       <div class="card faq">
         <h4>What is Hack Chicago?</h4>
-        <p>Hack Chicago is the premier high school hackathon that looks to gather 400+ high school programmers throughout the Midwest for 24 hours of fun! All you need to worry about is building something awesome, and we’ll provide the rest - including mentors, sponsors, workshops and a great number of resources. </p>
+        <p>Hack Chicago is the premier high school hackathon that looks to gather 400+ high school programmers throughout the Midwest for 24 hours of fun! All you need to worry about is building something awesome, and we’ll provide the rest - including mentors,
+          sponsors, workshops and a great number of resources. </p>
       </div>
 
       <div class="card faq">
@@ -174,23 +165,22 @@
         <h4>Do you have a code of conduct?</h4>
         <p>
           Although Hack Chicago is currently not an MLH affliated event, attendees are required to adhere to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>
-          and the <a href="https://conduct.hackclub.com">Hack Club Code of Conduct</a>.
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a> and the <a href="https://conduct.hackclub.com">Hack Club Code of Conduct</a>.
         </p>
       </div>
 
       <div class="card faq" id="mentor">
-          <div class="highlight-block"></div>
-          <h4>Interested in becoming a mentor?</h4>
-          <p>Please fill out the mentor <a href="https://goo.gl/forms/wFkYEfD3PMNxIcux2" target="_blank">application form</a>, and we'll reach back to you via email!</p>
+        <div class="highlight-block"></div>
+        <h4>Interested in becoming a mentor?</h4>
+        <p>Please fill out the mentor <a href="https://goo.gl/forms/wFkYEfD3PMNxIcux2" target="_blank">application form</a>, and we'll reach back to you via email!</p>
       </div>
 
       <div class="card faq" id="school">
         <div class="highlight-block"></div>
         <h4>Registering for a school?</h4>
-        <p>You may bring as many students as you like! To help us process your registration faster, please create a list of your students' information with our <a href="https://docs.google.com/spreadsheets/d/1yPw2Tv-_ZbD0fNkhuYnpSJ5tKL234hfxKLoz8j0UWBk/copy">template</a>
-          (<a href="/docs/batch_template.xlsx">download</a>) and upload it to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScd4BGqUd_3G3Nz6aXk9OiLNKfchaBXc2kHrEOFS1wjXWEIOw/viewform">school registration form</a>. We'll get back to you via email
-        as soon as possible!</p>
+        <p>You may bring as many students as you like! To help us process your registration faster, please create a list of your students' information with our <a href="https://docs.google.com/spreadsheets/d/1yPw2Tv-_ZbD0fNkhuYnpSJ5tKL234hfxKLoz8j0UWBk/copy">template</a>          (
+          <a href="/docs/batch_template.xlsx">download</a>) and upload it to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScd4BGqUd_3G3Nz6aXk9OiLNKfchaBXc2kHrEOFS1wjXWEIOw/viewform">school registration form</a>. We'll get back to you via email
+          as soon as possible!</p>
       </div>
 
       <div class="card faq">
@@ -208,36 +198,34 @@
       <div class="tier bronze">
         <h2>Bronze</h2>
         <p>5 Referrals</p>
-        <p>It's always better to have friends coming with you, isn't it? Partner up with them, learn together,
-          and go home at the end of the 24 hours with knowledge and satisfaction.</p>
+        <p>It's always better to have friends coming with you, isn't it? Partner up with them, learn together, and go home at the end of the 24 hours with knowledge and satisfaction.</p>
         <p class="reward">Reward: A special sticker!</p>
       </div>
 
       <div class="tier silver">
-          <h2>Silver</h2>
-          <p>10 Referrals</p>
-          <p>You're not with a group of friends anymore - you're bringing your crew! Work together and
-            consult each other... There is always someone to learn from!</p>
-          <p class="reward">Reward: A special t-shirt!</p>
+        <h2>Silver</h2>
+        <p>10 Referrals</p>
+        <p>You're not with a group of friends anymore - you're bringing your crew! Work together and consult each other... There is always someone to learn from!</p>
+        <p class="reward">Reward: A special t-shirt!</p>
       </div>
 
       <div class="tier gold">
-          <h2>Gold</h2>
-          <p>20 Referrals</p>
-          <p>Wow, that's impressive! You've demonstrated your ability to engage your community, and we'd love
-            to know more about you!
-          </p>
-          <p class="reward">Reward: A chance to hangout with the organizers before/after the event!</p>
+        <h2>Gold</h2>
+        <p>20 Referrals</p>
+        <p>Wow, that's impressive! You've demonstrated your ability to engage your community, and we'd love to know more about you!
+        </p>
+        <p class="reward">Reward: A chance to hangout with the organizers before/after the event!</p>
       </div>
     </div>
 
     <div class="link">
       <div class="ap-form">
-          <h3>Get your unique link and share with your friends!</h3>
-          <input class="ap-name" placeholder="Your full name"></input>
-          <button class="generate">Generate</button>
+        <h3>Get your unique link and share with your friends!</h3>
+        <input class="ap-name" placeholder="Your full name"></input>
+        <button class="generate">Generate</button>
       </div>
-      <div class="ap-result"></div><div class="ap-tooltip"></div>
+      <div class="ap-result"></div>
+      <div class="ap-tooltip"></div>
       <p class="ap-reset-bar">Not <span class="ap-name-box"></span>? <a class="ap-reset">Reset</a></p>
     </div>
   </div>
@@ -262,16 +250,7 @@
         <a href="https://zapier.com/" target="_blank"><img class="sponsor" src="img/sponsors/zapier.svg" alt="Zapier" style="width: 100px" /></a>
       </div>
     </div>
-    <!--<div class="sponsor-div">
-      <a href="https://www.stickermule.com/" target="_blank"><img class="sponsor-small" src="img/sponsors/stickermule.png" alt="StickerMule"></a>
-    </div>-->
   </div>
-
-  <!--<div id="prospectus">
-    <h3>Interested in becoming a sponsor for our Event?</h3>
-    <a href="docs/prospectus.pdf"><button>Read our Prospectus</button></a>
-    <a href="mentorclosed.html"><button class="closed">Mentor Registration Closed</button></a>
-  </div>-->
 
   <div class="crossfade-reverse footer">
     <div class="social">
@@ -290,20 +269,12 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/rellax.min.js"></script>
   <script src="js/scroll.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="js/index.js"></script>
-  <script>
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-    analytics.load("wVEX8meye3Oh38zsdy30FOcZDVWEIQ3H");
-    analytics.page();
-  }}();
-</script>
-<script>
-  var rellax = new Rellax('.rellax');
-</script>
+  <script src="js/inject.js"></script>
 
 </body>
+
 </html>

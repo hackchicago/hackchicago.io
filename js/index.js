@@ -99,7 +99,7 @@ function fillRef(code) {
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
     $("#button-signup").on(clickEvent, function() {
-       toggleSignup(code);
+      toggleSignup(code);
     });
   } else {
     $('#button-signup').on(clickEvent, function() {
@@ -176,7 +176,9 @@ $('.alt-signup.school').on(clickEvent, function() {
     scrollTop: $("#school").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#school .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
+    $('#school .highlight-block').effect("highlight", {
+      color: 'rgba(82, 153, 211, .8)'
+    }, 3000);
   }, 500);
 });
 $('.alt-signup.mentor').on(clickEvent, function() {
@@ -184,7 +186,9 @@ $('.alt-signup.mentor').on(clickEvent, function() {
     scrollTop: $("#mentor").offset().top - 100
   }, 1200);
   setTimeout(function() {
-    $('#mentor .highlight-block').effect("highlight", {color: 'rgba(82, 153, 211, .8)'}, 3000);
+    $('#mentor .highlight-block').effect("highlight", {
+      color: 'rgba(82, 153, 211, .8)'
+    }, 3000);
   }, 500);
 });
 
@@ -263,8 +267,6 @@ sr.reveal('.center', {
 });
 sr.reveal('.row-wrapper', {
   scale: 1,
-  viewFactor: 0.05,
-  distance: "50px",
   mobile: false
 });
 sr.reveal('.alt-signup');
