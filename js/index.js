@@ -34,9 +34,9 @@ $(document).ready(function() {
 });
 
 // define event times
-const signupEnd = moment('2018-07-14 23:59');
-const hackChicagoStart = moment('2018-07-21 12:00');
-const hackChicagoEnd = moment('2018-07-22 12:00');
+let signupEnd = moment('2018-07-14 23:59');
+let hackChicagoStart = moment('2018-07-21 12:00');
+let hackChicagoEnd = moment('2018-07-22 12:00');
 function checkTime() {
   // get current time
   const now = moment();
