@@ -3,17 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" async />
-  <link rel="stylesheet" href="css/index.css" async />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
   <meta name="description" content="Hack Chicago is the premier high school hackathon that looks to educate newer students on computer science while also helping the more advanced programmers excel. We look to encourage any students to come and grow their love for programming and create awesome projects. We strive to spread and educate students on computer science in the midwest region."
   />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <meta name="msapplication-TileColor" content="#1157DF">
   <meta name="theme-color" content="#1157DF">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
   <link rel="preload" href="apply.html" as="document">
 
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css" defer>
   <!-- SEO -->
   <title>Hack Chicago 2018 | Midwest's Largest High School Hackathon</title>
   <meta name="description" content="Hack Chicago is the premier high school hackathon happening this summer in the Midwest that gathers 400+ high school programmers for 24 hours of fun!">
@@ -74,6 +72,10 @@
 </head>
 
 <body>
+  <noscript id="deferred-styles">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+  </noscript>
   <!-- For SEO Indexing -->
   <h1 id="seo-title">Hack Chicago</h1>
   <header id="parallax">
@@ -327,12 +329,24 @@
 
   </div>
 
-
+  <script>
+        var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("deferred-styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
   <script src="js/rellax.min.js"></script>
   <script src="js/scroll.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="js/cookie.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/inject.js"></script>
 
