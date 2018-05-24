@@ -96,6 +96,8 @@ function checkTime() {
     $('.refBar').hide();
     // hide forceState
     $('.forceState').hide();
+    // hide signup status
+    $('#signup-status').hide();
   }
 }
 
