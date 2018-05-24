@@ -92,6 +92,8 @@ function checkTime() {
     $('.date').text('Thanks for attending!');
     // add button to view winners on devpost
     $('#signup-button-div').html('<a href="https://hackchicago18.devpost.com/" target="_blank"><button style="width:160px;height:45px;">View Submissions</button></a>');
+    // resize button
+    $('#signup-button-div button').css('width', '80%');
     // hide referral code
     $('.refBar').hide();
     // hide forceState
