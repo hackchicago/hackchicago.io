@@ -75,6 +75,8 @@ function checkTime() {
     $('#signup-status').html('Sign ups are now closed.<br />For further inquiries, <a class="underline" href="mailto:hello@hackchicago.io">email us</a>.').show();
     // hide referral code
     $('.refBar').hide();
+    // hide forceState
+    $('.forceState').hide();
   // UNCOMMENT THIS LATER - TODO: setup event dashboard (i.e. notifications using browser api)
   /*
   // during event
@@ -92,6 +94,8 @@ function checkTime() {
     $('#signup-button-div').html('<a href="https://hackchicago.devpost.com" target="_blank"><button style="width:160px;height:45px;">View Winners</button></a>');
     // hide referral code
     $('.refBar').hide();
+    // hide forceState
+    $('.forceState').hide();
   }
 }
 
