@@ -72,7 +72,7 @@ function checkTime() {
     $('#register-section').hide();
     $('.general-signup').hide();
     // show closed signups message
-    $('#signup-status').html('Sign ups are now closed.<br />For further inquiries, <a class="underline" href="mailto:hello@hackchicago.io">email us</a>.').show();
+    $('#signup-status').html('Sign ups are now closed.<br />For further inquiries, please <a class="underline" href="mailto:hello@hackchicago.io">email us</a>.').show();
     // hide referral code
     $('.refBar').hide();
     // hide forceState
