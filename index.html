@@ -46,13 +46,13 @@
       "endDate": "2018-07-22T12:00",
       "location": {
         "@type": "Place",
-        "name": "",
+        "name": "TBA",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "",
+          "streetAddress": "TBA",
           "addressLocality": "Chicago",
           "addressRegion": "IL",
-          "postalCode": "",
+          "postalCode": "60625",
           "addressCountry": "US"
         }
       },
@@ -60,10 +60,14 @@
         "@type": "Offer",
         "name": "Free Admission",
         "price": "0",
-        "priceCurrency": "",
-        "validFrom": "",
+        "priceCurrency": "USD",
+        "validFrom": "2018-05-13T16:00-08:00",
         "url": "https://hackchicago.io",
         "availability": "http://schema.org/InStock"
+      },
+      "performer": {
+        "@type": "PerformingGroup",
+        "name": "High School Hackers"
       }
     }
   </script>
@@ -328,17 +332,19 @@
   </div>
 
   <script>
-        var loadDeferredStyles = function() {
-          var addStylesNode = document.getElementById("deferred-styles");
-          var replacement = document.createElement("div");
-          replacement.innerHTML = addStylesNode.textContent;
-          document.body.appendChild(replacement)
-          addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-        else window.addEventListener('load', loadDeferredStyles);
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    if (raf) raf(function() {
+      window.setTimeout(loadDeferredStyles, 0);
+    });
+    else window.addEventListener('load', loadDeferredStyles);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
