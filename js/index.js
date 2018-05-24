@@ -2,14 +2,16 @@ window.sr = ScrollReveal({
   scale: .8
 });
 
-//Mobile compatible touch event
+// mobile compatible touch event
 const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
 
+// reset parallax effect on window resize
 $(window).resize(function() {
   resizeParallax();
 });
 
 $(document).ready(function() {
+  // setup parallax effect
   resizeParallax();
   /*$('.bottom').css('margin-top', clientHeight);*/
   let counter = 0;
@@ -18,18 +20,11 @@ $(document).ready(function() {
     if (counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
   });
 
+  // check referral
   checkRef(Cookies.get('ref'));
 
-  if (Cookies.get('hasSignedUp') !== undefined) {
-    $('.general-signup').hide();
-    $('#signup-success').show();
-    $('.refBar').hide();
-    $('#ambassador').show();
-    $('#register-section').hide();
-    $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
-
-    $('#forceState').on(clickEvent, checkState);
-  }
+  // check times and update page depending on time
+  checkTime();
 
   if (Cookies.get('ap-name') !== undefined) {
     setAPLink(Cookies.get('ap-name'));
@@ -37,6 +32,68 @@ $(document).ready(function() {
 
   let scrollBottom = $(window).scrollTop() + $(window).height();
 });
+
+function checkTime() {
+  // define event times
+  const signupEnd = moment('2018-07-14 23:59');
+  const hackChicagoStart = moment('2018-07-21 12:00');
+  const hackChicagoEnd = moment('2018-07-22 12:00');
+  // get current time
+  const now = moment();
+
+  // before event & during signups
+  if (now.isBefore(signupEnd)) {
+    // setup page
+    // check if user has signed up & adjust page accordingly
+    // if user has signed up:
+    if (Cookies.get('hasSignedUp') !== undefined) {
+      // hide registration
+      $('#register-section').hide();
+      $('.general-signup').hide();
+      // suggest ambassador program
+      $('#signup-status').show();
+      // hide referral code
+      $('.refBar').hide();
+      // show ambassador program
+      $('#ambassador').show();
+      // show option to change state of registration
+      $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
+      $('#forceState').on(clickEvent, checkState);
+    } else {
+      // show signup button
+      $('#signup-button-div').show();
+      // show option to change state of registration
+      $('.forceState').html('Already registered? <a id="forceState">Refer Your Friends</a>!');
+      $('#forceState').on(clickEvent, checkState);
+    }
+  // after signups close
+  } else if (now.isBefore(hackChicagoEnd)) {
+    // hide registration
+    $('#register-section').hide();
+    $('.general-signup').hide();
+    // show closed signups message
+    $('#signup-status').html('Sign ups are now closed.<br />For further inquiries, <a class="underline" href="mailto:hello@hackchicago.io">email us</a>.').show();
+    // hide referral code
+    $('.refBar').hide();
+  // UNCOMMENT THIS LATER - TODO: setup event dashboard (i.e. notifications using browser api)
+  /*
+  // during event
+  } else if (now.isAfter(hackChicagoStart) && now.isBefore(hackChicagoEnd)) {
+    // add link to event dashboard (with live notifications)
+  */
+  // after event
+  } else if (now.isAfter(hackChicagoEnd)) {
+    // hide registration
+    $('#register-section').hide();
+    $('.general-signup').hide();
+    // change date to thanks for attending message
+    $('.date').text('Thanks for attending!');
+    // add button to view winners on devpost
+    $('#signup-button-div').html('<a href="https://hackchicago.devpost.com" target="_blank"><button style="width:160px;height:45px;">View Winners</button></a>');
+    // hide referral code
+    $('.refBar').hide();
+  }
+}
 
 function resizeParallax() {
   var clientWidth = $(window).width();
@@ -54,12 +111,6 @@ function resizeParallax() {
   $('#bright').css('height', imgHeight);
   var imgHeight2 = (imgHeight) / 2;
 }
-
-$('.general-signup').on(clickEvent, function() {
-  $('html, body').animate({
-    scrollTop: $("#register-section").offset().top - 150
-  }, 1800);
-});
 
 function toggleSignup(ref) {
   if (ref)
@@ -95,7 +146,6 @@ function checkRef(ref) {
 }
 
 function fillRef(code) {
-
   if (code != "" && code != null) {
     $("#referralCode").html("Referred by " + code);
     $("#button-signup").on(clickEvent, function() {
@@ -121,7 +171,7 @@ function finishSignupFlow() {
 
   $('#button-signup').hide();
   $('.refBar').hide();
-  $('#signup-success').show();
+  $('#signup-status').show();
 
   Cookies.set('hasSignedUp', 'true', {
     expires: 180
@@ -153,6 +203,17 @@ $('a[href*="#"]')
     }
   });
 
+// CLICK EVENTS
+// signup button
+$('.general-signup').on(clickEvent, function() {
+  // on signup button press, scroll page to #register-section (choose between student, mentor, school)
+  $('html, body').animate({
+    scrollTop: $("#register-section").offset().top - 150
+  }, 1800);
+});
+
+$('#scrollToAP').on(clickEvent, scrollToAP);
+
 $('.splitscreen-close').on(clickEvent, function() {
   toggleSignup();
 });
@@ -169,8 +230,6 @@ $('.ap-reset').on(clickEvent, function() {
   resetAP();
 });
 
-$('#forceState').on(clickEvent, checkState);
-$('#scrollToAP').on(clickEvent, scrollToAP);
 $('.alt-signup.school').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#school").offset().top - 100
@@ -181,6 +240,7 @@ $('.alt-signup.school').on(clickEvent, function() {
     }, 3000);
   }, 500);
 });
+
 $('.alt-signup.mentor').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#mentor").offset().top - 100
@@ -201,7 +261,7 @@ function checkState() {
     });
     $('#register-section').hide();
     $('.general-signup').hide();
-    $('#signup-success').show();
+    $('#signup-status').show();
     $('.refBar').hide();
     $('.forceState').html("Haven't registered yet? <a id=\"forceState\" href=\"#!\">Register</a>");
 
