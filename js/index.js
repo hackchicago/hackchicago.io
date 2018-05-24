@@ -333,7 +333,8 @@ sr.reveal('.center', {
 });
 sr.reveal('.row-wrapper', {
   scale: 1,
-  mobile: false
+  mobile: false,
+  viewFactor: 0.01,
 });
 sr.reveal('.alt-signup');
 sr.reveal('.card');

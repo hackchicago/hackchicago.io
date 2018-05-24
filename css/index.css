@@ -391,7 +391,7 @@ button:hover {
   padding: 40px 0 40px 0;
 }
 
-#faq h2 {
+#faq h3 {
   margin: 0;
   color: #2a2a2a;
   font-size: 2.2em;
@@ -461,7 +461,7 @@ button:hover {
     height: 240px;
   }
 
-  #ambassador h2 {
+  #ambassador h3 {
     font-size: 1.8em!important;
   }
 
@@ -513,7 +513,7 @@ button:hover {
   width: 40%;
 }
 
-#sponsors h2 {
+#sponsors h3 {
   margin-top: 0;
   margin-bottom: 5px;
   color: #2a2a2a;
@@ -886,18 +886,10 @@ a.social-icon {
   margin-top: 15px;
 }
 
-#ambassador h2 {
+#ambassador h3 {
   margin: 0;
   color: #2a2a2a;
   font-size: 2.2em;
-  font-weight: 500;
-  text-align: center;
-}
-
-#register-section h2 {
-  margin: 0;
-  color: #2a2a2a;
-  font-size: 1.8em;
   font-weight: 500;
   text-align: center;
 }
@@ -929,7 +921,7 @@ a.social-icon {
   font-weight: bold;
 }
 
-.ap-grid .tier h2 {
+.ap-grid .tier h3 {
   font-size: 1.75rem!important;
 }
 
