@@ -29,7 +29,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function(){
-  gulp.src('js/*.js')
+  gulp.src('js/**/*.js')
     .pipe(minify({
         ext:{
             src:'-debug.js',
