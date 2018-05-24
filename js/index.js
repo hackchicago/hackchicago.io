@@ -33,11 +33,11 @@ $(document).ready(function() {
   let scrollBottom = $(window).scrollTop() + $(window).height();
 });
 
+// define event times
+const signupEnd = moment('2018-07-14 23:59');
+const hackChicagoStart = moment('2018-07-21 12:00');
+const hackChicagoEnd = moment('2018-07-22 12:00');
 function checkTime() {
-  // define event times
-  const signupEnd = moment('2018-07-14 23:59');
-  const hackChicagoStart = moment('2018-07-21 12:00');
-  const hackChicagoEnd = moment('2018-07-22 12:00');
   // get current time
   const now = moment();
 
