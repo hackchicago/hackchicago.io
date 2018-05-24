@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create(),
 var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var imagemin = require('gulp-imagemin');
+var minifyInline = require('gulp-minify-inline');
 var minifyInlineJSON = require('gulp-minify-inline-json');
 
 gulp.task('html', function() {
@@ -14,6 +15,7 @@ gulp.task('html', function() {
       removeComments: true,
       quoteCharacter: "\""
     }))
+    .pipe(minifyInline())
     .pipe(minifyInlineJSON())
     .pipe(gulp.dest('dist'))
     .pipe(reload({stream:true}))
@@ -27,7 +29,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function(){
-  gulp.src('js/*.js')
+  gulp.src('js/**/*.js')
     .pipe(minify({
         ext:{
             src:'-debug.js',
