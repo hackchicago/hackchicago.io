@@ -93,23 +93,23 @@
       </div>
       <div class="row">
         <div class="six columns">
-          <label for="FNAME">First Name</label>
+          <label for="FNAME">First Name<span class="required">*</span></label>
           <input type="text" id="FNAME" name="FNAME" required />
         </div>
         <div class="six columns">
-          <label for="LNAME">Last Name</label>
+          <label for="LNAME">Last Name<span class="required">*</span></label>
           <input type="text" id="LNAME" name="LNAME" required />
         </div>
       </div>
 
       <div class="row">
-        <label for="email">Email Address<span class="desc">Note: Please make sure you can receive emails from this address, as it is the only way that we will share updates with you!</span></label>
+        <label for="email">Email Address<span class="required">*</span><span class="desc">Note: Please make sure you can receive emails from this address, as it is the only way that we will share updates with you!</span></label>
         <input type="email" name="EMAIL" id="email" required />
       </div>
 
       <div class="row">
         <div class="six columns">
-          <label for="GRADE">Grade<span class="desc">2017-2018</span></label>
+          <label for="GRADE">Grade<span class="required">*</span><span class="desc">2017-2018</span></label>
           <select name="GRADE" id="GRADE" required>
                     <option value="8">8th (Class of '22)</option>
                     <option value="9">9th (Class of '21)</option>
@@ -120,7 +120,7 @@
         </div>
 
         <div class="six columns">
-          <label for="GENDER">Gender</label>
+          <label for="GENDER">Gender<span class="required">*</span></label>
           <select name="GENDER" id="GENDER">
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
@@ -131,25 +131,25 @@
       </div>
 
       <div class="row">
-        <label for="SCHOOL">School<span class="desc">Full name</span></label>
+        <label for="SCHOOL">School<span class="required">*</span><span class="desc">Full name</span></label>
         <input type="text" name="SCHOOL" id="SCHOOL" required />
       </div>
 
       <div class="row">
         <div class="six columns">
-          <label for="CITY">City<span class="desc">City name only!</span></label>
+          <label for="CITY">City<span class="required">*</span><span class="desc">City name only!</span></label>
           <input type="text" name="CITY" id="CITY" required />
         </div>
 
         <div class="six columns">
-          <label for="STATE">State<span class="desc">Please provide full name</span></label>
+          <label for="STATE">State<span class="required">*</span><span class="desc">Please provide full name</span></label>
           <input type="text" name="STATE" id="STATE" required />
         </div>
       </div>
 
       <div class="row">
         <div class="six columns">
-          <label for="SHIRTSIZE">Shirt Size<span class="desc">Adult size</span></label>
+          <label for="SHIRTSIZE">Shirt Size<span class="required">*</span><span class="desc">Adult size</span></label>
           <select name="SHIRTSIZE" id="SHIRTSIZE" required>
             <option value="S">S</option>
             <option value="M">M</option>
