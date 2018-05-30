@@ -3,7 +3,10 @@ var conversationalForm
 
 window.onload = function() {
     fillRef(getParam("ref"));
+    $( "#signup" ).sisyphus();
+    console.log("Form data saved.");
 };
+
 
 var emailCheck = function(dto, success, error){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -25,33 +28,9 @@ function getParam(name, url) {
 
 function fillRef(code) {
     if (code != "" && code != null) {
-        $("#ref-fill").html('<input type="hidden" name="REF" id="refcode">"');
+        $("#ref-fill").html('<input type="hidden" name="REF" id="refcode">');
         $("#refcode").val(code);
-        loadForm();
     } else {
-        $("#ref-fill").html('<input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name.<br />If you were not referred by anyone, simply reply “no”."/>');
-        loadForm();
+        $("#ref-fill").html('<label for="refcode">Who did you hear about Hack Chicago from?</label><input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name.<br />If you were not referred by anyone, simply reply “no”."/>');
     }
-}
-
-//Form will only load when the appropriate referral code section
-//has been inserted
-function loadForm() {
-    conversationalForm = window.cf.ConversationalForm.startTheConversation({
-        formEl: document.getElementById("signup"),
-        context: document.getElementById("cf-context"),
-        robotImage: "/img/orpheus.png",
-        preventAutoFocus: false,
-        userInterfaceOptions: { 
-            controlElementsInAnimationDelay: 250, 
-            robot: { 
-                robotResponseTime: 500,   
-                chainedResponseTime: 400 
-            }, 
-            user:{ 
-                showThinking: false, 
-                showThumb: false 
-            } 
-        } 
-    });
 }

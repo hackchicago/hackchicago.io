@@ -5,15 +5,10 @@ window.sr = ScrollReveal({
 // mobile compatible touch event
 const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
 
-// reset parallax effect on window resize
-$(window).resize(function() {
-  resizeParallax();
-});
-
 $(document).ready(function() {
-  // setup parallax effect
-  resizeParallax();
-  /*$('.bottom').css('margin-top', clientHeight);*/
+  if (getParam("success") !== null && getParam("success") !== "")
+    finishSignupFlow();
+
   let counter = 0;
   $("#bround2").on("click", function() {
     counter++;
@@ -103,33 +98,11 @@ function checkTime() {
   }
 }
 
-function resizeParallax() {
-  var clientWidth = $(window).width();
-  var clientHeight = $(window).height();
-  $('#parallax').css('height', clientHeight);
-  $('.backrow').css('height', clientHeight);
-  $('.middlerow').css('height', clientHeight);
-  $('.frontrow').css('height', clientHeight);
-  var divWidth1 = parseFloat($('#tleft').css('width'));
-  var divWidth2 = parseFloat($('#bright').css('width'));
-  var imgHeight = parseFloat($('#bround1').css('height'));
-  $('#tleft').css('width', divWidth1);
-  $('#bright').css('width', divWidth2);
-  $('#tleft').css('height', imgHeight);
-  $('#bright').css('height', imgHeight);
-  var imgHeight2 = (imgHeight) / 2;
-}
-
 function toggleSignup(ref) {
   if (ref)
-    $('#signup-frame').attr('src', 'apply.html?ref=' + ref);
+    window.location = "apply.html?ref=" + ref;
   else
-    $('#signup-frame').attr('src', 'apply.html');
-
-  $('.splitscreen').toggleClass('show');
-  $('.split-overlay').toggleClass('show');
-  $('body').toggleClass('noscroll');
-  $('body').toggleClass('yieldFocus');
+    window.location = "apply.html";
 }
 
 //Get Parameter
@@ -326,7 +299,6 @@ function resetAP() {
   $('.ap-reset-bar').hide();
   Cookies.remove("ap-name");
 }
-
 sr.reveal('.center', {
   duration: 1500,
   afterReveal: function(domEl) {

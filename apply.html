@@ -1,105 +1,119 @@
-<!--
-
-    This page is for embedding only... It should not be loaded directly.
-
--->
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/apply.css" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/skeleton.css" />
+  <link rel="stylesheet" href="css/apply.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,600|Raleway:800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,600,800|Raleway:800" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 </head>
 
 <body>
-    <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup" cf-form>
-        <label for="radio">
-            <input
-            cf-questions="Hi there! I'm Orpheus, the last coding dinosaur on earth. You're almost coming to Hack Chicago! I'm super excited to assist you with the application process 🚀<br /><br />During this friendly conversation of ours, you may tap any of your previous responses to modify them! Are you ready to start?"
-                cf-label="I can't wait! Let's begin!"
-                cf-error="Hit the button above to start your application!"
-                type="radio" value="0">
-            Start
-        </label>
-        <div id="ref-fill">
+  <div class="header">
+    <img src="img/bluelogo.svg" class="logo">
+  </div>
+  <div class="container">
+    <div class="title">
+      <h4>Attendee Application</h4>
+      <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
+    </div>
+    <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
+      <div id="ref-fill">
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="FNAME">First Name</label>
+          <input type="text" id="FNAME" name="FNAME" required />
         </div>
-        <input type="text" id="FNAME" name="FNAME"
-                cf-questions="What is your first name, dear human being?"
-        />
+        <div class="six columns">
+          <label for="LNAME">Last Name</label>
+          <input type="text" id="LNAME" name="LNAME" required />
+        </div>
+      </div>
 
-        <input type="text" name="LNAME"
-                cf-questions="And what is your last name?"
-        />
+      <div class="row">
+        <label for="email">Email Address<span class="desc">Note: Please make sure you can receive emails from this address, as it is the only way that we will share updates with you!</span></label>
+        <input type="email" name="EMAIL" id="email" required />
+      </div>
 
-        <input type="email" name="EMAIL"
-                cf-questions="Welcome, {FNAME}! What is your email address?"
-                cf-validation="window.emailCheck"
-                cf-error="Oops! That doesn't look like an email address... Try again?"
-        />
+      <div class="row">
+        <div class="six columns">
+          <label for="GRADE">Grade<span class="desc">2017-2018</span></label>
+          <select name="GRADE" id="GRADE" required>
+                    <option value="8">8th (Class of '22)</option>
+                    <option value="9">9th (Class of '21)</option>
+                    <option value="10">10th (Class of '20)</option>
+                    <option value="11">11th (Class of '19)</option>
+                    <option value="11">12th (Class of '18)</option>
+            </select>
+        </div>
 
-        <select name="GRADE"
-            cf-questions="What grade are you currently in (during the 2017-18 school year)?"
-        >
-                <option value="8">8th (Class of '22)</option>
-                <option value="9">9th (Class of '21)</option>
-                <option value="10">10th (Class of '20)</option>
-                <option value="11">11th (Class of '19)</option>
-                <option value="11">12th (Class of '18)</option>
-        </select>
+        <div class="six columns">
+          <label for="GENDER">Gender</label>
+          <select name="GENDER" id="GENDER">
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Nonbinary">Nonbinary</option>
+                      <option value="Undefined">Prefer Not To Say</option>
+              </select>
+        </div>
+      </div>
 
-        <select name="GENDER"
-            cf-questions="What gender do you identify as?"
-        >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Nonbinary">Nonbinary</option>
-                <option value="Undefined">Prefer Not To Say</option>
-        </select>
+      <div class="row">
+        <label for="SCHOOL">School<span class="desc">Full name</span></label>
+        <input type="text" name="SCHOOL" id="SCHOOL" required />
+      </div>
 
-        <input type="text" name="SCHOOL"
-                cf-questions="What is the name of your school?"
-        />
+      <div class="row">
+        <div class="six columns">
+          <label for="CITY">City<span class="desc">City name only!</span></label>
+          <input type="text" name="CITY" id="CITY" required />
+        </div>
 
-        <input type="text" name="CITY"
-                cf-questions="Which city is your school in? (I need the name of the city only - state is the next question!)"
-        />
+        <div class="six columns">
+          <label for="STATE">State<span class="desc">Please provide full name</span></label>
+          <input type="text" name="STATE" id="STATE" required />
+        </div>
+      </div>
 
-        <input type="text" name="STATE"
-                cf-questions="And what state is {CITY} in?<br /><br />If you are not from the United States, please repond with “International”."
-        />
+      <div class="row">
+        <div class="six columns">
+          <label for="SHIRTSIZE">Shirt Size<span class="desc">Adult size</span></label>
+          <select name="SHIRTSIZE" id="SHIRTSIZE" required>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+        <div class="six columns">
+          <label for="DIETRES">Dietary Restrictions<span class="desc">We'll try our best to provide alternatives for you</span></label>
+          <input type="text" name="DIETRES" id="DIETRES" />
+        </div>
+      </div>
 
-        <select name="SHIRTSIZE"
-            cf-questions="What is the preferred size of your shirt?"
-        />
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-        </select>
+      <div class="row">
+        <label for="NOTE">Anything interesting or important that you would want the Hack Chicago team to know? We can answer your questions, address your concerns, or provide you with further assistance!</label>
+        <textarea type="text" name="NOTE" id="NOTE"></textarea>
+      </div>
 
-        <input
-            type="text"
-            name="DIETRES"
-            cf-questions="Do you have any dietary restrictions? I will try my best to provide alternatives for you. <br /><br />If not, simply respond with “no”."
-        />
-
-        <input
-            type="text"
-            name="NOTE"
-            cf-questions="Anything interesting or important that you would want me to pass on to the Hack Chicago team? We can answer your questions, address your concerns, or provide you with further assistance! <br /><br />If not, simply respond with “no”."
-        />
+      <div class="row submitRow">
+        <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+        <button class="submit" type="submit">Submit Application</button>
+      </div>
     </form>
+  </div>
 
-    <div id="cf-context" class="hack-theme" role="cf-context" cf-context></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/lib/cf.min.js"></script>
-
-    <script src="js/apply.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://usebasin.com/f/da988bcf3fb2/ahoy.js" async defer></script>
+  <script src="js/lib/sisyphus.min.js"></script>
+  <script src="js/apply.js"></script>
 
 </body>
+
 </html>
