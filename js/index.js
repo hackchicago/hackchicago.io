@@ -100,9 +100,9 @@ function checkTime() {
 
 function toggleSignup(ref) {
   if (ref)
-    window.location = "apply.html?ref=" + ref;
+    window.location = "/apply?ref=" + ref;
   else
-    window.location = "apply.html";
+    window.location = "/apply";
 }
 
 //Get Parameter
@@ -142,12 +142,6 @@ function fillRef(code) {
 }
 
 function finishSignupFlow() {
-
-  $('#signup-frame').attr('src', 'apply.html');
-  $('.splitscreen').toggleClass('show');
-  $('.split-overlay').toggleClass('show');
-  $('body').toggleClass('noscroll');
-  $('body').toggleClass('yieldFocus');
 
   $('#button-signup').hide();
   $('.refBar').hide();
@@ -193,10 +187,6 @@ $('.general-signup').on(clickEvent, function() {
 });
 
 $('#scrollToAP').on(clickEvent, scrollToAP);
-
-$('.splitscreen-close').on(clickEvent, function() {
-  toggleSignup();
-});
 
 $('.generate').on(clickEvent, function() {
   if ($('.ap-name').val() != "") {
