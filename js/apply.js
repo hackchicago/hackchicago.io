@@ -31,6 +31,6 @@ function fillRef(code) {
         $("#ref-fill").html('<input type="hidden" name="REF" id="refcode">');
         $("#refcode").val(code);
     } else {
-        $("#ref-fill").html('<label for="refcode">Who did you hear about Hack Chicago from? (first and last name)</label><input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name.<br />If you were not referred by anyone, simply reply “no”."/>');
+        $("#ref-fill").html('<label for="refcode">Who did you hear about Hack Chicago from? <span class="desc">First and last name</span></label><input type="text" id="REF" name="REF" cf-questions="Just by chance, who told you about Hack Chicago? Simply reply with their full name.<br />If you were not referred by anyone, simply reply “no”."/>');
     }
 }
