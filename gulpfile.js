@@ -34,7 +34,7 @@ gulp.task('sitemap', function() {
 })
 
 gulp.task('css', function() {
-  return gulp.src('css/*.css')
+  return gulp.src('css/**/*.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
