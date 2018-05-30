@@ -39,6 +39,12 @@ label .desc {
   font-weight: normal;
 }
 
+label .required {
+  margin-left: 3px;
+  color: #c40000;
+  font-weight: normal;
+}
+
 input, select, textarea {
   width: 100%;
 }
