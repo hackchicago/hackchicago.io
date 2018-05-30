@@ -134,7 +134,6 @@ function fillRef(code) {
     });
   } else {
     $('#button-signup').on(clickEvent, function() {
-      $("#troubleshoot").html("Having trouble signing up? <a href=\"mailto:hello@hackchicago.io\">Email us!</a>");
       toggleSignup();
     });
   }
