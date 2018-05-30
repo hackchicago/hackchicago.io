@@ -49,7 +49,7 @@ input, select, textarea {
   width: 100%;
 }
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   border: 1px solid #5299d3!important;
 }
 
