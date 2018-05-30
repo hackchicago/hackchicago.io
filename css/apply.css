@@ -66,6 +66,7 @@ input:focus, select:focus {
   color: #5299D3;
   transition: all .3s;
   outline: none;
+  padding: 10px;
 }
 
 .submit:hover {
