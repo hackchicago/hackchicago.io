@@ -4,6 +4,7 @@ header {
   width: 100vw;
   height: 100vh;
   background-color: transparent;
+  border-bottom: 5px solid #5299D3;
 }
 
 h1#seo-title {
@@ -179,9 +180,7 @@ button:hover {
 .crossfade {
   margin: 0;
   padding: 0;
-  background-color: #bfd8f9;
-  background: -webkit-linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
-  background: linear-gradient(0deg, #ffffff 0%, #bfd8f9 100%);
+  background-color: #fff;
   padding: 120px 20px 45px 20px;
   text-align: center;
 }
@@ -231,10 +230,9 @@ button:hover {
   vertical-align: top;
   margin: 1%;
   border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   max-width: 100%;
-  border-top: solid #03a9f4 3px;
-  height: 225px;
+  border: solid #03a9f4 3px;
+  height: 240px;
 }
 
 .top-left h3 {
@@ -268,6 +266,7 @@ button:hover {
   overflow: hidden;
   border-radius: 8px;
   position: relative;
+  padding: 5px;
   height: 230px;
 }
 
@@ -285,6 +284,7 @@ button:hover {
   border-radius: 6px;
   position: relative;
   height: 230px;
+  padding: 5px;
 }
 
 .bot-right {
@@ -293,10 +293,9 @@ button:hover {
   display: inline-block;
   margin: 1%;
   border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  border-top: solid #e42d42;
+  border: solid #e42d42;
   max-width: 100%;
-  height: 225px;
+  height: 235px;
 }
 
 .bot-right h3 {
@@ -424,14 +423,11 @@ button:hover {
   max-width: 330px;
   background-color: white;
   padding: 16px;
-  height: 250px;
   margin: 15px;
   display: inline-table;
   overflow: hidden;
   text-align: left;
   border-radius: 5px 5px 9px 9px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
-  border-top: solid #5299D3 3px;
 }
 
 .faq h4 {
@@ -682,39 +678,63 @@ a.underline, #scrollToAP {
   line-height: 1.5;
 }
 
-div.scroll-indicator {
-  width: 0%;
-  height: 0vh;
-}
-
-div.scroll-indicator::before {
-  content: '╲╱';
-  color: #5299D3;
-  position: absolute;
-  opacity: 0.7;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  font-size: 20px;
-  width: 60px;
+.scroll-indicator {
+  display: block;
+  margin: 0 auto;
+  width: 23px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 10px;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -30px;
-  animation: bounce 1s ease infinite;
+  border-radius: 13px;
+  border: 2px solid #5299D3;
+  position: absolute;
+  bottom: 25px;
+  position: absolute;
+  right: 25px;
+  margin-left: -14px;
 }
 
-#scroll-container {
-  display: none;
+.scroll-indicator span {
+    display: block;
+    margin: 6px auto;
+    width: 3px;
+    height: 7px;
+    border-radius: 100%;
+    background: #5299D3;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
 }
 
-@keyframes bounce {
-  50% {
-    transform: translateY(-50%);
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    transform: translateY(12px);
   }
 }
 
@@ -781,9 +801,8 @@ a.social-icon {
 .crossfade-reverse {
   margin: 0;
   padding: 0;
-  background-color: #bfd8f9;
-  background: -webkit-linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
-  background: linear-gradient(0deg, #bfd8f9 0%, #ffffff 100%);
+  background-color: #fff;
+  border-bottom: 5px solid #5299D3;
   padding: 70px 20px 70px 20px;
   text-align: center;
   z-index: 0;
@@ -841,7 +860,6 @@ a.social-icon {
   text-align: middle;
   color: rgba(0, 0, 0, 0.6);
   border-radius: 5px 5px 9px 9px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
 .ap-grid .tier p {
@@ -857,15 +875,15 @@ a.social-icon {
 }
 
 .ap-grid .tier.bronze {
-  border-top: solid #CD7F32 3px;
+  border: solid #CD7F32 3px;
 }
 
 .ap-grid .tier.silver {
-  border-top: solid #C0C0C0 3px;
+  border: solid #C0C0C0 3px;
 }
 
 .ap-grid .tier.gold {
-  border-top: solid #FFD700 3px;
+  border: solid #FFD700 3px;
 }
 
 .link {
@@ -880,7 +898,6 @@ a.social-icon {
 .ap-name, .ap-link {
   background-color: transparent;
   padding: 0px 15px 0px 15px;
-  border-radius: 10px;
   font-size: .95em;
   outline: none;
   height: 40px;
@@ -889,9 +906,10 @@ a.social-icon {
   position: relative;
   transition: all .3s;
   border: none;
+  border: 2px solid #5299D3;
+  border-radius: 10px;
   transition: all .2s ease-in-out;
   margin-bottom: 5px;
-  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 .ap-tooltip {

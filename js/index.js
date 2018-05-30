@@ -294,11 +294,7 @@ sr.reveal('.center', {
     $('#scroll-container').show();
   }
 });
-sr.reveal('.row-wrapper', {
-  scale: 1,
-  mobile: false,
-  viewFactor: 0.01,
-});
+sr.reveal('.about-anim');
 sr.reveal('.alt-signup');
 sr.reveal('.card');
 sr.reveal('.tier');
