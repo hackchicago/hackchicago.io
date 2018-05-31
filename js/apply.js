@@ -5,8 +5,12 @@ window.onload = function() {
     fillRef(getParam("ref"));
     $( "#signup" ).sisyphus();
     console.log("Form data saved.");
-};
 
+    // disable autocomplete completely
+    $("input, select, textarea").on("focus click", function() {
+      $(this).attr("autocomplete", "new-" + Math.random().toString(36).replace(/[^a-z]+/g, ''));
+    });
+};
 
 var emailCheck = function(dto, success, error){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
