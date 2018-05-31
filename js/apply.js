@@ -6,7 +6,7 @@ window.onload = function() {
     $( "#signup" ).sisyphus();
     console.log("Form data saved.");
 
-    //Disable autocomplete completely
+    // disable autocomplete completely
     $("input, select, textarea").on("focus click", function() {
       $(this).attr("autocomplete", "new-" + Math.random().toString(36).replace(/[^a-z]+/g, ''));
     });
