@@ -519,7 +519,7 @@ button:hover {
   text-align: center;
 }
 
-#sponsors .sponsor-div, #sponsor-major, #sponsor-minor, #additional-support {
+#sponsors .sponsor-div, #sponsor-major, #sponsor-minor {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -565,14 +565,22 @@ button:hover {
   margin: 25px;
 }
 
+#additional-support {
+  width: 100%;
+  display: inline-block;
+  z-index: 100;
+  text-align: center;
+  align-items: center;
+}
+
 #additional-support a:hover {
     transform: scale(1)!important;
 }
 
 #additional-support .sponsor {
-  box-sizing: border-box;
-  display: block;
-  width: 80px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 180px;
   height: auto;
   margin: 25px;
   -webkit-filter: grayscale(100%);
