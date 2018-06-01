@@ -1,359 +1,227 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+	  <link rel="stylesheet" href="css/main.css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	  <meta name="msapplication-TileColor" content="#1157DF">
+	  <meta name="theme-color" content="#1157DF">
+	  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <meta name="msapplication-TileColor" content="#1157DF">
-  <meta name="theme-color" content="#1157DF">
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+	  <!-- SEO -->
+	  <title>Hack Chicago 2018 | Midwest's Largest High School Hackathon</title>
+	  <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+	  <meta name="keywords" content="hack,hackathon,chicago,high school,hacker,hack chicago,chicago hacks,midwest">
+	  <meta name="robots" content="index, follow">
+	  <meta name="image" content="https://hackchicago.io/img/seo.png">
 
-  <!-- SEO -->
-  <title>Hack Chicago 2018 | Midwest's Largest High School Hackathon</title>
-  <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-  <meta name="keywords" content="hack,hackathon,chicago,high school,hacker,hack chicago,chicago hacks,midwest">
-  <meta name="robots" content="index, follow">
-  <meta name="image" content="https://hackchicago.io/img/seo.png">
+	  <!-- Twitter -->
+	  <meta name="twitter:card" content="summary_large_image">
+	  <meta name="twitter:site" content="@hackchicago18">
+	  <meta name="twitter:title" content="Hack Chicago | Midwest's Largest High School Hackathon">
+	  <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+	  <meta name="twitter:image" content="https://hackchicago.io/img/seo.png">
+	  <meta name="twitter:image:alt" content="Hack Chicago logo with blue background">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@hackchicago18">
-  <meta name="twitter:title" content="Hack Chicago | Midwest's Largest High School Hackathon">
-  <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-  <meta name="twitter:image" content="https://hackchicago.io/img/seo.png">
-  <meta name="twitter:image:alt" content="Hack Chicago logo with blue background">
+	  <!-- Facebook OG -->
+	  <meta name="og:title" content="Hack Chicago | Midwest's Largest High School Hackathon">
+	  <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+	  <meta name="og:image" content="https://hackchicago.io/img/seo.png">
+	  <meta name="og:url" content="https://hackchicago.io">
+	  <meta name="og:site_name" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
+	  <meta name="fb:admins" content="756152961254213">
+	  <meta name="og:type" content="website">
 
-  <!-- Facebook OG -->
-  <meta name="og:title" content="Hack Chicago | Midwest's Largest High School Hackathon">
-  <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-  <meta name="og:image" content="https://hackchicago.io/img/seo.png">
-  <meta name="og:url" content="https://hackchicago.io">
-  <meta name="og:site_name" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
-  <meta name="fb:admins" content="756152961254213">
-  <meta name="og:type" content="website">
+	  <!-- Schema -->
+	  <script type="application/ld+json">
+	    {
+	      "@context": "http://schema.org",
+	      "@type": "Event",
+	      "name": "Hack Chicago 2018",
+	      "description": "The premier high school hackathon happening this summer in the Midwest that gathers 400+ high school programmers for 24 hours of fun!",
+	      "image": [
+	        "https://hackchicago.io/img/brand/1x1.png",
+	        "https://hackchicago.io/img/brand/4x3.png",
+	        "https://hackchicago.io/img/brand/16x9.png"
+	      ],
+	      "startDate": "2018-07-21T12:00",
+	      "endDate": "2018-07-22T12:00",
+	      "location": {
+	        "@type": "Place",
+	        "name": "TBA",
+	        "address": {
+	          "@type": "PostalAddress",
+	          "streetAddress": "TBA",
+	          "addressLocality": "Chicago",
+	          "addressRegion": "IL",
+	          "postalCode": "60625",
+	          "addressCountry": "US"
+	        }
+	      },
+	      "offers": {
+	        "@type": "Offer",
+	        "name": "Free Admission",
+	        "price": "0",
+	        "priceCurrency": "USD",
+	        "validFrom": "2018-05-13T16:00-08:00",
+	        "url": "https://hackchicago.io",
+	        "availability": "http://schema.org/InStock"
+	      },
+	      "performer": {
+	        "@type": "PerformingGroup",
+	        "name": "High School Hackers"
+	      }
+	    }
+	  </script>
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-  <!-- Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Event",
-      "name": "Hack Chicago 2018",
-      "description": "The premier high school hackathon happening this summer in the Midwest that gathers 400+ high school programmers for 24 hours of fun!",
-      "image": [
-        "https://hackchicago.io/img/brand/1x1.png",
-        "https://hackchicago.io/img/brand/4x3.png",
-        "https://hackchicago.io/img/brand/16x9.png"
-      ],
-      "startDate": "2018-07-21T12:00",
-      "endDate": "2018-07-22T12:00",
-      "location": {
-        "@type": "Place",
-        "name": "TBA",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "TBA",
-          "addressLocality": "Chicago",
-          "addressRegion": "IL",
-          "postalCode": "60625",
-          "addressCountry": "US"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Free Admission",
-        "price": "0",
-        "priceCurrency": "USD",
-        "validFrom": "2018-05-13T16:00-08:00",
-        "url": "https://hackchicago.io",
-        "availability": "http://schema.org/InStock"
-      },
-      "performer": {
-        "@type": "PerformingGroup",
-        "name": "High School Hackers"
-      }
-    }
-  </script>
-</head>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
-<body>
-  <noscript id="deferred-styles">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
-  </noscript>
-  <!-- For SEO Indexing -->
-  <h1 id="seo-title">Hack Chicago 2018 | Midwest's Largest High School Hackathon</h1>
-  <header id="parallax">
-    <div class="backrow rellax" data-rellax-speed="-8"></div>
-    <div class="middlerow rellax" data-rellax-speed="-5"></div>
-    <div class="frontrow rellax" data-rellax-speed="0"></div>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a id="scrollToTop">Hack Chicago</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
 
-    <div class="center">
-      <img src="img/bluelogo.svg" alt="Hack Chicago">
-      <h2>The Midwest's Largest High School Hackathon</h2>
-      <p class="date">July 21<sup>st</sup> to 22<sup>nd</sup></p>
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
 
-      <div id="signup-section">
-        <div id="signup-button-div"><button class="general-signup">Sign Up</button></div>
-        <p id="signup-status">Your application has been submitted!<br />Be sure to check out the <a id="scrollToAP">Ambassadors Program!</a></p>
-      </div>
-      <!-- Autofilling Referral Code-->
-      <sub class="refBar"><span id="referralCode"></span></sub>
-      <sub class="forceState"></sub>
-    </div>
-    <a id="scroll-container" href="#join">
-      <div class="scroll-indicator"></div>
-    </a>
-  </header>
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<h2>Hack Chicago</h2>
+							<p>The Midwest's Largest High School Hackathon</p>
+						</div>
+					</section>
 
-  <div id="join" class="crossfade">
-    <img src="img/peopleblue3.svg" alt="icon of students">
-    <p class="calltoaction">Join us and over 400 other students to be a part of the Midwest's largest high school hackathon</p>
-  </div>
+				<!-- Wrapper -->
+					<section id="wrapper">
 
-  <div id="register-section">
-    <p>I am registering as a
-      <div id="button-group">
-        <button class="alt-signup attendee" id="button-signup">Student</button>
-        <button class="alt-signup mentor">Mentor</button>
-        <button class="alt-signup school">School</button>
-      </div>
-    </p>
-  </div>
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Magna arcu feugiat</h2>
+										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<a href="#" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
 
-  <div class="about">
-    <div class="row-wrapper">
-      <div class="top-row">
-        <div class="top-left" id="tleft">
-          <a target="_blank" href="https://chicagohacks.tech" title="Chicago Hacks 2017" alt="Chicago Hacks 2017">
-            <span class="corner-badge">
-              <img src="img/chihacks_transparent.png" style="height: 35px" alt="Chicago Hacks 2017 Logo">
-            </span>
-          </a>
-          <h3>Last Year...</h3>
-          <p>We hosted <a href="http://chicagohacks.tech/" style="color: #03A9F4" target="_blank">Chicago Hacks</a>, Chicago’s largest high school hackathon. With over 130 attendees and over 30 projects presented, it would be an understatement to call that
-            just a success. We saw passionate hackers collaborate and build amazing things in 24 hours. Through workshops and mentorships, beginners and veteran programmers created awesome projects. </p>
-        </div>
-        <div class="top-right">
-          <img src="img/chihacks-big.jpg" alt="Students working at Chicago Hacks 2017" class="background" id="bround1">
-        </div>
-      </div>
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Tempus adipiscing</h2>
+										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<a href="#" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
 
-      <div class="bot-row">
-        <div class="bot-left">
-          <img src="img/hackclub-big.jpg" alt="Zach Latta, Founder of Hack Club" class="background" id="bround2">
-        </div>
-        <div class="bot-right" id="bright">
-          <a target="_blank" href="https://hackclub.com" title="Hack Club" alt="Hack Club">
-            <span class="corner-badge">
-              <img src="img/hackclub_transparent.png" style="height: 35px" alt="Hack Club Logo">
-            </span>
-          </a>
-          <h3>This Year...</h3>
-            <p>We are striving to improve the event by making it bigger and better. Through a partnership with <a href="https://hackclub.com/" target="_blank">Hack Club</a>, we will be bringing an even larger event to the the Midwest. With more attendees,
-            activities, prizes, and hackers, we expect this year to be a blast!</p>
-        </div>
-      </div>
-    </div>
-  </div>
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Nullam dignissim</h2>
+										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<a href="#" class="special">Learn more</a>
+									</div>
+								</div>
+							</section>
 
-  <div id="faq">
-    <h3>FAQs</h3>
-    <p class="desc">Have questions? Chances are you will find the answers in our FAQ section.</p>
-    <div class="faq-grid">
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Vitae phasellus</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3 class="major">Ante fermentum</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<h3 class="major">Fusce consequat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
 
-      <div class="card faq">
-        <h4>What is a hackathon?</h4>
-        <p>A hackathon is an event where programmers come to learn and build cool things together. Students have been learning skills in school that they never put into use - hackathons are aimed to solve that problem. We’d love to see students converting
-          ideas into apps and games, and it’s also a great time to learn new skills through various workshops.</p>
-      </div>
+					</section>
 
-      <div class="card faq">
-        <h4>What is Hack Chicago?</h4>
-        <p>Hack Chicago is the premier high school hackathon that looks to gather 400+ high school programmers throughout the Midwest for 24 hours of fun! All you need to worry about is building something awesome, and we’ll provide the rest - including mentors,
-          sponsors, workshops and a great number of resources. </p>
-      </div>
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<ul class="contact">
+								<li class="fa-envelope"><a href="mailto:hello@hackchicago.io">hello@hackchicago.io</a></li>
+								<li class="fa-twitter"><a href="https://twitter.com/hackchicago18">Twitter</a></li>
+								<li class="fa-facebook"><a href="https://facebook.com/hackchicago">Facebook</a></li>
+								<li class="fa-instagram"><a href="https://instagram.com/hackchicago">Instagram</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; 2018 Hack Chicago Team</li>
+							</ul>
+						</div>
+					</section>
 
-      <div class="card faq">
-        <h4>Where is the hackathon?</h4>
-        <p>We’re still looking for a venue for the event, but will let you know as soon as possible!</p>
-      </div>
+			</div>
 
-      <div class="card faq">
-        <h4>Who can participate?</h4>
-        <p>Any high school student! Including Class of 2018 graduates who may have graduated prior to the event date, as well as Class of 2022 incoming freshmen!</p>
-      </div>
+		<!-- Scripts -->
+			<script src="js/skel.min.js"></script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+			<script src="js/inject.js"></script>
 
-      <div class="card faq">
-        <h4>I don’t know how to code! Should I still come?</h4>
-        <p>Yes!!! Our hackathon is the perfect place to learn about programming with all our different workshops we will offer at the event. Experienced mentors will also be there to help you throughout the event, so there’s nothing to worry about!</p>
-      </div>
-
-      <div class="card faq">
-        <h4>Will there be security at the event?</h4>
-        <p>There will be security for the entirety of the event to ensure the safety of all our attendees.</p>
-      </div>
-
-      <div class="card faq">
-        <h4>How much does your event cost?</h4>
-        <p>Our event is entirely free! Food will be provided throughout the entire duration of the event. We will also be giving t-shirts to all attendees.</p>
-      </div>
-
-      <div class="card faq">
-        <h4>What should I bring?</h4>
-        <p>Your laptop, any amenities you require, chargers, and your innovative spirit. Also a pillow in case you decide to sleep! We will require a valid student ID for attendance at the event.</p>
-      </div>
-
-      <div class="card faq">
-        <h4>Will there be prizes?</h4>
-        <p>Yes! We have many prizes available courtesy of our sponsors. Certain prizes will be awarded based on best in that category, and there will be many giveaways throughout the event!</p>
-      </div>
-
-      <div class="card faq">
-        <h4>What can I create?</h4>
-        <p>Anything you want! However, we hope that there are projects that create an impact or cause social change. Also, your project must be entirely made during the hackathon, but you may come to the hackathon with an idea already in mind.</p>
-      </div>
-
-      <div class="card faq">
-        <h4>Do you offer travel reimbursement?</h4>
-        <p>At this moment we are unable to provide travel reimbursement, but check again later to see if this changes!</p>
-      </div>
-
-      <div class="card faq">
-        <h4>Do you have a code of conduct?</h4>
-        <p>
-          Although Hack Chicago is currently not an MLH affliated event, attendees are required to adhere to the
-          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a> and the <a href="https://conduct.hackclub.com">Hack Club Code of Conduct</a>.
-        </p>
-      </div>
-
-      <div class="card faq" id="mentor">
-        <div class="highlight-block"></div>
-        <h4>Interested in becoming a mentor?</h4>
-        <p>Please fill out the mentor <a href="https://goo.gl/forms/wFkYEfD3PMNxIcux2" target="_blank">application form</a>, and we'll reach back to you via email!</p>
-      </div>
-
-      <div class="card faq" id="school">
-        <div class="highlight-block"></div>
-        <h4>Registering for a school?</h4>
-        <p>You may bring as many students as you like! To help us process your registration faster, please create a list of your students' information with our <a href="https://docs.google.com/spreadsheets/d/1yPw2Tv-_ZbD0fNkhuYnpSJ5tKL234hfxKLoz8j0UWBk/copy">template</a> (<a href="/docs/batch_template.xlsx">download</a>) and upload it to the <a href="https://docs.google.com/forms/d/e/1FAIpQLScd4BGqUd_3G3Nz6aXk9OiLNKfchaBXc2kHrEOFS1wjXWEIOw/viewform">school registration form</a>. We'll get back to you via email as soon as possible!</p>
-      </div>
-
-      <div class="card faq">
-        <h4>Have a question we didn't answer?</h4>
-        <p>Send us an email at <a href="mailto:hello@hackchicago.io">hello@hackchicago.io</a> and we will get back to you as soon as possible!</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="ambassador">
-    <h3>Hacker Ambassadors</h3>
-    <p class="desc">Share the event with your friends and get rewarded with exclusive swag!</p>
-
-    <div class="ap-grid">
-      <div class="tier bronze">
-        <h3>Bronze</h3>
-        <p>5 Referrals</p>
-        <p>It's always better to have friends coming with you, isn't it? Partner up with them, learn together, and go home at the end of the 24 hours with knowledge and satisfaction.</p>
-        <p class="reward">Reward: A special sticker!</p>
-      </div>
-
-      <div class="tier silver">
-        <h3>Silver</h3>
-        <p>10 Referrals</p>
-        <p>You're not with a group of friends anymore - you're bringing your crew! Work together and consult each other... There is always someone to learn from!</p>
-        <p class="reward">Reward: A special t-shirt!</p>
-      </div>
-
-      <div class="tier gold">
-        <h3>Gold</h3>
-        <p>20 Referrals</p>
-        <p>Wow, that's impressive! You've demonstrated your ability to engage your community, and we'd love to know more about you!
-        </p>
-        <p class="reward">Reward: A chance to hangout with the organizers before/after the event!</p>
-      </div>
-    </div>
-
-    <div class="link">
-      <div class="ap-form">
-        <h3>Get your unique link and share with your friends!</h3>
-        <input class="ap-name" placeholder="Your full name"></input>
-        <button class="generate">Generate</button>
-      </div>
-      <div class="ap-result"></div>
-      <div class="ap-tooltip"></div>
-      <p class="ap-reset-bar">Not <span class="ap-name-box"></span>? <a class="ap-reset">Reset</a></p>
-    </div>
-  </div>
-
-  <div id="sponsors">
-    <h3>Partners</h3>
-    <div class="sponsor-div" style="margin-bottom: 50px">
-      <a href="https://hackclub.com/" target="_blank"><img class="partner" src="img/sponsors/hackclub.svg" alt="Hack Club"></a>
-    </div>
-
-    <h3>Sponsors</h3>
-    <p class="desc">Interested in sponsoring? Read our <a href="/docs/prospectus.pdf">prospectus</a> to learn more about sponsorship!</p>
-    <div class="sponsor-div" id="big-div">
-      <div id="sponsor-major">
-        <a href="https://balsamiq.com/" target="_blank"><img class="sponsor" src="img/sponsors/balsamiq.svg" alt="Balsamiq" /></a>
-        <a href="https://www.flexera.com/" target="_blank"><img class="sponsor" src="img/sponsors/flexera.png" alt="Flexera" /></a>
-      </div>
-      <br />
-      <div id="sponsor-minor">
-        <a href="https://new.civisanalytics.com/" target="_blank"><img class="sponsor" src="img/sponsors/civis.png" alt="Civis Analytics" /></a>
-        <a href="https://www.tastytrade.com/tt/" target="_blank"><img class="sponsor" src="img/sponsors/tastytrade.svg" alt="Tastytrade" /></a>
-        <a href="https://tastyworks.com/" target="_blank"><img class="sponsor" src="img/sponsors/tastyworks.svg" alt="Tastyworks" /></a>
-      </div>
-    </div>
-
-    <p class="desc" style="margin: 0">With additional support from:</p>
-    <div id="additional-support">
-      <a href="https://www.highschoolesportsleague.com/" target="_blank"><img class="sponsor" src="img/sponsors/hsel.png" alt="High School Esports League" /></a>
-      <a href="https://zapier.com/" target="_blank"><img class="sponsor" style="width: 80px" src="img/sponsors/zapier.svg" alt="Zapier" /></a>
-      </div>
-  </div>
-
-  <div class="crossfade-reverse footer">
-    <div class="social">
-      <a class="social-icon" href="https://twitter.com/hackchicago18"><span class="symbol">twitterbird</span></a>
-      <a class="social-icon" href="https://facebook.com/hackchicago"><span class="symbol">facebook</span></a>
-      <a class="social-icon" href="https://instagram.com/hackchicago"><span class="symbol">instagram</span></a>
-      <a class="social-icon" href="https://github.com/hackchicago"><span class="symbol">githubalt</span></a>
-      <a class="social-icon" href="mailto:hello@hackchicago.io"><span class="symbol">email</span></a>
-    </div>
-
-    <div class="footer-links">
-      &copy; 2018 Hack Chicago Team
-    </div>
-
-  </div>
-
-  <script>
-    var loadDeferredStyles = function() {
-      var addStylesNode = document.getElementById("deferred-styles");
-      var replacement = document.createElement("div");
-      replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
-      addStylesNode.parentElement.removeChild(addStylesNode);
-    };
-    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    if (raf) raf(function() {
-      window.setTimeout(loadDeferredStyles, 0);
-    });
-    else window.addEventListener('load', loadDeferredStyles);
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
-  <script src="js/lib/rellax.min.js"></script>
-  <script src="js/lib/scroll.min.js"></script>
-  <script src="js/lib/cookie.min.js"></script>
-  <script src="js/lib/moment.min.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/inject.js"></script>
-
-</body>
-
+	</body>
 </html>
