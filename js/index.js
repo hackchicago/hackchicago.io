@@ -1,7 +1,3 @@
-window.sr = ScrollReveal({
-  scale: .8
-});
-
 // mobile compatible touch event
 const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
 
