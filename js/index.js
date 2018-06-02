@@ -113,7 +113,7 @@ function checkRef() {
   let urlRef = getParam('ref');
   if (urlRef !== null && urlRef !== "" && urlRef !== "null") Cookies.set('ref', urlRef, { expires: 180 });
   let cookieRef = Cookies.get('ref');
-  if (cookieRef !== null && cookieRef !== "" && cookieRef !== "null") $('#button-a').attr('href','/apply?ref='+cookieRef);
+  if (cookieRef !== null && cookieRef !== "" && cookieRef !== "null") $('#signup-button-a').attr('href','/apply?ref='+cookieRef);
 }
 
 function finishSignupFlow() {
@@ -154,12 +154,12 @@ $('a[href*="#"]')
 
 // CLICK EVENTS
 // signup button
-$('.general-signup').on(clickEvent, function() {
+/*$('.general-signup').on(clickEvent, function() {
   // on signup button press, scroll page to #register-section (choose between student, mentor, school)
   $('html, body').animate({
     scrollTop: $("#register-section").offset().top - 150
   }, 1800);
-});
+});*/
 
 $('#scrollToAP').on(clickEvent, scrollToAP);
 
@@ -186,7 +186,7 @@ $('.alt-signup.school').on(clickEvent, function() {
   }, 500);
 });
 
-$('.alt-signup.mentor').on(clickEvent, function() {
+/*$('.alt-signup.mentor').on(clickEvent, function() {
   $('html, body').animate({
     scrollTop: $("#mentor").offset().top - 100
   }, 1200);
@@ -195,7 +195,7 @@ $('.alt-signup.mentor').on(clickEvent, function() {
       color: 'rgba(82, 153, 211, .8)'
     }, 3000);
   }, 500);
-});
+});*/
 
 function checkState() {
   if (Cookies.get('hasSignedUp') == undefined) {
