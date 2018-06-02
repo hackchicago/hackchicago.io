@@ -128,14 +128,7 @@ function checkRef(ref) {
 
 function fillRef(code) {
   if (code != "" && code != null) {
-    $("#referralCode").html("Referred by " + code);
-    $("#button-signup").on(clickEvent, function() {
-      toggleSignup(code);
-    });
-  } else {
-    $('#button-signup').on(clickEvent, function() {
-      toggleSignup();
-    });
+    $('#button-a').attr('href','/apply?ref='+code);
   }
 
   return code;
