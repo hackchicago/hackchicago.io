@@ -111,9 +111,9 @@ function getParam(name, url) {
 
 function checkRef() {
   let urlRef = getParam('ref');
-  if (urlRef !== null && urlRef !== "" && urlRef !== "null") Cookies.set('ref', urlRef, { expires: 180 });
+  if (urlRef != null && urlRef !== "" && urlRef !== "null" && urlRef != undefined) Cookies.set('ref', urlRef, { expires: 180 });
   let cookieRef = Cookies.get('ref');
-  if (cookieRef !== null && cookieRef !== "" && cookieRef !== "null") $('#signup-button-a').attr('href','/apply?ref='+cookieRef);
+  if (cookieRef != null && cookieRef != "" && cookieRef != "null" && cookieRef != undefined) $('#signup-button-a').attr('href','/apply?ref='+cookieRef);
 }
 
 function finishSignupFlow() {
