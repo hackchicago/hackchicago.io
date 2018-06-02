@@ -16,7 +16,7 @@ $(document).ready(function() {
   });
 
   // check referral
-  checkRef(Cookies.get('ref'));
+  checkRef();
 
   // check times and update page depending on time
   checkTime();
@@ -98,13 +98,6 @@ function checkTime() {
   }
 }
 
-function toggleSignup(ref) {
-  if (ref)
-    window.location = "/apply?ref=" + ref;
-  else
-    window.location = "/apply";
-}
-
 //Get Parameter
 function getParam(name, url) {
   if (!url) url = window.location.href;
@@ -116,22 +109,11 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function checkRef(ref) {
-  if (ref != null && ref != "" && ref != "null")
-    fillRef(ref);
-  else {
-    Cookies.set('ref', fillRef(getParam("ref")), {
-      expires: 180
-    })
-  }
-}
-
-function fillRef(code) {
-  if (code != "" && code != null) {
-    $('#button-a').attr('href','/apply?ref='+code);
-  }
-
-  return code;
+function checkRef() {
+  let urlRef = getParam('ref');
+  if (urlRef !== null && urlRef !== "" && urlRef !== "null") Cookies.set('ref', urlRef, { expires: 180 });
+  let cookieRef = Cookies.get('ref');
+  if (cookieRef !== null && cookieRef !== "" && cookieRef !== "null") $('#button-a').attr('href','/apply?ref='+cookieRef);
 }
 
 function finishSignupFlow() {
