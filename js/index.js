@@ -165,28 +165,6 @@ $('.ap-reset').on(clickEvent, function() {
   resetAP();
 });
 
-$('.alt-signup.school').on(clickEvent, function() {
-  $('html, body').animate({
-    scrollTop: $("#school").offset().top - 100
-  }, 1200);
-  setTimeout(function() {
-    $('#school .highlight-block').effect("highlight", {
-      color: 'rgba(82, 153, 211, .8)'
-    }, 3000);
-  }, 500);
-});
-
-/*$('.alt-signup.mentor').on(clickEvent, function() {
-  $('html, body').animate({
-    scrollTop: $("#mentor").offset().top - 100
-  }, 1200);
-  setTimeout(function() {
-    $('#mentor .highlight-block').effect("highlight", {
-      color: 'rgba(82, 153, 211, .8)'
-    }, 3000);
-  }, 500);
-});*/
-
 function checkState() {
   if (Cookies.get('hasSignedUp') == undefined) {
     $('#ambassador').show();
