@@ -1,7 +1,3 @@
-window.sr = ScrollReveal({
-  scale: .8
-});
-
 // mobile compatible touch event
 const clickEvent = 'ontouchend' in document ? 'touchend' : 'click';
 
@@ -288,19 +284,3 @@ function resetAP() {
   $('.ap-reset-bar').hide();
   Cookies.remove("ap-name");
 }
-sr.reveal('.center', {
-  duration: 1500,
-  afterReveal: function(domEl) {
-    $('#scroll-container').show();
-  }
-});
-sr.reveal('.row-wrapper', {
-  scale: 1,
-  mobile: false,
-  viewFactor: 0.01,
-});
-sr.reveal('.alt-signup');
-sr.reveal('.card');
-sr.reveal('.tier');
-sr.reveal('.sponsor');
-sr.reveal('.partner');
