@@ -15,9 +15,6 @@ $(document).ready(function() {
     if (counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
   });
 
-  // check referral
-  checkRef();
-
   // check times and update page depending on time
   checkTime();
 
@@ -107,13 +104,6 @@ function getParam(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function checkRef() {
-  let urlRef = getParam('ref');
-  if (urlRef != null && urlRef !== "" && urlRef !== "null" && urlRef != undefined) Cookies.set('ref', urlRef, { expires: 180 });
-  let cookieRef = Cookies.get('ref');
-  if (cookieRef != null && cookieRef != "" && cookieRef != "null" && cookieRef != undefined) $('#signup-button-a').attr('href','/apply?ref='+cookieRef);
 }
 
 function finishSignupFlow() {
