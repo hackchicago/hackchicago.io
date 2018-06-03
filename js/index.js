@@ -15,9 +15,6 @@ $(document).ready(function() {
     if (counter === 10) window.location.href = 'http://bit.ly/2LiBlne';
   });
 
-  // check referral
-  checkRef(Cookies.get('ref'));
-
   // check times and update page depending on time
   checkTime();
 
@@ -98,13 +95,6 @@ function checkTime() {
   }
 }
 
-function toggleSignup(ref) {
-  if (ref)
-    window.location = "/apply?ref=" + ref;
-  else
-    window.location = "/apply";
-}
-
 //Get Parameter
 function getParam(name, url) {
   if (!url) url = window.location.href;
@@ -114,31 +104,6 @@ function getParam(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function checkRef(ref) {
-  if (ref != null && ref != "" && ref != "null")
-    fillRef(ref);
-  else {
-    Cookies.set('ref', fillRef(getParam("ref")), {
-      expires: 180
-    })
-  }
-}
-
-function fillRef(code) {
-  if (code != "" && code != null) {
-    $("#referralCode").html("Referred by " + code);
-    $("#button-signup").on(clickEvent, function() {
-      toggleSignup(code);
-    });
-  } else {
-    $('#button-signup').on(clickEvent, function() {
-      toggleSignup();
-    });
-  }
-
-  return code;
 }
 
 function finishSignupFlow() {
@@ -179,12 +144,12 @@ $('a[href*="#"]')
 
 // CLICK EVENTS
 // signup button
-$('.general-signup').on(clickEvent, function() {
+/*$('.general-signup').on(clickEvent, function() {
   // on signup button press, scroll page to #register-section (choose between student, mentor, school)
   $('html, body').animate({
     scrollTop: $("#register-section").offset().top - 150
   }, 1800);
-});
+});*/
 
 $('#scrollToAP').on(clickEvent, scrollToAP);
 
@@ -198,28 +163,6 @@ $('.generate').on(clickEvent, function() {
 
 $('.ap-reset').on(clickEvent, function() {
   resetAP();
-});
-
-$('.alt-signup.school').on(clickEvent, function() {
-  $('html, body').animate({
-    scrollTop: $("#school").offset().top - 100
-  }, 1200);
-  setTimeout(function() {
-    $('#school .highlight-block').effect("highlight", {
-      color: 'rgba(82, 153, 211, .8)'
-    }, 3000);
-  }, 500);
-});
-
-$('.alt-signup.mentor').on(clickEvent, function() {
-  $('html, body').animate({
-    scrollTop: $("#mentor").offset().top - 100
-  }, 1200);
-  setTimeout(function() {
-    $('#mentor .highlight-block').effect("highlight", {
-      color: 'rgba(82, 153, 211, .8)'
-    }, 3000);
-  }, 500);
 });
 
 function checkState() {
