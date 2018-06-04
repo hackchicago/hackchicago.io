@@ -1,119 +1,243 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/lib/normalize.css" />
-    <link rel="stylesheet" href="css/lib/skeleton.css" />
-    <link rel="stylesheet" href="css/bulma.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta name="msapplication-TileColor" content="#1157DF">
-    <meta name="theme-color" content="#1157DF">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-    <!-- SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hack Chicago 2018</title>
-    <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-    <meta name="keywords" content="hack,hackathon,chicago,high school,hacker,hack chicago,chicago hacks,midwest">
-    <meta name="robots" content="index, follow">
-    <meta name="image" content="https://hackchicago.io/img/seo.png">
+    <meta name="description" content="Free bootstrap template Atlas">
+    <link rel="icon" href="img/favicon.png" sizes="32x32" type="image/png">
+    <!-- custom.css -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="fonts/fa/css/font-awesome.min.css">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@hackchicago18">
-    <meta name="twitter:title" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
-    <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-    <meta name="twitter:image" content="https://hackchicago.io/img/seo.png">
-    <meta name="twitter:image:alt" content="Hack Chicago logo with blue background">
+    <!-- AOS -->
+    <link rel="stylesheet" href="css/aos.css">
+</head>
 
-    <!-- Facebook OG -->
-    <meta name="og:title" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
-    <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
-    <meta name="og:image" content="https://hackchicago.io/img/seo.png">
-    <meta name="og:url" content="https://hackchicago.io">
-    <meta name="og:site_name" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
-    <meta name="fb:admins" content="756152961254213">
-    <meta name="og:type" content="website">
-
-    <!-- Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Event",
-        "name": "Hack Chicago 2018",
-        "description": "The premier high school hackathon happening this summer in the Midwest that gathers 400+ high school programmers for 24 hours of fun!",
-        "image": [
-          "https://hackchicago.io/img/brand/1x1.png",
-          "https://hackchicago.io/img/brand/4x3.png",
-          "https://hackchicago.io/img/brand/16x9.png"
-        ],
-        "startDate": "2018-07-21T12:00",
-        "endDate": "2018-07-22T12:00",
-        "location": {
-          "@type": "Place",
-          "name": "TBA",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "TBA",
-            "addressLocality": "Chicago",
-            "addressRegion": "IL",
-            "postalCode": "60625",
-            "addressCountry": "US"
-          }
-        },
-        "offers": {
-          "@type": "Offer",
-          "name": "Free Admission",
-          "price": "0",
-          "priceCurrency": "USD",
-          "validFrom": "2018-05-13T16:00-08:00",
-          "url": "https://hackchicago.io",
-          "availability": "http://schema.org/InStock"
-        },
-        "performer": {
-          "@type": "PerformingGroup",
-          "name": "High School Hackers"
-        }
-      }
-    </script>
-  </head>
-
-  <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#top">
-        <h1 class="title">Hack Chicago</h1>
-      </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  </nav>
-    <section class="hero is-medium is-light">
-      <div class="hero-body">
-        <div class="container header">
-          <div class="columns">
-            <div class="column is-one-third">
-              <img src="img/bluelogo.svg" alt="Hack Chicago 2018">
-            </div>
-            <div class="column has-text-centered">
-              <h2 class="title">
-                Join us at the Midwest's <hl>&nbsp;largest&nbsp;</hl> high school hackathon!
-              </h2>
-
-              <a href="/apply"><button class="btn">Apply</button></a>
-            </div>
-          </div>
+<body>
+    <!-- banner -->
+    <div class="jumbotron jumbotron-fluid" id="banner">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row justify-content-between">
+                    <div class="col-2">
+                        <img src="img/bluelogo.svg" alt="logo">
+                    </div>
+                    <div class="col-6 align-self-center text-right">
+                        <a href="#" class="text-blue lead">Hack Chicago 2018</a>
+                    </div>
+                </div>
+            </header>
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-blue font-weight-bold my-5">
+            	Midwest's Largest<br>
+            	High School Hackathon
+            </h1>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-blue my-4">
+                Hack Chicago is the premier high school hackathon that looks to gather 400+ high school programmers <br />throughout the Midwest for 24 hours of fun! <strong>Come in, and build something awesome.</strong>
+            </p>
+            <a href="/apply" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-blue">Apply Now</a>
         </div>
-      </div>
-    </section>
+    </div>
+    <!-- four-blcok -->
+    <div class="container my-5 py-2">
+        <h2 class="text-center font-weight-bold my-5">By the organizers of awesome events</h2>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-3 text-center">
+                <a href="https://chicagohacks.tech" target="_blank"><img src="img/chihacks.png" alt="Chicago Hacks Logo" class="mx-auto events" style="background-color: #03A9F4;"></a>
+                <h4>Chicago Hacks</h4>
+                <p>The windy city's premier high school hackathon</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-3 text-center">
+                <a href="https://cincyhacks.com/" target="_blank"><img src="img/cincy.jpg" alt="Cincy Hacks Logo" class="mx-auto events"></a>
+                <h4>Cincy Hacks</h4>
+                <p>Cincinnati's first high school hackathon</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-3 text-center">
+                <a href="https://event0.org/" target="_blank"><img src="img/event0.png" alt="Event0 Logo" class="mx-auto events" style="background-color: #9C82AC;"></a>
+                <h4>event0</h4>
+                <p>The Chicago Public Schools hackathon</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-3 text-center">
+                <!--Website Down <a href="http://hackthefog.com/" target="_blank">--><img src="img/htf.jpeg" alt="Hack The Fog Logo" class="mx-auto events"><!--</a>-->
+                <h4>Hack The Fog</h4>
+                <p>San Francisco's first high school hackathon</p>
+            </div>
+        </div>
+    </div>
+    <!-- feature (skew background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">400 hackers + 24 hours</h2>
+                    <p class="my-4">We are striving to improve the event by making it bigger and better. Through a partnership with <a href="https://hackclub.com" target="_blank">Hack Club</a>,
+                      we will be bringing an even larger event to the the Midwest.
+                      With more attendees, activities, prizes, and hackers, we expect this year to be a blast!</p>
+                    <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Apply Now</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="img/chihacks-big.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold">Collaborate & Innovate</h2>
+                    <p class="my-4">
+                        You will have 24 hours to build an awesome project with your friends. You have been learning skills in school that you've never put into use - we help solving that problem.
+                        We’d love to see you converting ideas into apps and games, and it’s also a great time to learn new skills through our variety of workshops.
+                    </p>
+                    <a href="/apply" class="btn my-4 font-weight-bold atlas-cta cta-blue">Apply Now</a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="img/bround.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="container my-5 py-2" id="price-table">
+        <h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
+        <div class="row">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">STARTUP</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Up to 5 Documents</li>
+                    <li>Up to 3 Reviews</li>
+                    <li>5 team Members</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+                <h4 class="my-4">PREMIUM</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Up to 15 Documents</li>
+                    <li>Up to 10 Reviews</li>
+                    <li>25 team Members</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">PROFESSIONAL</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">30</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Unlimited Documents</li>
+                    <li>Unlimited Reviews</li>
+                    <li>Unlimited Members</li>
+                    <li>Unlimited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-1.png" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-2.png" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-3.png" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-4.png" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-5.png" class="mx-auto d-block">
+                </div>
+                <div class="col-sm-4 col-md-2 py-2 align-self-center">
+                    <img src="img/client-6.png" class="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
+        <div class="container my-5">
+            <div class="row justify-content-between">
+                <div class="col-md-6 text-white">
+                    <h2 class="font-weight-bold">Contact Us</h2>
+                    <p class="my-4">
+                        Te iisque labitur eos, nec sale argumentum scribentur,
+                        <br> augue disputando in vim. Erat fugit sit at, ius lorem.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li>Email : company_email@com</li>
+                        <li>Phone : 361-688-5824</li>
+                        <li>Address : 4826 White Avenue, Corpus Christi, Texas</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                    	<div class="row">
+	                        <div class="form-group col-md-6">
+	                            <label for="name">Your Name</label>
+	                            <input type="name" class="form-control" id="name">
+	                        </div>
+	                        <div class="form-group col-md-6">
+	                            <label for="Email">Your Email</label>
+	                            <input type="email" class="form-control" id="Email">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="message">Message</label>
+	                        <textarea class="form-control" id="message" rows="3"></textarea>
+	                    </div>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  -->
+
+	<!-- copyright -->
+	<div class="jumbotron jumbotron-fluid" id="copyright">
+        <div class="container">
+            <div class="row justify-content-between">
+            	<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+                    Copyright © 2018 Hack Chicago Team
+                </div>
+                <div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
+                    <a href="https://facebook.com/hackchicago" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/hackchicago18" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com/hackchicago" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:hello@hackchicago.io" class="d-inline-block text-center ml-2">
+                    	<i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+</body>
+
 </html>
