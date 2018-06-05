@@ -82,6 +82,7 @@ a, button {
 
 #banner header img {
   max-width: 160px;
+  border-radius: 0!important;
 }
 
 @media (max-width: 991px) {
@@ -96,9 +97,6 @@ a, button {
     display: block !important;
     margin-left: auto;
     margin-right: auto;
-  }
-  #banner a.lead {
-    display: none;
   }
   #banner h1 {
     margin-top: 0 !important;
