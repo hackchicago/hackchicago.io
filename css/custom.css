@@ -1,5 +1,9 @@
 /********** common setting **********/
 
+strong {
+  font-weight: 900 !important;
+}
+
 h2 {
   font-size: 2.8rem !important;
   font-weight: 700;
