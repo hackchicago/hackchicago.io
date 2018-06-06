@@ -115,12 +115,16 @@ a, button {
   max-width: 480px;
 }
 
+#feature-top {
+  background: linear-gradient(168deg,#f7f9fe 55%,#fff 0)
+}
+
 #feature-first {
-  background: linear-gradient(168deg,#fff 55%,#daefe8 0)
+  background: linear-gradient(168deg,#fff 55%,#f7f9fe 0)
 }
 
 #feature-last {
-  background: #daefe8;
+  background: #f7f9fe;
 }
 
 /********** price table **********/
@@ -130,8 +134,18 @@ a, button {
   padding-bottom: 4rem !important;
 }
 
+#price-table_basic {
+  background: rgba(82, 153, 211, .6);
+  color: #ffffff;
+}
+
+#price-table_plus {
+  background: rgba(82, 153, 211, .8);
+  color: #ffffff;
+}
+
 #price-table__premium {
-  background: #192440;
+  background: rgba(82, 153, 211, 1);
   color: #ffffff;
 }
 
@@ -162,7 +176,7 @@ a, button {
 /********** copyright **********/
 
 #copyright {
-  background: #192440;
+  background: #f7f9fe;
   padding: 2rem 3rem;
 }
 
@@ -181,7 +195,7 @@ a, button {
 }
 
 #copyright #social-media a:hover {
-  background: #00FFAD;
+  background: #5299d3;
 }
 
 #copyright #social-media a:hover i {
