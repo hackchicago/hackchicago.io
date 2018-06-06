@@ -80,12 +80,17 @@ a, button {
   overflow: hidden;
 }
 
+#banner header .col-2 {
+  flex: none!important;
+  max-width: none;
+}
+
 #banner header img {
-  max-width: 160px;
+  max-width: 160px !important;
   border-radius: 0!important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   header .col-2 {
     height: 156px;
     width: 100% !important;
@@ -93,7 +98,7 @@ a, button {
     max-width: none;
   }
   #banner header img {
-    width: 150px !important;
+    width: 130px !important;
     display: block !important;
     margin-left: auto;
     margin-right: auto;
