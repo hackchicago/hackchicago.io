@@ -15,8 +15,6 @@ h2 {
 
 img {
   display: block;
-  max-width: 100%;
-
   border-radius: 20px;
 }
 
@@ -231,135 +229,129 @@ a, button {
   border-radius: 0!important;
 }
 
+/* Sponsor Section Styling */
 
-/* Slider */
-
-.slick-slide {
-  margin: 0px 20px;
-}
-
-.slick-slider
-{
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-          user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-  max-height: 200px!important;
-}
-
-.slick-list
-{
-  position: relative;
-  display: block;
-  overflow: hidden;
+#sponsors {
   margin: 0;
-  padding: 0;
-
-  max-height: 200px!important;
-}
-.slick-list:focus
-{
-  outline: none;
-}
-.slick-list.dragging
-{
-  cursor: pointer;
-  cursor: hand;
+  padding: 0px 20px 10px 20px;
+  text-align: center;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-  -webkit-transform: translate3d(0, 0, 0);
-     -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-       -o-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+#sponsors .sponsor-div, #sponsor-major, #sponsor-minor {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.slick-track
-{
-  position: relative;
-  top: 0;
-  left: 0;
+#sponsors a {
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}
+
+#sponsors a:hover {
+  transform: scale(1.05);
+}
+
+#sponsors .partner {
+  box-sizing: border-box;
   display: block;
-  max-height: 200px!important;
-}
-.slick-track:before,
-.slick-track:after
-{
-  display: table;
-  content: '';
-}
-.slick-track:after
-{
-  clear: both;
-}
-
-.slide {
-  position: relative;
-  vertical-align: middle;
-  height: 200px!important;
-  width: 200px!important;
-}
-
-.slide img {
-  position:absolute;
-    top:0;
-    bottom:0;
-    margin:auto;
-}
-
-.slick-loading .slick-track
-{
-  visibility: hidden;
-}
-
-.slick-slide
-{
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-  float: right;
-}
-.slick-slide img
-{
-  display: block;
-}
-.slick-slide.slick-loading img
-{
-  display: none;
-}
-.slick-slide.dragging img
-{
-  pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-  display: block;
-}
-.slick-loading .slick-slide
-{
-  visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-  display: block;
+  width: 250px;
   height: auto;
-  border: 1px solid transparent;
+  margin: 25px;
 }
-.slick-arrow.slick-hidden {
-  display: none;
+
+#sponsor-major .sponsor {
+  box-sizing: border-box;
+  display: block;
+  width: 270px;
+  height: auto;
+  margin: 25px;
 }
+
+#sponsor-minor .sponsor {
+  box-sizing: border-box;
+  display: block;
+  width: 185px;
+  height: auto;
+  margin: 25px;
+}
+
+#additional-support {
+  width: 100%;
+  display: inline-block;
+  z-index: 100;
+  text-align: center;
+  align-items: center;
+}
+
+#additional-support a:hover {
+    transform: scale(1)!important;
+}
+
+#additional-support .sponsor {
+  vertical-align: middle;
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  margin: 25px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+#additional-support .sponsor:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 500px) {
+  #sponsors {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #sponsors .partner {
+    max-width: 300px;
+  }
+  #sponsors .sponsor-small {
+    width: 160px;
+    margin: 10px;
+    display: block;
+  }
+  #big-div {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 340px) {
+  #sponsors .sponsor-small {
+    width: 130px;
+    margin: 10px;
+    display: block;
+  }
+  #sponsors .partner {
+    max-width: 260px;
+  }
+}
+
+.modal-backdrop {
+  opacity: .5;
+}
+
+.modal-content, .modal-footer, .modal-header {
+  border: none!important;
+}
+
+#referral-modal button {
+  border-radius: 50px;
+  padding: 10px 25px 10px 25px;
+}
+
