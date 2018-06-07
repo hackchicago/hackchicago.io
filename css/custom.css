@@ -32,7 +32,7 @@ a, button {
   background-position: bottom;
 }
 
-.jumbotron h2 hl {
+hl {
   color: #5299d3;
 }
 
@@ -155,17 +155,17 @@ a, button {
 }
 
 #price-table_basic {
-  background: rgba(82, 153, 211, .6);
+  background: linear-gradient(168deg,rgba(82, 153, 211, .6) 55%,rgba(82, 153, 211, .8) 0);
   color: #ffffff;
 }
 
 #price-table_plus {
-  background: rgba(82, 153, 211, .8);
+  background: linear-gradient(168deg,rgba(82, 153, 211, .7) 55%,rgba(82, 153, 211, .9) 0);
   color: #ffffff;
 }
 
 #price-table__premium {
-  background: rgba(82, 153, 211, 1);
+  background: linear-gradient(168deg,rgba(82, 153, 211, .9) 55%,rgba(82, 153, 211, 1) 0);
   color: #ffffff;
 }
 
