@@ -1,3 +1,5 @@
+AOS.init({});
+
 // check URL for referral code
 let urlRef = getParam('ref');
 if (urlRef != null && urlRef !== "" && urlRef !== "null" && urlRef != undefined) 
