@@ -90,6 +90,10 @@ hl {
   overflow: hidden;
 }
 
+#banner h1 {
+  line-height: 1.2!important;
+}
+
 #banner header .col-2 {
   flex: none!important;
   max-width: none;
@@ -344,5 +348,22 @@ hl {
   #ref {
     display: block!important;
     line-height: 1.5;
+  }
+
+  #price-table{
+    max-width: 95%;
+  }
+
+  #price-table div {
+    margin-top: 10px!important;
+    border-radius: 10px;
+  }
+
+  #price-table .display-2 {
+    font-size: 4.5rem;
+  }
+
+  #price-table div ul .desc {
+    display: none!important;
   }
 }
