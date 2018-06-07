@@ -14,11 +14,6 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-$('#sponsor-carousel').on('slid.bs.carousel', function () {
-    $(".carousel-item.active:nth-child(" + ($(".carousel-inner .carousel-item").length -1) + ") + .carousel-item").insertBefore($(".carousel-item:first-child"));
-    $(".carousel-item.active:last-child").insertBefore($(".carousel-item:first-child"));
-});
-
 $(function() {
 
     var r = Cookies.get('ref');
