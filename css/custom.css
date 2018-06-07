@@ -135,19 +135,25 @@ hl {
   padding-bottom: 4rem !important;
 }
 
-#price-table_basic {
-  background: linear-gradient(168deg,rgba(82, 153, 211, .6) 55%,rgba(82, 153, 211, .8) 0);
-  color: #ffffff;
+#price-table div {
+  border-radius:10px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 0!important;
 }
 
-#price-table_plus {
-  background: linear-gradient(168deg,rgba(82, 153, 211, .7) 55%,rgba(82, 153, 211, .9) 0);
-  color: #ffffff;
+#price-table_basic .inner-wrapper {
+  background: linear-gradient(168deg,rgba(82, 153, 211, 0.05) 55%,rgba(82, 153, 211, .1) 0);
+  color: #5299d3;
 }
 
-#price-table__premium {
-  background: linear-gradient(168deg,rgba(82, 153, 211, .9) 55%,rgba(82, 153, 211, 1) 0);
-  color: #ffffff;
+#price-table_plus .inner-wrapper {
+  background: linear-gradient(168deg,rgba(82, 153, 211, .1) 55%,rgba(82, 153, 211, .2) 0);
+  color: #5299d3;
+}
+
+#price-table__premium .inner-wrapper {
+  background: linear-gradient(168deg,rgba(82, 153, 211, .2) 55%,rgba(82, 153, 211, .3) 0);
+  color: #5299d3;
 }
 
 #price-table ul li {
@@ -225,6 +231,7 @@ hl {
   margin: 0;
   padding: 0px 20px 30px 20px;
   text-align: center;
+  background: linear-gradient(168deg,#fff 55%,#f7f9fe 0);
 }
 
 #sponsors .sponsor-div, #sponsor-major, #sponsor-minor {
