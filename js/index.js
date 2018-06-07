@@ -17,11 +17,11 @@ function getParam(name, url) {
 }
 
 $(function() {
-
     var r = Cookies.get('ref');
     if (r != "" && r != null) {
       $(".apply-link").attr("href", "/apply?ref=" + r);
       $("#ref-name").text(r);
-      $("#ref").css("display", "inline");
+
+      $("#ref").addClass("show");
     }
 });
