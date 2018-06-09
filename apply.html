@@ -89,7 +89,7 @@
       <h4>Attendee Application</h4>
       <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
     </div>
-    <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
+    <form name="signup" accept-charset="UTF-8" onsubmit="return validatePhone();" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
       <div id="ref-fill">
       </div>
       <div class="row">
@@ -109,7 +109,7 @@
       </div>
 
       <div class="row">
-        <label for="phone">Phone Number<span class="required">*</span></label>
+        <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
         <input type="number" name="PHONE" id="phone" required />
       </div>
 
@@ -177,7 +177,7 @@
 
       <div class="row submitRow">
         <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
-        <button class="submit" type="submit">Submit Application</button>
+        <button class="submit" type="submit" id="submitApplication">Submit Application</button>
       </div>
     </form>
   </div>

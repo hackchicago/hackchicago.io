@@ -33,6 +33,16 @@ var emailCheck = function(dto, success, error){
   return error();
 };
 
+function validatePhone() {
+  var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
+  if(re.exec($('#phone').val())) {
+    return true;
+  } else {
+    $('#submitApplication').text('Invalid phone number');
+    return false;
+  }
+}
+
 // get parameter
 function getParam(name, url) {
   if (!url) url = window.location.href;
