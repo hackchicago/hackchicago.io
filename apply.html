@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/lib/normalize.css" />
   <link rel="stylesheet" href="css/lib/skeleton.css" />
+  <link rel="stylesheet" href="css/lib/number-polyfill.css" />
   <link rel="stylesheet" href="css/apply.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
@@ -108,6 +109,11 @@
       </div>
 
       <div class="row">
+        <label for="phone">Phone Number<span class="required">*</span></label>
+        <input type="number" name="PHONE" id="phone" required />
+      </div>
+
+      <div class="row">
         <div class="six columns">
           <label for="GRADE">Grade<span class="required">*</span><span class="desc">2017-2018</span></label>
           <select name="GRADE" id="GRADE" required>
@@ -179,6 +185,7 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://usebasin.com/f/da988bcf3fb2/ahoy.js" async defer></script>
+  <script src="js/lib/number-polyfill.js"></script>
   <script src="js/lib/sisyphus.min.js"></script>
   <script src="js/lib/cookie.min.js"></script>
   <script src="js/apply.js"></script>
