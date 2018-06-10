@@ -33,14 +33,31 @@ var emailCheck = function(dto, success, error){
   return error();
 };
 
-function validatePhone() {
+function validateForm() {
+  // set to false
+  let validated = true;
+
+  // check for phone
   var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
-  if(re.exec($('#phone').val())) {
-    return true;
-  } else {
-    $('#submitApplication').text('Invalid phone number');
-    return false;
+  if(!re.exec($('#phone').val())) {
+    // handle invalid phone
+    $('#phone').css('borderColor','red');
+
+    validated = false;
   }
+  // check for email confirmation
+  if(!($('#email').val() === $('#email-confirm').val())) {
+    // handle emails not being equal
+    $('#email').css('borderColor','red');
+    $('#email-confirm').css('borderColor','red');
+
+    validated = false;
+  }
+
+  if (!validated) $('#submitApplication').text('Invalid responses');
+
+  // return value of whether form is correct (returning false doesn't submit the form)
+  return validated;
 }
 
 // get parameter

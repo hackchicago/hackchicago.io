@@ -89,7 +89,7 @@
       <h4>Attendee Application</h4>
       <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
     </div>
-    <form name="signup" accept-charset="UTF-8" onsubmit="return validatePhone();" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
+    <form name="signup" accept-charset="UTF-8" onsubmit="return validateForm();" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
       <div id="ref-fill">
       </div>
       <div class="row">
@@ -104,8 +104,14 @@
       </div>
 
       <div class="row">
-        <label for="email">Email Address<span class="required">*</span><span class="desc">Note: Please make sure you can receive emails from this address, as it is the only way that we will share updates with you!</span></label>
-        <input type="email" name="EMAIL" id="email" required />
+        <div class="six columns">
+          <label for="email">Email Address<span class="required">*</span><span class="desc">Please make sure we can reach you</span></label>
+          <input type="email" name="EMAIL" id="email" required />
+        </div>
+        <div class="six columns">
+          <label for="email-confirm">Confirm Email Address<span class="required">*</span><span class="desc">Make sure both emails match!</span></label>
+          <input type="email" id="email-confirm" required />
+        </div>
       </div>
 
       <div class="row">
