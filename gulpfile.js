@@ -4,11 +4,11 @@ var browserSync = require('browser-sync').create(),
   reload = browserSync.reload;
 var cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
-var imagemin = require('gulp-imagemin');
 var minifyInline = require('gulp-minify-inline');
 var minifyInlineJSON = require('gulp-minify-inline-json');
 var sitemap = require('gulp-sitemap');
 var save = require('gulp-save');
+var imageop = require('gulp-image-optimization');
 
 gulp.task('html', function() {
   return gulp.src('*.html')
@@ -61,13 +61,24 @@ gulp.task('js', function() {
 });
 
 gulp.task('img', function() {
-  gulp.src('img/**/*')
-    .pipe(imagemin())
+    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imageop({
+      optimizationLevel: 5,
+      progressive: true,
+      interlaced: true
+    }))
     .pipe(gulp.dest('dist/img'))
     .pipe(reload({
       stream: true
     }))
 });
+
+gulp.task('svg', function() {
+  gulp.src('img/**/*.svg')
+  .pipe(gulp.dest('dist/img/'))
+  .pipe(reload({
+    stream: true
+  }))
+})
 
 gulp.task('fonts', function() {
   gulp.src('fonts/**/*')
@@ -110,5 +121,5 @@ gulp.task('watch', function() {
   gulp.watch('fonts/**/*', ['fonts']);
 });
 
-gulp.task('default', ['browser-sync', 'html', 'js', 'css', 'img', 'fonts', 'docs', 'static', 'sitemap', 'watch']);
-gulp.task('build', ['html', 'js', 'css', 'img', 'fonts', 'static', 'docs', 'sitemap']);
+gulp.task('default', ['browser-sync', 'html', 'js', 'css', 'img', 'svg', 'fonts', 'docs', 'static', 'sitemap', 'watch']);
+gulp.task('build', ['html', 'js', 'css', 'img', 'svg', 'fonts', 'static', 'docs', 'sitemap']);
