@@ -2,6 +2,16 @@
   overflow:hidden;
 }
 
+#hc-flag {
+  background: url(/img/hackclub_flag.svg) center top no-repeat;
+  background-position: center top;
+  width: 10rem;
+  height: 4rem;
+  position: absolute;
+  left: -5%;
+  top: -3.05rem;
+}
+
 /********** common setting **********/
 
 strong {
