@@ -277,7 +277,7 @@ hl {
 #sponsor-major .sponsor {
   box-sizing: border-box;
   display: block;
-  width: 280px;
+  width: 320px;
   height: auto;
   margin: 25px;
 }
@@ -293,7 +293,7 @@ hl {
 #sponsor-minor .sponsor {
   box-sizing: border-box;
   display: block;
-  width: 165px;
+  width: 145px;
   height: auto;
   margin: 25px;
 }
