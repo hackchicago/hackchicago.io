@@ -30,8 +30,5 @@
     "gulp-minify-inline-json": "^1.3.0",
     "gulp-save": "^1.3.0",
     "gulp-sitemap": "^5.1.0"
-  },
-  "dependencies": {
-    "gulp-image-optimization": "^0.1.3"
   }
 }
