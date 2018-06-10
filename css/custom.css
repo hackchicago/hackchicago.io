@@ -244,7 +244,7 @@ hl {
   background: linear-gradient(168deg,#fff 55%,#f7f9fe 0);
 }
 
-#sponsors .sponsor-div, #sponsor-major, #sponsor-minor {
+#sponsors .sponsor-div, #sponsor-major, #sponsor-minor, #sponsor-middle {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -277,7 +277,15 @@ hl {
 #sponsor-major .sponsor {
   box-sizing: border-box;
   display: block;
-  width: 270px;
+  width: 320px;
+  height: auto;
+  margin: 25px;
+}
+
+#sponsor-middle .sponsor {
+  box-sizing: border-box;
+  display: block;
+  width: 195px;
   height: auto;
   margin: 25px;
 }
@@ -285,7 +293,7 @@ hl {
 #sponsor-minor .sponsor {
   box-sizing: border-box;
   display: block;
-  width: 185px;
+  width: 145px;
   height: auto;
   margin: 25px;
 }
