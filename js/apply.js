@@ -39,7 +39,7 @@ $('#phone').blur(function() { checkPhone(); });
 
 function checkEmail() {
   // check for email confirmation
-  if(!($('#email').val() === $('#email-confirm').val())) {
+  if(!($('#email').val() === $('#email-confirm').val()) && $('#email').val() !== '' && $('#email-confirm').val() !== '') {
     // handle emails not being equal
     $('#email').addClass('invalid');
     $('#email-confirm').addClass('invalid');
@@ -54,7 +54,7 @@ function checkEmail() {
 function checkPhone() {
   // check for phone
   var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
-  if(!re.exec($('#phone').val())) {
+  if(!re.exec($('#phone').val()) && $('#phone').val() !== '') {
     // handle invalid phone
     $('#phone').addClass('invalid');
     return false;
