@@ -79,3 +79,7 @@ input:focus, select:focus, textarea:focus {
   border-color: red !important;
   border-width: 2px !important;
 }
+
+.already-signed-up, .container {
+  display: none;
+}

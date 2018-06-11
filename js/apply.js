@@ -2,16 +2,22 @@ var ref;
 var conversationalForm
 
 window.onload = function() {
-    $( "#signup" ).sisyphus();
-    console.log("Form data saved.");
+  // save form data
+  $("#signup").sisyphus();
 
-    // disable autocomplete completely
-    $("input, select, textarea").on("focus click", function() {
-      $(this).attr("autocomplete", "new-" + Math.random().toString(36).replace(/[^a-z]+/g, ''));
-    });
+  // disable autocomplete completely
+  $("input, select, textarea").on("focus click", function() {
+    $(this).attr("autocomplete", "new-" + Math.random().toString(36).replace(/[^a-z]+/g, ''));
+  });
 
-    // check referral
-    checkRef();
+  // check referral
+  checkRef();
+
+  // check if user has signed up already
+  if(Cookies.get('hasSignedUp') == 'true')
+    $('.already-signed-up').show();
+  else
+    $('.container').show();
 };
 
 function checkRef() {
@@ -26,13 +32,13 @@ function checkRef() {
   }
 }
 
-var emailCheck = function(dto, success, error){
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if(re.test(dto.text.toLowerCase()))
-  return success();
-  return error();
-};
+function reSignup() {
+  $('.already-signed-up').hide();
+  $('.container').show();
+  Cookies.remove('hasSignedUp');
+}
 
+// check email confirmation + phone number when user leaves field
 $('#email').blur(function() { checkEmail(); });
 $('#email-confirm').blur(function() { checkEmail(); });
 $('#phone').blur(function() { checkPhone(); });
