@@ -41,20 +41,28 @@ function validateForm() {
   var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
   if(!re.exec($('#phone').val())) {
     // handle invalid phone
-    $('#phone').css('borderColor','red');
+    $('#phone').addClass('invalid');
 
     validated = false;
+  } else {
+    $('#phone').removeClass('invalid');
   }
   // check for email confirmation
   if(!($('#email').val() === $('#email-confirm').val())) {
     // handle emails not being equal
-    $('#email').css('borderColor','red');
-    $('#email-confirm').css('borderColor','red');
+    $('#email').addClass('invalid');
+    $('#email-confirm').addClass('invalid');
 
     validated = false;
+  } else {
+    $('#email').removeClass('invalid');
+    $('#email-confirm').removeClass('invalid');
   }
 
-  if (!validated) $('#submitApplication').text('Invalid responses');
+  if (!validated) {
+    $('#submitApplication').text('Invalid responses');
+    location.href = '#email';
+  }
 
   // return value of whether form is correct (returning false doesn't submit the form)
   return validated;
