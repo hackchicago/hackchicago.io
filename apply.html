@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/lib/normalize.css" />
   <link rel="stylesheet" href="css/lib/skeleton.css" />
+  <link rel="stylesheet" href="css/lib/number-polyfill.css" />
   <link rel="stylesheet" href="css/apply.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
@@ -88,7 +89,7 @@
       <h4>Attendee Application</h4>
       <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
     </div>
-    <form name="signup" accept-charset="UTF-8" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
+    <form name="signup" accept-charset="UTF-8" onsubmit="return validateForm();" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
       <div id="ref-fill">
       </div>
       <div class="row">
@@ -103,8 +104,19 @@
       </div>
 
       <div class="row">
-        <label for="email">Email Address<span class="required">*</span><span class="desc">Note: Please make sure you can receive emails from this address, as it is the only way that we will share updates with you!</span></label>
-        <input type="email" name="EMAIL" id="email" required />
+        <div class="six columns">
+          <label for="email">Email Address<span class="required">*</span><span class="desc">Please make sure we can reach you</span></label>
+          <input type="email" name="EMAIL" id="email" required />
+        </div>
+        <div class="six columns">
+          <label for="email-confirm">Confirm Email Address<span class="required">*</span><span class="desc">Make sure both emails match!</span></label>
+          <input type="email" id="email-confirm" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
+        <input type="number" name="PHONE" id="phone" required />
       </div>
 
       <div class="row">
@@ -171,7 +183,7 @@
 
       <div class="row submitRow">
         <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
-        <button class="submit" type="submit">Submit Application</button>
+        <button class="submit" type="submit" id="submitApplication">Submit Application</button>
       </div>
     </form>
   </div>
@@ -179,6 +191,7 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://usebasin.com/f/da988bcf3fb2/ahoy.js" async defer></script>
+  <script src="js/lib/number-polyfill.js"></script>
   <script src="js/lib/sisyphus.min.js"></script>
   <script src="js/lib/cookie.min.js"></script>
   <script src="js/apply.js"></script>
