@@ -33,39 +33,45 @@ var emailCheck = function(dto, success, error){
   return error();
 };
 
-function validateForm() {
-  // set to false
-  let validated = true;
+$('#email').blur(function() { checkEmail(); });
+$('#email-confirm').blur(function() { checkEmail(); });
+$('#phone').blur(function() { checkPhone(); });
 
-  // check for phone
-  var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
-  if(!re.exec($('#phone').val())) {
-    // handle invalid phone
-    $('#phone').addClass('invalid');
-
-    validated = false;
-  } else {
-    $('#phone').removeClass('invalid');
-  }
+function checkEmail() {
   // check for email confirmation
   if(!($('#email').val() === $('#email-confirm').val())) {
     // handle emails not being equal
     $('#email').addClass('invalid');
     $('#email-confirm').addClass('invalid');
-
-    validated = false;
+    return false;
   } else {
     $('#email').removeClass('invalid');
     $('#email-confirm').removeClass('invalid');
+    return true;
   }
+}
 
-  if (!validated) {
+function checkPhone() {
+  // check for phone
+  var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
+  if(!re.exec($('#phone').val())) {
+    // handle invalid phone
+    $('#phone').addClass('invalid');
+    return false;
+  } else {
+    $('#phone').removeClass('invalid');
+    return true;
+  }
+}
+
+function validateForm() {
+  if (!checkEmail() || !checkPhone()) {
     $('#submitApplication').text('Invalid responses');
     location.href = '#email';
+    return false;
+  } else {
+    return true;
   }
-
-  // return value of whether form is correct (returning false doesn't submit the form)
-  return validated;
 }
 
 // get parameter
