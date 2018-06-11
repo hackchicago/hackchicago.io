@@ -13,6 +13,9 @@
   <meta name="theme-color" content="#1157DF">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="css/aos.css">
+
   <!-- SEO -->
   <title>Apply – Hack Chicago 2018</title>
   <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
@@ -81,16 +84,16 @@
 </head>
 
 <body>
-  <div class="header">
+  <div class="header" data-aos="fade" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">
     <a href="/"><img src="img/bluelogo.svg" class="logo"></a>
   </div>
-  <div class="already-signed-up">
+  <div class="already-signed-up" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">
     <div class="title">
       <h4>Attendee Application</h4>
       <p>Hey! It looks like you've already signed up to Hack Chicago.<br />If this is an error, please feel free to <a href="javascript: reSignup();">sign up</a>.</p>
     </div>
   </div>
-  <div class="container">
+  <div class="container" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">
     <div class="title">
       <h4>Attendee Application</h4>
       <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
@@ -197,6 +200,8 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://usebasin.com/f/da988bcf3fb2/ahoy.js" async defer></script>
+  <!-- AOS -->
+  <script src="js/lib/aos.js"></script>
   <script src="js/lib/number-polyfill.js"></script>
   <script src="js/lib/sisyphus.min.js"></script>
   <script src="js/lib/cookie.min.js"></script>

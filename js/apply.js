@@ -14,10 +14,12 @@ window.onload = function() {
   checkRef();
 
   // check if user has signed up already
-  if(Cookies.get('hasSignedUp') == 'true')
+  if(Cookies.get('hasSignedUp') == 'true') {
     $('.already-signed-up').show();
-  else
+  } else {
     $('.container').show();
+  }
+  AOS.init({});
 };
 
 function checkRef() {
@@ -32,6 +34,7 @@ function checkRef() {
   }
 }
 
+// clear hasSignedUp cookie & show form
 function reSignup() {
   $('.already-signed-up').hide();
   $('.container').show();
