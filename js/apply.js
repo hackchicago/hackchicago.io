@@ -45,6 +45,7 @@ function reSignup() {
 $('#email').blur(function() { checkEmail(); });
 $('#email-confirm').blur(function() { checkEmail(); });
 $('#phone').blur(function() { checkPhone(); });
+$('#GENDER').on('change', function() { checkGender(); });
 
 function checkEmail() {
   // check for email confirmation
@@ -73,8 +74,19 @@ function checkPhone() {
   }
 }
 
+function checkGender() {
+  if($('#GENDER').val() == '') {
+    // handle invalid gender
+    $('#GENDER').addClass('invalid');
+    return false;
+  } else {
+    $('#GENDER').removeClass('invalid');
+    return true;
+  }
+}
+
 function validateForm() {
-  if (!checkEmail() || !checkPhone()) {
+  if (!checkEmail() || !checkPhone() || !checkGender()) {
     $('#submitApplication').text('Invalid responses');
     location.href = '#email';
     return false;
