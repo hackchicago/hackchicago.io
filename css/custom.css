@@ -105,6 +105,32 @@ hl {
   color: #4076BB;
 }
 
+/********** signup overlay **********/
+
+.swal-footer {
+  text-align: center !important;
+  margin-bottom: 1.5rem;
+}
+
+.swal-text {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif  !important;
+  font-size: 1.15rem !important;
+  font-weight: 600;
+}
+
+.swal-button {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif !important;
+  font-size: 1rem;
+  font-weight: 700 !important;
+  border-radius: 50px;
+  background: #5299d3;
+  transition: .3s ease-in-out !important;
+}
+
+.swal-button:hover {
+  background: #4076bb;
+}
+
 /********** banner **********/
 
 #banner header {
