@@ -39,7 +39,9 @@ function getParam(name, url) {
 }
 
 function showTravelUpdate() {
-
+  swal('Travel info', 'Here is some travel info', {
+    button: 'Ok!',
+  });
 }
 
 function signup() {
