@@ -15,7 +15,6 @@ if(Cookies.get('hasSignedUp') == 'true') {
 } else {
   var r = Cookies.get('ref');
   if (r != "" && r != null && r != "null" && r != undefined) {
-    $(".apply-link").attr("href", "/apply?ref=" + r);
     $("#ref-name").text(r);
     $("#ref").addClass("show");
   }
@@ -30,4 +29,29 @@ function getParam(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function signup() {
+  swal("I am applying as a", {
+    buttons: {
+      mentor: {
+        text: "Mentor",
+        value: "mentor",
+      },
+      student: {
+        text: "Student",
+        value: "student",
+      }
+    },
+  })
+  .then((value) => {
+    switch (value) {
+      case "student":
+        window.location.href = '/apply';
+        break;
+      case "mentor":
+        window.open('https://docs.google.com/forms/u/1/d/e/1FAIpQLSeMttIViw27TTfxzT12yKEYeHdjb7gn7WC2M1TGwrY3UlaGkQ/viewform', '_blank');
+        break;
+    }
+  });
 }
