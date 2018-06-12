@@ -409,4 +409,8 @@ hl {
   #referral-program div ul .desc {
     display: none!important;
   }
+
+  #travel-banner {
+    text-align: left;
+  }
 }
