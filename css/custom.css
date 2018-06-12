@@ -94,6 +94,10 @@ hl {
   background-size: cover;
 }
 
+#tagline a {
+  color: #4076BB;
+}
+
 /********** banner **********/
 
 #banner header {
@@ -140,12 +144,12 @@ hl {
 
 /********** price table **********/
 
-#price-table {
+#referral-program {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
 }
 
-#price-table div {
+#referral-program div {
   border-radius:10px;
   padding: 5px 10px 5px 10px;
   margin-top: 0!important;
@@ -166,7 +170,7 @@ hl {
   color: #5299d3;
 }
 
-#price-table ul li {
+#referral-program ul li {
   padding: 5px 0;
 }
 
@@ -382,20 +386,20 @@ hl {
     display: block!important;
   }
 
-  #price-table{
+  #referral-program{
     max-width: 95%;
   }
 
-  #price-table div {
+  #referral-program div {
     margin-top: 10px!important;
     border-radius: 10px;
   }
 
-  #price-table .display-2 {
+  #referral-program .display-2 {
     font-size: 4.5rem;
   }
 
-  #price-table div ul .desc {
+  #referral-program div ul .desc {
     display: none!important;
   }
 }
