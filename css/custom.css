@@ -202,6 +202,13 @@ hl {
 }
 
 /********** schedule **********/
+<<<<<<< HEAD
+#schedule .table {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+=======
 
 #schedule {
   margin-top: 0rem !important;
@@ -224,6 +231,7 @@ td {
 tr > * {
   padding: 0.3rem 0.5rem !important;
 }
+>>>>>>> 269a5889c26bac3195fcd0fd9476b346556b5610
 
 /********** judges **********/
 
