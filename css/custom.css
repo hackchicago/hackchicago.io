@@ -200,6 +200,13 @@ hl {
   padding: 5px 0;
 }
 
+/********** schedule **********/
+#schedule .table {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+
 /********** contact **********/
 
 #contact {
