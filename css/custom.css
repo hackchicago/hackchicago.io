@@ -225,6 +225,38 @@ tr > * {
   padding: 0.3rem 0.5rem !important;
 }
 
+/********** judges **********/
+
+#judges {
+  background: #f7f9fe;
+  width: 100%;
+}
+
+#judges h2 {
+  margin-bottom: 0rem !important;
+  width: initial;
+}
+
+.judges-header {
+  padding-bottom: 1.5rem;
+}
+
+.all-judges {
+  flex-flow: row wrap;
+  align-items: start;
+  text-align: center;
+}
+
+figure img {
+  border-radius: 50%;
+  box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
+}
+
+figure {
+  margin: 0rem !important;
+  max-width: 225px;
+}
+
 /********** contact **********/
 
 #contact {
