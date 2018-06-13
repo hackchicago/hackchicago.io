@@ -302,79 +302,96 @@
     </section>
 
     <!-- Schedule -->
-    <section id="schedule">
-      <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .1em!important;">Schedule</h2>
-      <p class="text-center lead my-4">Saturday, July 21</p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Event</th>
-            <!--<th scope="col">Location</th>-->
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">11:00 AM</th>
-            <td>Registration Opens</td>
-            <!--<td>Location</td>-->
-          </tr>
-          <tr>
-            <th scope="row">12:00 PM</th>
-            <td>Opening Ceremony</td>
-            <!--<td>Location</td>-->
-          </tr>
-          <tr>
-            <th scope="row">1:00 PM</th>
-            <td>Hacking Begins</td>
-            <!--<td>Location</td>-->
-          </tr>
-          <tr>
-            <th scope="row">7:00 PM</th>
-            <td>Dinner</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="text-center lead my-4">Sunday, July 22</p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Event</th>
-            <!--<th scope="col">Location</th>-->
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">12:00 AM</th>
-            <td>Midnight Snack</td>
-          </tr>
-          <tr>
-            <th scope="row">7:30 AM</th>
-            <td>Breakfast</td>
-          </tr>
-          <tr>
-            <th scope="row">11:30 AM</th>
-            <td>Lunch</td>
-          </tr>
-          <tr>
-            <th scope="row">1:00 PM</th>
-            <td>Hacking Ends; Submit to Devpost</td>
-          </tr>
-          <tr>
-            <th scope="row">1:30 PM</th>
-            <td>Judging</td>
-          </tr>
-          <tr>
-            <th scope="row">2:30 PM</th>
-            <td>Closing Ceremony</td>
-          </tr>
-          <tr>
-            <th scope="row">3:30 PM</th>
-            <td>End of Hackathon</td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="container my-5 py-2 " id="schedule">
+      <div class="container" style="margin-top: 15px">
+        <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .1em!important;">Schedule</h2>
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+          <p class="text-center lead my-4 bold">Saturday, July 21</p>
+          <table cellspacing="0" class="table schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+                <!--<th scope="col">Location</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>11:00 AM</td>
+                <td>Registration Opens</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>12:30 PM</td>
+                <td>Opening Ceremony</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>1:30 PM</td>
+                <td>Hacking Begins</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>7:30 PM</td>
+                <td>Dinner</td>
+                <!--<td>Location</td>-->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
+          <p class="text-center lead my-4 bold">Sunday, July 22</p>
+          <table class="table schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Time</th>
+                <th scope="col">Event</th>
+                <!--<th scope="col">Location</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12:00 AM</td>
+                <td>Midnight Snack</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>7:30 AM</td>
+                <td>Breakfast</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>11:30 PM</td>
+                <td>Lunch</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>1:00 PM</td>
+                <td>
+                  Hacking Ends<br/>Submissions to Devpost
+                </td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>1:30 PM</td>
+                <td>Judging</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>2:30 PM</td>
+                <td>Closing Ceremony</td>
+                <!--<td>Location</td>-->
+              </tr>
+              <tr>
+                <td>3:30 PM</td>
+                <td>End of Hackathon</td>
+                <!--<td>Location</td>-->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-center lead my-4">Subject to change*</p>
+      </div>
     </section>
 
     <!-- Sponsors -->
@@ -436,8 +453,11 @@
       </div>
     </section>
 
+    <!-- Food Catering -->
+
     <!-- Judges -->
     <section id="judges">
+      
     </section>
     <!--
     <div class="jumbotron jumbotron-fluid">
