@@ -14,7 +14,7 @@
 
 /********** common setting **********/
 
-strong, b {
+strong, b, .bold {
   font-weight: 700 !important;
 }
 
@@ -172,7 +172,8 @@ hl {
 
 #referral-program {
   padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-bottom: 0rem !important;
+  margin-bottom: 0rem !important;
 }
 
 #referral-program div {
@@ -198,6 +199,30 @@ hl {
 
 #referral-program ul li {
   padding: 5px 0;
+}
+
+/********** schedule **********/
+
+#schedule {
+  margin-top: 0rem !important;
+}
+
+table {
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+th {
+  background-color: rgba(64, 118, 187, 0.6);
+}
+
+td {
+  background-color: rgba(82, 153, 211, 0.2);
+}
+
+tr > * {
+  padding: 0.3rem 0.5rem !important;
 }
 
 /********** contact **********/
