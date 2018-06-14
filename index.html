@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no,">
-  <title>Hack Chicago 2018</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <!-- custom.css -->
+  <!-- stylesheets -->
   <link rel="stylesheet" href="css/custom.css">
-  <!-- bootstrap.min.css -->
   <link rel="stylesheet" href="css/lib/bootstrap.min.css">
-  <!-- font-awesome -->
   <link rel="stylesheet" href="fonts/fa/css/font-awesome.min.css">
-
-  <!-- AOS -->
   <link rel="stylesheet" href="css/aos.css">
+  <!-- viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no,">
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!-- theme color (mobile) -->
+  <meta name="msapplication-TileColor" content="#1157DF">
+  <meta name="theme-color" content="#1157DF">
 
   <!-- Handle case where JavaScript is disabled -->
   <noscript>
@@ -27,6 +27,7 @@
   </noscript>
 
   <!-- SEO -->
+  <title>Hack Chicago 2018</title>
   <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
   <meta name="keywords" content="hack,hackathon,chicago,high school,hacker,hack chicago,chicago hacks,midwest">
   <meta name="robots" content="index, follow">
@@ -94,15 +95,15 @@
 
 <body>
   <div class="body-wrap">
-    <!-- travel alert -->
+    <!-- Travel Alert -->
     <div class="alert alert-danger alert-dismissible fade show" role="alert" id="travel-banner">
       Please read our <a href="javascript: showTravelUpdate();">travel update</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="closeTravelBanner();">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <!-- banner -->
-    <div class="jumbotron jumbotron-fluid" id="banner">
+    <!-- Header Banner -->
+    <section class="jumbotron jumbotron-fluid" id="banner">
       <div class="container text-center text-md-left">
         <header>
           <div class="row justify-content-between">
@@ -117,8 +118,8 @@
         </h1>
         <p data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true" class="lead text-blue"
           style="margin-top: 0; font-weight: 600">July 21-22, 2018 &nbsp;&ndash;&nbsp; Location TBD</p>
-        <p id="tagline" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true" class="lead text-blue my-4"
-          style="max-width: 960px">
+        <p id="tagline" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true"
+          class="lead text-blue my-4" style="max-width: 960px">
           Hack Chicago is the premier high school hackathon gathering 400+ student programmers throughout the Midwest for 24 hours
           of fun!
           <strong>Come in for free, and build something awesome.</strong>
@@ -132,9 +133,10 @@
           <strong id="ref-name"></strong>!
         </p>
       </div>
-    </div>
-    <!-- four-blcok -->
-    <div class="container my-5 py-2" style="position: relative">
+    </section>
+
+    <!-- Brought to You By -->
+    <section class="container my-5 py-2" style="position: relative">
       <a div data-aos="fade" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true" id="hc-flag" href="https://hackclub.com"></a>
       <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .3em!important;">By the organizers of awesome events</h2>
       <p class="text-center lead my-4">Working together to bring you the best high school hackathon in the nation!</p>
@@ -178,72 +180,75 @@
           <p>Central Pennsylvania's first high school hackathon</p>
         </div>
       </div>
-    </div>
-    <!-- feature (skew background) -->
-    <div class="jumbotron jumbotron-fluid feature" id="feature-top">
-      <div class="container">
-        <div class="row justify-content-between text-center text-md-left">
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
-            <h2 class="font-weight-bold">Bigger &&nbsp;
-              <hl>Better</hl>
-            </h2>
-            <p class="my-4">
-              Last year, we hosted
-              <strong>Chicago Hacks</strong>, Chicago’s largest high school hackathon. With over 130 attendees and over 30 projects
-              presented, it would be an understatement to call that just a success. We saw passionate hackers collaborate
-              and build amazing things in 24 hours. Through workshops and mentorships, beginners and veteran programmers
-              created awesome projects.
-            </p>
-            <a href="https://chicagohacks.tech/" class="btn my-4 font-weight-bold atlas-cta cta-blue">See what happened last year >></a>
-          </div>
-          <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
-            <img src="img/photos/1.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="jumbotron jumbotron-fluid feature" id="feature-top">
+        <div class="container">
+          <div class="row justify-content-between text-center text-md-left">
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+              <h2 class="font-weight-bold">Bigger &&nbsp;
+                <hl>Better</hl>
+              </h2>
+              <p class="my-4">
+                Last year, we hosted
+                <strong>Chicago Hacks</strong>, Chicago’s largest high school hackathon. With over 130 attendees and over 30 projects
+                presented, it would be an understatement to call that just a success. We saw passionate hackers collaborate
+                and build amazing things in 24 hours. Through workshops and mentorships, beginners and veteran programmers
+                created awesome projects.
+              </p>
+              <a href="https://chicagohacks.tech/" class="btn my-4 font-weight-bold atlas-cta cta-blue">See what happened last year >></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+              <img src="img/photos/1.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
-      <div class="container my-5">
-        <div class="row justify-content-between text-center text-md-left">
-          <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
-            <h2 class="font-weight-bold">
-              <hl>400 hackers</hl>&nbsp;+ 24 hours</h2>
-            <p class="my-4">We are striving to improve the event by making it bigger and better. Through a partnership with
-              <a href="https://hackclub.com"
-                target="_blank">Hack Club</a>, we will be bringing an even larger event to the Midwest. With more attendees, activities, and
-              prizes, we expect this year to be a blast!</p>
-            <a href="https://hackclub.com/?ref=hackchicago" class="btn my-4 font-weight-bold atlas-cta cta-blue">What is Hack Club?</a>
-          </div>
-          <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
-            <img src="img/photos/2.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+      <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+          <div class="row justify-content-between text-center text-md-left">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+              <h2 class="font-weight-bold">
+                <hl>400 hackers</hl>&nbsp;+ 24 hours</h2>
+              <p class="my-4">We are striving to improve the event by making it bigger and better. Through a partnership with
+                <a href="https://hackclub.com" target="_blank">Hack Club</a>, we will be bringing an even larger event to the Midwest. With more attendees, activities,
+                and prizes, we expect this year to be a blast!</p>
+              <a href="https://hackclub.com/?ref=hackchicago" class="btn my-4 font-weight-bold atlas-cta cta-blue">What is Hack Club?</a>
+            </div>
+            <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+              <img src="img/photos/2.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
-      <div class="container">
-        <div class="row justify-content-between text-center text-md-left">
-          <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
-            <h2 class="font-weight-bold">Collaborate &&nbsp;
-              <hl>Innovate</hl>
-            </h2>
-            <p class="my-4">
-              You will have 24 hours to build an awesome project with your friends. You've been learning skills in school that you haven't
-              put into use - we help solve that problem. We’d love to see you convert ideas into apps and games, and it’s
-              also a great time to learn new skills through our variety of workshops.
-            </p>
-            <a href="javascript: signup();" class="btn my-4 font-weight-bold atlas-cta cta-blue apply-link">Apply Now</a>
-          </div>
-          <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
-            <img src="img/photos/3.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+      <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+          <div class="row justify-content-between text-center text-md-left">
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+              <h2 class="font-weight-bold">Collaborate &&nbsp;
+                <hl>Innovate</hl>
+              </h2>
+              <p class="my-4">
+                You will have 24 hours to build an awesome project with your friends. You've been learning skills in school that you haven't
+                put into use - we help solve that problem. We’d love to see you convert ideas into apps and games, and it’s
+                also a great time to learn new skills through our variety of workshops.
+              </p>
+              <a href="javascript: signup();" class="btn my-4 font-weight-bold atlas-cta cta-blue apply-link">Apply Now</a>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+              <img src="img/photos/3.jpg" alt="Chicago Hacks 2017 Picture" class="mx-auto d-block">
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container my-5 py-2" id="referral-program">
+    <!-- Referral Program -->
+    <section class="container my-5 py-2" id="referral-program">
       <h2 class="text-center font-weight-bold d-block mb-3">Become a&nbsp;
         <hl>Hacker Ambassador</hl>
       </h2>
@@ -300,9 +305,118 @@
           <strong>Check your email after submitting your application for your unique link!</strong> Email us at
           <a href="mailto:hello@hackchicago.io">hello@hackchicago.io</a> if you need help getting your link.</p>
       </div>
-    </div>
+    </section>
 
-    <div id="sponsors">
+    <!-- Schedule -->
+    <section class="container my-5 py-2 " id="schedule">
+      <div class="container" style="margin-top: 15px">
+        <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .1em!important;">Schedule</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+
+              <p class="text-center lead my-4 bold">Saturday, July 21</p>
+              <table cellspacing="0" class="table fixed schedule-table">
+                <thead>
+                  <tr>
+                    <th scope="col" width="20%">Time</th>
+                    <th scope="col">Event</th>
+                    <!--<th scope="col">Location</th>-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>11:00 AM</td>
+                    <td>Registration Opens</td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                  <tr>
+                    <td>11:30 AM</td>
+                    <td><a class="tip" data-toggle="tooltip" data-placement="right" title="A limited lunch will be served if you arrive early!">Lunch</a></td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                  <tr>
+                    <td>12:30 PM</td>
+                    <td>Opening Ceremony</td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                  <tr>
+                    <td>1:30 PM</td>
+                    <td>Hacking Begins</td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                  <tr class="ws">
+                    <td>2:00 PM</td>
+                    <td>Workshop: Intro to Programming</td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                  <tr>
+                    <td>7:30 PM</td>
+                    <td>Dinner</td>
+                    <!--<td>Location</td>-->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
+            <p class="text-center lead my-4 bold">Sunday, July 22</p>
+            <table class="table fixed schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col" width="20%">Time</th>
+                  <th scope="col">Event</th>
+                  <!--<th scope="col">Location</th>-->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12:00 AM</td>
+                  <td>Midnight Snack</td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>7:30 AM</td>
+                  <td>Breakfast</td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>11:30 PM</td>
+                  <td>Lunch</td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>1:00 PM</td>
+                  <td>
+                    Hacking Ends - Submissions Due to <a href="https://hackchicago18.devpost.com/">Devpost</a>
+                  </td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>1:30 PM</td>
+                  <td>Judging</td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>2:30 PM</td>
+                  <td>Closing Ceremony</td>
+                  <!--<td>Location</td>-->
+                </tr>
+                <tr>
+                  <td>3:30 PM</td>
+                  <td>Event Ends</td>
+                  <!--<td>Location</td>-->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="text-center my-4">Subject to change*</p>
+      </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section id="sponsors">
       <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .3em!important;">Our Sponsors</h2>
       <p class="text-center lead my-4">Interested in sponsoring? Read our
         <a href="docs/prospectus.pdf">prospectus</a> to learn more about sponsorship!</p>
@@ -323,6 +437,12 @@
           </a>
           <a href="https://www.flexera.com/" target="_blank">
             <img class="sponsor" src="img/sponsors/flexera.png" alt="Flexera" />
+          </a>
+          <a href="https://www.neighborhoods.com/" target="_blank">
+            <img class="sponsor" src="img/sponsors/neighborhoods.png" alt="Neighborhoods.com" />
+          </a>
+          <a href="https://repl.it/" target="_blank">
+            <img class="sponsor" src="img/sponsors/replit.png" alt="Repl.it" style="width:175px;" />
           </a>
         </div>
         <br />
@@ -352,75 +472,10 @@
           </a>
         </div>
       </div>
-    </div>
-    <!--
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-1.png" class="mx-auto d-block">
-                </div>
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-2.png" class="mx-auto d-block">
-                </div>
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-3.png" class="mx-auto d-block">
-                </div>
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-4.png" class="mx-auto d-block">
-                </div>
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-5.png" class="mx-auto d-block">
-                </div>
-                <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-6.png" class="mx-auto d-block">
-                </div>
-            </div>
-        </div>
-    </div>
-  -->
-    <!--
-    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
-        <div class="container my-5">
-            <div class="row justify-content-between">
-                <div class="col-md-6 text-white">
-                    <h2 class="font-weight-bold">Contact Us</h2>
-                    <p class="my-4">
-                        Te iisque labitur eos, nec sale argumentum scribentur,
-                        <br> augue disputando in vim. Erat fugit sit at, ius lorem.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li>Email : company_email@com</li>
-                        <li>Phone : 361-688-5824</li>
-                        <li>Address : 4826 White Avenue, Corpus Christi, Texas</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <form>
-                    	<div class="row">
-	                        <div class="form-group col-md-6">
-	                            <label for="name">Your Name</label>
-	                            <input type="name" class="form-control" id="name">
-	                        </div>
-	                        <div class="form-group col-md-6">
-	                            <label for="Email">Your Email</label>
-	                            <input type="email" class="form-control" id="Email">
-	                        </div>
-	                    </div>
-	                    <div class="form-group">
-	                        <label for="message">Message</label>
-	                        <textarea class="form-control" id="message" rows="3"></textarea>
-	                    </div>
-                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-  -->
-
-    <!-- copyright -->
-    <div class="jumbotron jumbotron-fluid" id="copyright">
+    </section>
+    
+    <!-- Footer -->
+    <section class="jumbotron jumbotron-fluid" id="copyright">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-md-6 align-self-center text-center text-md-left my-2">
@@ -445,17 +500,18 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      </div>
+    </section>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="js/lib/aos.js"></script>
-  <script src="js/lib/cookie.min.js"></script>
-  <script src="js/lib/swal.min.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/inject.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/lib/bs.bundle.min.js"></script>
+    <script src="js/lib/aos.js"></script>
+    <script src="js/lib/cookie.min.js"></script>
+    <script src="js/lib/swal.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/inject.js"></script>
 
-  <script src="https://embed.small.chat/T0266FRGMGB2EQ6EQG.js" async></script>
+    <script src="https://embed.small.chat/T0266FRGMGB2EQ6EQG.js" async></script>
 </body>
 
 </html>

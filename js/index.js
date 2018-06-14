@@ -25,7 +25,9 @@ function closeTravelBanner() {
   Cookies.set('travelBanner', 'closed', { expires: 180 });
 }
 
-AOS.init({});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+})
 
 // get URL params
 function getParam(name, url) {
