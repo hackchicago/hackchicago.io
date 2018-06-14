@@ -207,22 +207,31 @@ hl {
   margin-top: 0rem !important;
 }
 
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+
 table {
-  font-size: 1.2rem;
-  border-radius: 0.4rem;
+  font-size: 1rem;
   overflow: hidden;
 }
 
-th {
-  background-color: rgba(64, 118, 187, 0.6);
+th{
+
 }
 
 td {
-  background-color: rgba(82, 153, 211, 0.2);
+}
+
+tr.ws {
+  font-weight: 600;
+}
+
+.tip {
+  color: #4076bb!important;
 }
 
 tr > * {
-  padding: 0.3rem 0.5rem !important;
+  padding: 0.7rem 0.2rem !important;
 }
 
 /********** judges **********/
@@ -252,7 +261,8 @@ figure img {
   box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
 }
 
-figure {
+figure.judge {
+  text-align: center;
   margin: 0rem !important;
   max-width: 225px;
 }

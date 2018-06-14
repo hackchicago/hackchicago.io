@@ -20,6 +20,12 @@ if(Cookies.get('hasSignedUp') == 'true') {
   }
 }
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+})
+
+
+
 // get URL params
 function getParam(name, url) {
   if (!url) url = window.location.href;
