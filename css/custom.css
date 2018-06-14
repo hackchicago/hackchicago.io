@@ -28,7 +28,6 @@ h2 {
 }
 
 img {
-  display: block;
   border-radius: 20px;
 }
 
@@ -232,6 +231,22 @@ tr.ws {
 
 tr > * {
   padding: 0.7rem 0.2rem !important;
+}
+
+/********** judges **********/
+
+#judges {
+  background: #f7f9fe;
+}
+
+figure img {
+  border-radius: 50%;
+  box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
+  height: 7.3rem;
+}
+
+#judges figcaption {
+  font-size: 1.1rem;
 }
 
 /********** contact **********/
