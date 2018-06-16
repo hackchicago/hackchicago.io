@@ -28,7 +28,6 @@ h2 {
 }
 
 img {
-  display: block;
   border-radius: 20px;
 }
 
@@ -215,13 +214,6 @@ table {
   overflow: hidden;
 }
 
-th{
-
-}
-
-td {
-}
-
 tr.ws {
   font-weight: 600;
 }
@@ -232,6 +224,32 @@ tr.ws {
 
 tr > * {
   padding: 0.7rem 0.2rem !important;
+}
+
+/********** judges **********/
+
+figure .judge-content {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: rgba(82,153,211, .3);
+}
+
+figure .judge-content a {
+  color: #4076bb;
+}
+
+figure img {
+  border-radius: 50%;
+  border: 3px solid #5299d3;
+  height: 7.3rem;
+}
+
+#judges figcaption {
+  font-size: 1.1rem;
+}
+
+.ee {
+  color: #000!important;
 }
 
 /********** contact **********/
