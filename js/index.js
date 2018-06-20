@@ -10,7 +10,7 @@ if (getParam('success') == 'true') Cookies.set('hasSignedUp', 'true', { expires:
 
 // handle signed up attendee or referral
 if(Cookies.get('hasSignedUp') == 'true') {
-  $('#tagline').html('<b>Your application has been submitted! 🎉 🎉 <br/>Be sure to join our <a href="https://www.facebook.com/groups/hackchicago/">Facebook group</a> and get bonus swag with our <a href="#referral-program">Referral program</a>.</b>');
+  $('#tagline').html('<b>Your application has been submitted 🎉 🎉 <br/> Look out for an email receipt within 15 minutes!</b>');
   $('#apply-button').hide();
 } else {
   var r = Cookies.get('ref');
