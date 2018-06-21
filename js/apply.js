@@ -75,7 +75,7 @@ function checkPhone() {
 }
 
 function checkGender() {
-  if($('#GENDER').val() == '') {
+  if($('#GENDER').val() == '' || $('#GENDER').val() == null) {
     // handle invalid gender
     $('#GENDER').addClass('invalid');
     return false;
