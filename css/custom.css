@@ -460,7 +460,7 @@ figure img {
   }
 
   .about-link {
-    padding-bottom: 2rem;
+    display: inline-block;
   }
 
   #ref {
