@@ -45,6 +45,7 @@ function reSignup() {
 $('#email').blur(function() { checkEmail(); });
 $('#email-confirm').blur(function() { checkEmail(); });
 $('#phone').blur(function() { checkPhone(); });
+$('#GRADE').on('change', function() { checkGrade(); });
 $('#GENDER').on('change', function() { checkGender(); });
 
 function checkEmail() {
@@ -74,6 +75,17 @@ function checkPhone() {
   }
 }
 
+function checkGrade() {
+  if($('#GRADE').val() == '' || $('#GRADE').val() == null) {
+    // handle invalid grade
+    $('#GRADE').addClass('invalid');
+    return false;
+  } else {
+    $('#GRADE').removeClass('invalid');
+    return true;
+  }
+}
+
 function checkGender() {
   if($('#GENDER').val() == '' || $('#GENDER').val() == null) {
     // handle invalid gender
@@ -86,7 +98,7 @@ function checkGender() {
 }
 
 function validateForm() {
-  if (!checkEmail() || !checkPhone() || !checkGender()) {
+  if (!checkEmail() || !checkPhone() || !checkGender() || !checkGrade()) {
     $('#submitApplication').text('Invalid responses');
     location.href = '#email';
     return false;
