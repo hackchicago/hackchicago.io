@@ -141,11 +141,27 @@
       </div>
 
       <div class="row">
-        <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
-        <input type="number" name="PHONE" id="phone" required />
+        <div class="six columns">
+          <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
+          <input type="number" name="PHONE" id="phone" required />
+        </div>
+        <div class="six columns">
+          <label for="GENDER">Gender<span class="required">*</span></label>
+          <select name="GENDER" id="GENDER">
+                      <option value="" disabled="disabled" selected="selected">Select One</option>
+                      <option value="Undefined">Prefer Not To Say</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Nonbinary">Nonbinary</option>
+          </select>
+        </div>
       </div>
 
       <div class="row">
+        <div class="six columns">
+          <label for="SCHOOL">School<span class="required">*</span><span class="desc">Full name</span></label>
+          <input type="text" name="SCHOOL" id="SCHOOL" required />
+        </div>
         <div class="six columns">
           <label for="GRADE">Grade<span class="required">*</span><span class="desc">2017-2018</span></label>
           <select name="GRADE" id="GRADE" required>
@@ -157,22 +173,6 @@
                     <option value="11">12th (Class of ’18)</option>
             </select>
         </div>
-
-        <div class="six columns">
-          <label for="GENDER">Gender<span class="required">*</span></label>
-          <select name="GENDER" id="GENDER">
-                      <option value="" disabled="disabled" selected="selected">Select One</option>
-                      <option value="Undefined">Prefer Not To Say</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Nonbinary">Nonbinary</option>
-              </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <label for="SCHOOL">School<span class="required">*</span><span class="desc">Full name</span></label>
-        <input type="text" name="SCHOOL" id="SCHOOL" required />
       </div>
 
       <div class="row">
@@ -182,7 +182,7 @@
         </div>
 
         <div class="six columns">
-          <label for="STATE">State<span class="required">*</span><span class="desc">Please provide full name</span></label>
+          <label for="STATE">State<span class="required">*</span><span class="desc">Full name</span></label>
           <input type="text" name="STATE" id="STATE" required />
         </div>
       </div>
