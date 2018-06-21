@@ -459,6 +459,10 @@ figure img {
     max-width: 200px;
   }
 
+  .about-link {
+    padding-bottom: 2rem;
+  }
+
   #ref {
     line-height: 1.5;
   }
