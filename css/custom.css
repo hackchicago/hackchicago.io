@@ -428,6 +428,17 @@ figure img {
   font-size: 1.3rem !important;
 }
 
+/* yellow fade on success page */
+@keyframes yellowfade {
+  from { background: #ffff00; }
+  to { background: transparent; }
+}
+
+#tagline {
+  animation-name: yellowfade;
+  animation-duration: 3s;
+}
+
 @media (max-width: 768px) {
   h2 {
     font-size: 2.2rem!important;
