@@ -42,7 +42,7 @@ function getParam(name, url) {
 
 function showTravelUpdate() {
   swal('Travel info',
-  "If at least 15 people from your city (in the Midwest) sign up for Hack Chicago, you'll receive a bus ride to and from Hack Chicago.\n\nBe sure to use your referral link!\n\nAlso, parents are allowed to use the bus, and be chaperones at Hack Chicago.\n\nPlease let us know if you have any questions!", 
+  "Hey Midwest Hackers! If at least 15 people from your city sign up for Hack Chicago, you'll receive a free bus ride to and from Hack Chicago.\n\nPlease let us know if you have any questions!", 
   {
     button: 'Ok!',
   });
