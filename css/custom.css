@@ -420,6 +420,10 @@ figure img {
   display: inline!important;
 }
 
+.apply-link {
+  font-size: 1.3rem !important;
+}
+
 @media (max-width: 768px) {
   h2 {
     font-size: 2.2rem!important;
