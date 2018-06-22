@@ -510,4 +510,8 @@ figure img {
   #referral-program div ul .desc {
     display: none!important;
   }
+  
+  #feature-top, #feature-first, #feature-last {
+    padding: 0.1rem 0rem !important;
+  }
 }
