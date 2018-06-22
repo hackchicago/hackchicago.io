@@ -18,6 +18,8 @@ if(Cookies.get('hasSignedUp') == 'true') {
   }
 }
 
+AOS.init({});
+
 if(!(Cookies.get('travelBanner') == 'closed')) $('#travel-banner').show();
 
 function closeTravelBanner() {
