@@ -43,7 +43,7 @@ function getParam(name, url) {
 }
 
 function showTravelUpdate() {
-  swal('Travel info',
+  swal('Midwest travel info',
   "Hey Midwest Hackers!\n\nIf at least 15 people from your city sign up for Hack Chicago, you'll receive a free bus ride to and from Hack Chicago.\n\nPlease let us know if you have any questions!", 
   {
     button: 'Ok!',
