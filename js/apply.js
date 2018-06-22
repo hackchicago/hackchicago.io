@@ -91,6 +91,19 @@ function validateForm() {
     location.href = '#email';
     return false;
   } else {
+    const fname = $('#FNAME').val();
+    const lname = $('#LNAME').val();
+    const name = `${fname} ${lname}`;
+    const email = $('#email').val();
+    const uid = ("hackchicago2018" + "/" + fname + "/" + lname + "/" + email).toUpperCase();
+
+    // identify user in FS
+    FS.identify(uid, {
+      name: name,
+      email: email,
+      uid: uid
+    });
+
     return true;
   }
 }
