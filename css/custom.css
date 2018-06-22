@@ -49,6 +49,10 @@ a, button {
   padding-top: 6.4rem !important;
 }
 
+#feature-top, #feature-first, #feature-last {
+  padding: 1.5rem 1rem !important;
+}
+
 hl {
   color: #5299d3;
 }
