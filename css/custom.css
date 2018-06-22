@@ -9,7 +9,6 @@
   height: 4rem;
   position: absolute;
   left: -5%;
-  top: -3.05rem;
 }
 
 /********** common setting **********/
@@ -43,6 +42,11 @@ a, button {
 .jumbotron#banner {
   background-image: url(/img/bg.png);
   background-position: bottom;
+  padding-bottom: 1.4rem;
+}
+
+.jumbotron#feature-top {
+  padding-top: 6.4rem !important;
 }
 
 hl {
