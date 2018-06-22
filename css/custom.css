@@ -36,6 +36,13 @@ a, button {
   text-decoration: none !important;
 }
 
+#travel-banner {
+  margin-bottom: 0rem;
+  border-radius: 0rem;
+  text-align: center;
+  display: none;
+}
+
 .jumbotron {
   margin-bottom: 0 !important;
 }
@@ -479,5 +486,9 @@ figure img {
 
   #referral-program div ul .desc {
     display: none!important;
+  }
+
+  #travel-banner {
+    text-align: left;
   }
 }

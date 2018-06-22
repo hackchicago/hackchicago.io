@@ -1,5 +1,3 @@
-AOS.init({});
-
 // check URL for referral code
 let urlRef = getParam('ref');
 if (urlRef != null && urlRef !== "" && urlRef !== "null" && urlRef != undefined)
@@ -20,11 +18,18 @@ if(Cookies.get('hasSignedUp') == 'true') {
   }
 }
 
+AOS.init({});
+
+if(!(Cookies.get('travelBanner') == 'closed')) $('#travel-banner').show();
+
+function closeTravelBanner() {
+  $('#travel-banner').hide();
+  Cookies.set('travelBanner', 'closed', { expires: 180 });
+}
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 })
-
-
 
 // get URL params
 function getParam(name, url) {
@@ -35,6 +40,14 @@ function getParam(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function showTravelUpdate() {
+  swal('Midwest travel info',
+  "Hey Midwest Hackers!\n\nIf at least 15 people from your city sign up for Hack Chicago, you'll receive a free bus ride to and from Hack Chicago.\n\nPlease let us know if you have any questions!", 
+  {
+    button: 'Ok!',
+  });
 }
 
 function signup() {
