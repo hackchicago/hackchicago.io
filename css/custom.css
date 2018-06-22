@@ -434,7 +434,7 @@ figure img {
   to { background: transparent; }
 }
 
-#tagline {
+.success {
   animation-name: yellowfade;
   animation-duration: 3s;
 }
