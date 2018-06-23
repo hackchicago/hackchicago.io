@@ -46,7 +46,7 @@ $('#email').blur(function() { checkEmail(); });
 $('#email-confirm').blur(function() { checkEmail(); });
 $('#phone').blur(function() { checkPhone(); });
 $('#GRADE').on('change', function() { checkGrade(); });
-$('#GENDER').on('change', function() { checkGender(); });
+$('#STATE').blur(function() { checkState(); });
 
 function checkEmail() {
   // check for email confirmation
@@ -86,19 +86,109 @@ function checkGrade() {
   }
 }
 
-function checkGender() {
-  if($('#GENDER').val() == '' || $('#GENDER').val() == null) {
-    // handle invalid gender
-    $('#GENDER').addClass('invalid');
-    return false;
-  } else {
-    $('#GENDER').removeClass('invalid');
+function checkState() {
+  // get state (uppercase)
+  const state = $('#STATE').val().toUpperCase();
+  
+  state_abbr = {
+    'AL' : 'ALABAMA',
+    'AK' : 'ALASKA',
+    'AS' : 'AMERICA SAMOA',
+    'AZ' : 'ARIZONA',
+    'AR' : 'ARKANSAS',
+    'CA' : 'CALIFORNIA',
+    'CO' : 'COLORADO',
+    'CT' : 'CONNECTICUT',
+    'DE' : 'DELAWARE',
+    'DC' : 'DISTRICT OF COLUMBIA',
+    'FM' : 'MICRONESIA',
+    'FL' : 'FLORIDA',
+    'GA' : 'GEORGIA',
+    'GU' : 'GUAM',
+    'HI' : 'HAWAII',
+    'ID' : 'IDAHO',
+    'IL' : 'ILLINOIS',
+    'IN' : 'INDIANA',
+    'IA' : 'IOWA',
+    'KS' : 'KANSAS',
+    'KY' : 'KENTUCKY',
+    'LA' : 'LOUISIANA',
+    'ME' : 'MAINE',
+    'MH' : 'MARSHALL ISLANDS',
+    'MD' : 'MARYLAND',
+    'MA' : 'MASSACHUSETTS',
+    'MI' : 'MICHIGAN',
+    'MN' : 'MINNESOTA',
+    'MS' : 'MISSISSIPPI',
+    'MO' : 'MISSOURI',
+    'MT' : 'MONTANA',
+    'NE' : 'NEBRASKA',
+    'NV' : 'NEVADA',
+    'NH' : 'NEW HAMPSHIRE',
+    'NJ' : 'NEW JERSEY',
+    'NM' : 'NEW MEXICO',
+    'NY' : 'NEW YORK',
+    'NC' : 'NORTH CAROLINA',
+    'ND' : 'NORTH DAKOTA',
+    'OH' : 'OHIO',
+    'OK' : 'OKLAHOMA',
+    'OR' : 'OREGON',
+    'PW' : 'PALAU',
+    'PA' : 'PENNSYLVANIA',
+    'PR' : 'PUERTO RICO',
+    'RI' : 'RHODE ISLAND',
+    'SC' : 'SOUTH CAROLINA',
+    'SD' : 'SOUTH DAKOTA',
+    'TN' : 'TENNESSEE',
+    'TX' : 'TEXAS',
+    'UT' : 'UTAH',
+    'VT' : 'VERMONT',
+    'VI' : 'VIRGIN ISLAND',
+    'VA' : 'VIRGINIA',
+    'WA' : 'WASHINGTON',
+    'WV' : 'WEST VIRGINIA',
+    'WI' : 'WISCONSIN',
+    'WY' : 'WYOMING'
+  }
+  
+  if(state_abbr[state.replace(/\s+/g, '')] !== undefined) {
+    // auto replace text with actual state name (uppercase first letter)
+    $('#STATE').val(toTitleCase(state_abbr[state.replace(/\s+/g, '')]));
+    // remove error
+    $('#STATE').removeClass('invalid');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').css('color', '#222');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').html('Full state name');
+
     return true;
+  // check if full state name is valid
+  } else if(Object.values(state_abbr).indexOf(state) > -1) {
+    // set to proper formatting
+    $('#STATE').val(toTitleCase(state));
+
+    // remove error
+    $('#STATE').removeClass('invalid');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').css('color', '#222');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').html('Full state name');
+
+    return true;
+  } else {
+    // show error
+    $('#STATE').addClass('invalid');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').css('color', 'red');
+    $('div.row:nth-child(6) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)').html('Please use the full, correct state name');
+
+    return false;
   }
 }
 
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
 function validateForm() {
-  if (!checkEmail() || !checkPhone() || !checkGender() || !checkGrade()) {
+  if (!checkEmail() || !checkPhone() || !checkGrade() || !checkState()) {
     $('#submitApplication').text('Invalid responses');
     location.href = '#email';
     return false;
