@@ -14,12 +14,15 @@ if (!document.getElementById(cssId)) {
   head.appendChild(link);
 }
 
+const localStorage = window.localStorage;
+
 var hc = new tingle.modal({
   footer: true,
   stickyFooter: false,
   closeMethods: ['overlay', 'button', 'escape'],
   closeLabel: "Close",
   beforeClose: function() {
+    localStorage.setItem('hasClosedHCModal', 'true');
     return true; // close the modal
   }
 });
@@ -28,7 +31,7 @@ var hc = new tingle.modal({
 hc.setContent('<div style="text-align: center"><img src="https://hackchicago.io/img/brand/logo-blue.svg" style="width: 200px"><div class="hackchicago__title">Check out <span class="hackchicago__blue">Hack Chicago</span>!</div><div class="hackchicago__desc">We are striving to improve the event by making it bigger and better. Through a partnership with Hack Club, we will be bringing Hack Chicago, an even larger event, to the Midwest. With more attendees, activities, prizes, and hackers, we expect this year to be a blast!</div></div>');
 
 // add a button
-hc.addFooterBtn('Join us now!', 'tingle-btn tingle-btn--primary', function() { window.location.href = "https://hackchicago.io/?ref="+window.location.hostname+" popup"});
+hc.addFooterBtn('Join us now!', 'tingle-btn tingle-btn--primary', function() { localStorage.setItem('hasClosedHCModal', 'true'); window.location.href = "https://hackchicago.io/?ref="+window.location.hostname+" popup"});
 
 // get URL params
 function getParam(name, url) {
@@ -42,5 +45,5 @@ function getParam(name, url) {
 }
 
 window.onload = function() {
-	if(!getParam('hcm')) hc.open();
+	if(!getParam('hcm') && localStorage.getItem('hasClosedHCModal') !== 'true') hc.open();
 }
