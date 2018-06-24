@@ -25,7 +25,7 @@ var hc = new tingle.modal({
 });
 
 // set content
-hc.setContent('<div style="text-align: center"><img src="https://hackchicago.io/img/brand/logo-blue.svg" style="width: 200px"><h1 class="hackchicago__title">Check out <strong class="hackchicago__blue">Hack Chicago</strong>!</h1><p>We are striving to improve the event by making it bigger and better. Through a partnership with Hack Club, we will be bringing Hack Chicago, an even larger event, to the Midwest. With more attendees, activities, prizes, and hackers, we expect this year to be a blast!</p></div>');
+hc.setContent('<div style="text-align: center"><img src="https://hackchicago.io/img/brand/logo-blue.svg" style="width: 200px"><div class="hackchicago__title">Check out <span class="hackchicago__blue">Hack Chicago</span>!</div><div class="hackchicago__desc">We are striving to improve the event by making it bigger and better. Through a partnership with Hack Club, we will be bringing Hack Chicago, an even larger event, to the Midwest. With more attendees, activities, prizes, and hackers, we expect this year to be a blast!</div></div>');
 
 // add a button
 hc.addFooterBtn('Join us now!', 'tingle-btn tingle-btn--primary', function() { window.location.href = "https://hackchicago.io/?ref="+window.location.hostname+" popup"});

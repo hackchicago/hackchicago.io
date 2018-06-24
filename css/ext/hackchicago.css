@@ -13,13 +13,15 @@
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif !important;
 }
 
-.tingle-modal-box__content p {
+.hackchicago__desc {
 	line-height: 1.8;
 	font-size: 1.2rem;
+	color: #7F828B;
 }
 
 .hackchicago__title {
-	font-size: 2.4rem;
+  font-size: 2.4rem;
+  margin: 1.8rem;
 }
 
 .hackchicago__blue {
@@ -27,9 +29,18 @@
 }
 
 @media (max-width : 540px) {
-	.tingle-modal-box__content p {
+	.hackchicago__desc {
 		font-size: 1rem;
 	}
+
+	.hackchicago__title {
+    font-size: 2rem;
+    margin: 0.3rem;
+  }
+  
+  .tingle-modal-box__footer {
+    padding-top: 1rem !important;
+  }
 
 	.tingle-modal-box__content {
 		padding: 1rem 1.5rem !important;
@@ -41,10 +52,6 @@
 
 	.tingle-modal__closeIcon {
 		font-size: 2rem !important;
-	}
-	
-	.hackchicago__title {
-		font-size: 2rem;
 	}
 }
 
