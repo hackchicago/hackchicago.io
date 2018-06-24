@@ -9,7 +9,6 @@
   height: 4rem;
   position: absolute;
   left: -5%;
-  top: -3.05rem;
 }
 
 /********** common setting **********/
@@ -43,6 +42,15 @@ a, button {
 .jumbotron#banner {
   background-image: url(/img/bg.png);
   background-position: bottom;
+  padding-bottom: 1.4rem;
+}
+
+.jumbotron#feature-top {
+  padding-top: 6.4rem !important;
+}
+
+#feature-top, #feature-first, #feature-last {
+  padding: 1.5rem 1rem !important;
 }
 
 hl {
@@ -420,16 +428,32 @@ figure img {
   display: inline!important;
 }
 
+.apply-link {
+  font-size: 1.3rem !important;
+}
+
+/* yellow fade on success page */
+@keyframes yellowfade {
+  from { background: #ffff00; }
+  to { background: transparent; }
+}
+
+.success {
+  animation-name: yellowfade;
+  animation-duration: 3s;
+}
+
 @media (max-width: 768px) {
   h2 {
     font-size: 2.2rem!important;
   }
 
   header .col-2 {
-    height: 156px;
     width: 100% !important;
     flex: none;
     max-width: none;
+    visibility:hidden;
+    height:1.2rem;
   }
   #banner header img {
     width: 130px !important;
@@ -439,10 +463,12 @@ figure img {
   }
   #banner h1 {
     margin-top: 0 !important;
+    font-size: 2.6rem;
   }
 
   #banner .apply-link {
     margin-bottom: 10px!important;
+    margin-top: 0px !important;
   }
 
   #sponsors {
@@ -456,8 +482,13 @@ figure img {
     max-width: 200px;
   }
 
+  .about-link {
+    display: inline-block;
+  }
+
   #ref {
     line-height: 1.5;
+    font-size: 1.1rem;
   }
 
   #ref.show {
@@ -479,5 +510,9 @@ figure img {
 
   #referral-program div ul .desc {
     display: none!important;
+  }
+  
+  #feature-top, #feature-first, #feature-last {
+    padding: 0.1rem 0rem !important;
   }
 }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/lib/skeleton.css" />
   <link rel="stylesheet" href="css/lib/number-polyfill.css" />
   <link rel="stylesheet" href="css/apply.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/aos.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
   <!-- viewport -->
@@ -38,17 +39,17 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hackchicago18">
-  <meta name="twitter:title" content="Apply – Hack Chicago 2018 | Midwest's Largest High School Hackathon">
+  <meta name="twitter:title" content="Apply – Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
   <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
   <meta name="twitter:image" content="https://hackchicago.io/img/seo.png">
   <meta name="twitter:image:alt" content="Hack Chicago logo with blue background">
 
   <!-- Facebook OG -->
-  <meta name="og:title" content="Apply – Hack Chicago 2018 | Midwest's Largest High School Hackathon">
+  <meta name="og:title" content="Apply – Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
   <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
   <meta name="og:image" content="https://hackchicago.io/img/seo.png">
   <meta name="og:url" content="https://hackchicago.io">
-  <meta name="og:site_name" content="Hack Chicago 2018 | Midwest's Largest High School Hackathon">
+  <meta name="og:site_name" content="Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
   <meta name="fb:admins" content="756152961254213">
   <meta name="og:type" content="website">
 
@@ -107,13 +108,13 @@
   <div class="already-signed-up" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">
     <div class="title">
       <h4>Attendee Application</h4>
-      <p>Hey! It looks like you've already signed up to Hack Chicago.<br />If this is an error, please feel free to <a href="javascript: reSignup();">sign up</a>.</p>
+      <p>Hey! It looks like you’ve already signed up to Hack Chicago.<br />If this is an error, please feel free to <a href="javascript: reSignup();">sign up</a>.</p>
     </div>
   </div>
   <div class="container" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">
     <div class="title">
       <h4>Attendee Application</h4>
-      <p>Hi! Thanks for your interest in joining us at Hack Chicago! We're so excited to see you here!<br /> Please fill out the following information accurately. We'll be manually reviewing them once you submit, and we'll get back to you via email!</p>
+      <p>Hi! Thanks for your interest in joining us at Hack Chicago. We’re so excited to see you here!<br /> Please fill out the following information accurately. We’ll be reviewing them once you submit, and will get back to you via email.</p>
     </div>
     <form name="signup" accept-charset="UTF-8" onsubmit="return validateForm();" action="https://usebasin.com/f/da988bcf3fb2" method="POST" id="signup">
       <div id="ref-fill">
@@ -141,37 +142,38 @@
       </div>
 
       <div class="row">
-        <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
-        <input type="number" name="PHONE" id="phone" required />
-      </div>
-
-      <div class="row">
         <div class="six columns">
-          <label for="GRADE">Grade<span class="required">*</span><span class="desc">2017-2018</span></label>
-          <select name="GRADE" id="GRADE" required>
-                    <option value="8">8th (Class of '22)</option>
-                    <option value="9">9th (Class of '21)</option>
-                    <option value="10">10th (Class of '20)</option>
-                    <option value="11">11th (Class of '19)</option>
-                    <option value="11">12th (Class of '18)</option>
-            </select>
+          <label for="phone">Phone Number<span class="required">*</span><span class="desc">Example: 8005555555</span></label>
+          <input type="number" name="PHONE" id="phone" required />
         </div>
-
         <div class="six columns">
           <label for="GENDER">Gender<span class="required">*</span></label>
-          <select name="GENDER" id="GENDER">
+          <select name="GENDER" id="GENDER" required>
                       <option value="" disabled="disabled" selected="selected">Select One</option>
                       <option value="Undefined">Prefer Not To Say</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                       <option value="Nonbinary">Nonbinary</option>
-              </select>
+          </select>
         </div>
       </div>
 
       <div class="row">
-        <label for="SCHOOL">School<span class="required">*</span><span class="desc">Full name</span></label>
-        <input type="text" name="SCHOOL" id="SCHOOL" required />
+        <div class="six columns">
+          <label for="SCHOOL">School<span class="required">*</span><span class="desc">Full name</span></label>
+          <input type="text" name="SCHOOL" id="SCHOOL" required />
+        </div>
+        <div class="six columns">
+          <label for="GRADE">Grade<span class="required">*</span><span class="desc">2017-2018</span></label>
+          <select name="GRADE" id="GRADE" required>
+                    <option value="" disabled="disabled" selected="selected">Select One</option>
+                    <option value="8">8th (Class of ’22)</option>
+                    <option value="9">9th (Class of ’21)</option>
+                    <option value="10">10th (Class of ’20)</option>
+                    <option value="11">11th (Class of ’19)</option>
+                    <option value="11">12th (Class of ’18)</option>
+            </select>
+        </div>
       </div>
 
       <div class="row">
@@ -181,7 +183,7 @@
         </div>
 
         <div class="six columns">
-          <label for="STATE">State<span class="required">*</span><span class="desc">Please provide full name</span></label>
+          <label for="STATE">State<span class="required">*</span><span class="desc">Full state name</span></label>
           <input type="text" name="STATE" id="STATE" required />
         </div>
       </div>
@@ -190,6 +192,7 @@
         <div class="six columns">
           <label for="SHIRTSIZE">Shirt Size<span class="required">*</span><span class="desc">Adult size</span></label>
           <select name="SHIRTSIZE" id="SHIRTSIZE" required>
+            <option value="" disabled="disabled" selected="selected">Select One</option>
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
@@ -197,13 +200,13 @@
           </select>
         </div>
         <div class="six columns">
-          <label for="DIETRES">Dietary Restrictions<span class="desc">We'll try our best to provide alternatives for you</span></label>
+          <label for="DIETRES">Dietary Restrictions/Allergies<span class="desc">We’ll try to provide alternatives</span></label>
           <input type="text" name="DIETRES" id="DIETRES" />
         </div>
       </div>
 
       <div class="row">
-        <label for="NOTE">Anything interesting or important that you would want the Hack Chicago team to know? We can answer your questions, address your concerns, or provide you with further assistance!</label>
+        <label for="NOTE">Anything interesting or important that you would want the Hack Chicago team to know? We can answer your questions, address your concerns, or provide you with further assistance.</label>
         <textarea type="text" name="NOTE" id="NOTE"></textarea>
       </div>
 
