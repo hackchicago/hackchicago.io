@@ -49,6 +49,9 @@ $('#GRADE').on('change', function() { checkGrade(); });
 $('#STATE').blur(function() { checkState(); });
 
 function checkEmail() {
+  // set email to lowercase
+  $('#email').val($('#email').val().toLowerCase());
+  $('#email-confirm').val($('#email-confirm').val().toLowerCase());
   // check for email confirmation
   if(!($('#email').val() === $('#email-confirm').val()) && $('#email').val() !== '' && $('#email-confirm').val() !== '') {
     // handle emails not being equal
