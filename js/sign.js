@@ -15,8 +15,11 @@ if (getParam('success')) $('#status').text(`Success, check your email!`).css('co
 // check email confirmation + phone number when user leaves field
 $('#student_email').blur(function() { checkStudentEmail(); });
 $('#student_email_confirm').blur(function() { checkStudentEmail(); });
+$('#student_phone').blur(function() { checkStudentPhone(); });
 $('#parent_email').blur(function() { checkParentEmail(); });
 $('#parent_email_confirm').blur(function() { checkParentEmail(); });
+$('#parent_phone').blur(function() { checkParentPhone(); });
+
 
 function checkStudentEmail() {
   // set email to lowercase
