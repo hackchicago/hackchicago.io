@@ -52,16 +52,44 @@ function checkParentEmail() {
   }
 }
 
+function checkStudentPhone() { 
+  // check for phone 
+  const re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
+  If(!re.exec($('#student_phone').val()) && $('#student_phone').val() !== '') {
+    // handle invalid phone 
+    $('#student_phone').addClass('invalid');
+    return false;
+  } else { 
+    $('#student_phone').removeClass('invalid');
+    return true; 
+  }
+}
+
+function checkParentPhone() { 
+  // check for phone 
+  const re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
+  If(!re.exec($('#parent_phone').val()) && $('#parent_phone').val() !== '') {
+    // handle invalid phone 
+    $('#parent_phone').addClass('invalid');
+    return false;
+  } else { 
+    $('#parent_phone').removeClass('invalid');
+    return true; 
+  }
+}
+
 function submitSignatureForm() {
-  if (!checkStudentEmail() || !checkParentEmail()) {
+  if (!checkStudentEmail() || !checkParentEmail() || !checkStudentPhone() || !checkParentPhone()) {
     $('#signDocuments').text('Invalid responses');
     location.href = '#start';
   } else {
     const formData = {
       studentName: $('#student_fullname').val(),
       studentEmail: $('#student_email').val(),
+      studentPhone: $('#student_phone').val(),
       parentName: $('#parent_fullname').val(),
-      parentEmail: $('#parent_email').val()
+      parentEmail: $('#parent_email').val(),
+      parentPhone: $('#parent_phone').val()
     };
     $('#signDocuments').text('Loading..');
     fetch('https://api.hackchicago.io/v1/signatures', {
