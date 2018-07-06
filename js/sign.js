@@ -8,8 +8,9 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-// display error messages
-if (getParam('error')) $('#status').text(`Error: ${getParam('error')}. Please retry.`);
+// display error/success messages
+if (getParam('error')) $('#status').text(`Error: ${getParam('error')}. Please retry.`).css('color','red');
+if (getParam('success')) $('#status').text(`Success, check your email!`).css('color','green');
 
 // check email confirmation + phone number when user leaves field
 $('#student_email').blur(function() { checkStudentEmail(); });
@@ -69,6 +70,14 @@ function submitSignatureForm() {
       headers:{
         'Content-Type': 'application/json'
       }
-    }).catch(error => console.error('Error:', error));
+    }).catch(error => {
+      $('#signDocuments').text('🚨 Error 🚨');
+      console.error('Error:', error);
+    });
   }
 }
+
+$('#start').submit(function () {
+  submitSignatureForm();
+  return false;
+});

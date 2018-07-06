@@ -80,5 +80,5 @@ input:focus, select:focus, textarea:focus {
 }
 
 #status {
-  color: red;
+  text-align: center;
 }
