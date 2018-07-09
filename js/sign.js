@@ -58,7 +58,7 @@ function checkParentEmail() {
 function checkStudentPhone() { 
   // check for phone 
   const re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
-  If(!re.exec($('#student_phone').val()) && $('#student_phone').val() !== '') {
+  if(!re.exec($('#student_phone').val()) && $('#student_phone').val() !== '') {
     // handle invalid phone 
     $('#student_phone').addClass('invalid');
     return false;
@@ -71,7 +71,7 @@ function checkStudentPhone() {
 function checkParentPhone() { 
   // check for phone 
   const re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
-  If(!re.exec($('#parent_phone').val()) && $('#parent_phone').val() !== '') {
+  if(!re.exec($('#parent_phone').val()) && $('#parent_phone').val() !== '') {
     // handle invalid phone 
     $('#parent_phone').addClass('invalid');
     return false;
