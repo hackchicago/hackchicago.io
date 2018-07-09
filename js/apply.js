@@ -47,6 +47,9 @@ $('#email-confirm').blur(function() { checkEmail(); });
 $('#phone').blur(function() { checkPhone(); });
 $('#GRADE').on('change', function() { checkGrade(); });
 $('#STATE').blur(function() { checkState(); });
+$('#parent_email').blur(function() { checkParentEmail(); });
+$('#parent_email_confirm').blur(function() { checkParentEmail(); });
+$('#parent_phone').blur(function() { checkParentPhone(); });
 
 function checkEmail() {
   // set email to lowercase
@@ -184,6 +187,36 @@ function checkState() {
   }
 }
 
+function checkParentEmail() {
+  // set email to lowercase
+  $('#parent_email').val($('#parent_email').val().toLowerCase());
+  $('#parent_email_confirm').val($('#parent_email_confirm').val().toLowerCase());
+  // check for email confirmation
+  if(!($('#parent_email').val() === $('#parent_email_confirm').val()) && $('#parent_email').val() !== '' && $('#parent_email_confirm').val() !== '') {
+    // handle emails not being equal
+    $('#parent_email').addClass('invalid');
+    $('#parent_email_confirm').addClass('invalid');
+    return false;
+  } else {
+    $('#parent_email').removeClass('invalid');
+    $('#parent_email_confirm').removeClass('invalid');
+    return true;
+  }
+}
+
+function checkParentPhone() {
+  // check for phone
+  var re = new RegExp('^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$');
+  if(!re.exec($('#parent_phone').val()) && $('#parent_phone').val() !== '') {
+    // handle invalid phone
+    $('#parent_phone').addClass('invalid');
+    return false;
+  } else {
+    $('#parent_phone').removeClass('invalid');
+    return true;
+  }
+}
+
 function toTitleCase(str) {
   return str.replace(/\w\S*/g, function(txt){
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -191,7 +224,7 @@ function toTitleCase(str) {
 }
 
 function validateForm() {
-  if (!checkEmail() || !checkPhone() || !checkGrade() || !checkState()) {
+  if (!checkEmail() || !checkPhone() || !checkGrade() || !checkState() || !checkParentEmail() || !checkParentPhone()) {
     $('#submitApplication').text('Invalid responses');
     location.href = '#email';
     return false;

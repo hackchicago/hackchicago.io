@@ -38,6 +38,13 @@ label .desc {
   font-weight: normal;
 }
 
+h5 .desc {
+  margin-left: 5px;
+  font-size: 60%;
+  opacity: .5;
+  font-weight: normal;
+}
+
 label .required {
   margin-left: 3px;
   color: #c40000;
