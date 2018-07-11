@@ -334,7 +334,7 @@ figure img {
   background: linear-gradient(168deg,#fff 55%,#f7f9fe 0);
 }
 
-#sponsors .sponsor-div, #sponsor-major, #sponsor-minor, #sponsor-middle {
+#sponsors .sponsor-div, #sponsor-major, #sponsor-minor, #sponsor-middle, #sponsor-upper-middle {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -380,12 +380,20 @@ figure img {
   margin: 14px;
 }
 
+#sponsor-upper-middle .sponsor {
+  box-sizing: border-box;
+  display: block;
+  width: 230px;
+  height: auto;
+  margin: 14px;
+}
+
 #sponsor-minor .sponsor {
   box-sizing: border-box;
   display: block;
   width: 145px;
   height: auto;
-  margin: 25px;
+  margin: 0px 25px 25px 25px;
 }
 
 #additional-support {
@@ -405,7 +413,7 @@ figure img {
   display: inline-block;
   width: 180px;
   height: auto;
-  margin: 25px;
+  margin: 15px 25px 0px 25px;
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
