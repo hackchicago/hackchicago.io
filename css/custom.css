@@ -427,9 +427,7 @@ figure img {
 }
 
 #ref {
-  display: none;
   color: #5299d3;
-  margin-left: 10px;
 }
 
 #ref.show {
