@@ -60,3 +60,7 @@ setTimeout(() => {
 var deadline = new Date(Date.parse("21 Jul 2018 05:00:00 -0600"));
 initializeClock('clockdiv', deadline);
 
+$("#countdown-intro").on('click', () => {
+    window.location.href = '/fire';
+});
+
