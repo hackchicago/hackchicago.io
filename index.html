@@ -28,7 +28,7 @@
 
   <!-- SEO -->
   <title>Hack Chicago 2018</title>
-  <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+  <meta name="description" content="Hack Chicago is the premier high school hackathon, bringing together 300+ high school programmers for 24 hours of fun!">
   <meta name="keywords" content="hack,hackathon,chicago,high school,hacker,hack chicago,chicago hacks,midwest">
   <meta name="robots" content="index, follow">
   <meta name="image" content="https://hackchicago.io/img/seo.png">
@@ -37,13 +37,13 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hackchicago18">
   <meta name="twitter:title" content="Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
-  <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+  <meta name="twitter:description" content="Hack Chicago is the premier high school hackathon, bringing together 300+ high school programmers for 24 hours of fun!">
   <meta name="twitter:image" content="https://hackchicago.io/img/seo.png">
   <meta name="twitter:image:alt" content="Hack Chicago logo with blue background">
 
   <!-- Facebook OG -->
   <meta name="og:title" content="Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
-  <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 400+ high school programmers for 24 hours of fun!">
+  <meta name="og:description" content="Hack Chicago is the premier high school hackathon, bringing together 300+ high school programmers for 24 hours of fun!">
   <meta name="og:image" content="https://hackchicago.io/img/seo.png">
   <meta name="og:url" content="https://hackchicago.io">
   <meta name="og:site_name" content="Hack Chicago 2018 | Midwest’s Largest High School Hackathon">
@@ -56,7 +56,7 @@
       "@context": "http://schema.org",
       "@type": "Event",
       "name": "Hack Chicago 2018",
-      "description": "The premier high school hackathon happening this summer in the Midwest that gathers 400+ high school programmers for 24 hours of fun!",
+      "description": "The premier high school hackathon happening this summer in the Midwest that gathers 300+ high school programmers for 24 hours of fun!",
       "image": [
         "https://hackchicago.io/img/brand/1x1.png",
         "https://hackchicago.io/img/brand/4x3.png",
@@ -97,6 +97,27 @@
   <div class="body-wrap">
     <!-- Header Banner -->
     <section class="jumbotron jumbotron-fluid" id="banner" style="padding-top: 0.5rem;">
+      <div id="clockdiv" style="visibility: hidden">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Seconds</div>
+        </div>
+        <br />
+        <div class="smalltext intro" id="countdown-intro">Almost there! Hack Chicago happens in...</div>
+      </div>
+
       <div class="container text-center text-md-left">
         <header>
           <div class="row justify-content-between">
@@ -110,10 +131,11 @@
           <br> High School Hackathon
         </h1>
         <p data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true" class="lead text-blue"
-          style="margin-top: 0; font-weight: 600">July 21-22, 2018  at  <a href="https://goo.gl/maps/zMuD4bDTGBA2" target="blank">TechNexus</a> – 20 N Upper Wacker Dr #1200, Chicago, IL</p>
+          style="margin-top: 0; font-weight: 600">July 21-22, 2018 at
+          <a href="https://goo.gl/maps/zMuD4bDTGBA2" target="blank">TechNexus</a> – 20 N Upper Wacker Dr #1200, Chicago, IL</p>
         <p id="tagline" data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true"
           class="lead text-blue my-4" style="max-width: 960px">
-          Hack Chicago is the premier high school hackathon gathering 400+ student programmers throughout the Midwest for 24 hours
+          Hack Chicago is the premier high school hackathon gathering 300+ student programmers throughout the Midwest for 24 hours
           of fun!
           <strong>Come in for free, and build something awesome.</strong>
         </p>
@@ -125,7 +147,9 @@
           <b>General applications close tomorrow!</b>
         </p>
         <p data-aos="fade" data-aos-delay="500" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true" class="lead text-blue"
-        style="margin-top: 0; font-weight: 600;font-size: 1rem;"><a style="color: #5299d3;" href="/mentor">Apply as a Mentor</a></p>
+          style="margin-top: 0; font-weight: 600;font-size: 1rem;">
+          <a style="color: #5299d3;" href="/mentor">Apply as a Mentor</a>
+        </p>
       </div>
     </section>
 
@@ -164,13 +188,14 @@
           <div class="row justify-content-between text-center text-md-left">
             <div class="col-md-6 flex-md-first">
               <h2 class="font-weight-bold">
-                So much<hl>&nbsp;fun</hl>
+                So much
+                <hl>&nbsp;fun</hl>
               </h2>
-              <p class="my-4">We’re committed to making Hack Chicago the best hackathon you’ve ever attended. By partnering
-                with <a href="https://hackclub.com" target="_blank">Hack Club</a>, a network of high school coding clubs, we 
-                can provide the best possible experience. We’ll have coding workshops for people who have never written a
-                line of code before, as well as ones for those with years of experience. Plus, fun surprises, and of course,
-                hacking galore.
+              <p class="my-4">We’re committed to making Hack Chicago the best hackathon you’ve ever attended. By partnering with
+                <a href="https://hackclub.com"
+                  target="_blank">Hack Club</a>, a network of high school coding clubs, we can provide the best possible experience. We’ll
+                have coding workshops for people who have never written a line of code before, as well as ones for those
+                with years of experience. Plus, fun surprises, and of course, hacking galore.
               </p>
               <a href="https://hackclub.com/?ref=hackchicago" class="my-4 font-weight-bold about-link">What is Hack Club? »</a>
             </div>
@@ -194,11 +219,12 @@
                 here
               </h2>
               <p class="my-4">
-                Everyone is welcome. We aim to create a safe space for all, free of harassment and discrimination.
-                Therefore, we take violations of our 
+                Everyone is welcome. We aim to create a safe space for all, free of harassment and discrimination. Therefore, we take violations
+                of our
                 <a href="https://github.com/MLH/mlh-policies/blob/master/code-of-conduct.md">event code of conduct</a>
-                and <a href="https://conduct.hackclub.com">Hack Club code of conduct</a> very seriously. To report 
-                something, please email us at <a href="mailto:conduct@hackchicago.io">conduct@hackchicago.io</a>.
+                and
+                <a href="https://conduct.hackclub.com">Hack Club code of conduct</a> very seriously. To report something, please email us at
+                <a href="mailto:conduct@hackchicago.io">conduct@hackchicago.io</a>.
               </p>
               <a href="/apply" class="btn my-4 font-weight-bold atlas-cta cta-blue apply-link">Apply Now</a>
             </div>
@@ -215,7 +241,8 @@
 
     <!-- Brought to You By -->
     <section class="container my-5 py-2" style="position: relative">
-      <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .3em!important;">By the organizers of <span class="text-blue">awesome</span> events</h2>
+      <h2 class="text-center font-weight-bold my-5" style="margin-bottom: .3em!important;">By the organizers of
+        <span class="text-blue">awesome</span> events</h2>
       <p class="text-center lead my-4">Working together to bring you the best high school hackathon in the nation!</p>
       <div class="row">
         <div class="col text-center">
@@ -278,8 +305,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-4 text-center py-4 mt-5"
-          id="price-table_plus">
+        <div class="col-md-4 text-center py-4 mt-5" id="price-table_plus">
           <div class="inner-wrapper">
             <h4 class="my-4">SILVER</h4>
             <p class="font-weight-bold">
@@ -291,15 +317,15 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-4 text-center py-4 mt-5"
-          id="price-table__premium">
+        <div class="col-md-4 text-center py-4 mt-5" id="price-table__premium">
           <div class="inner-wrapper">
             <h4 class="my-4">GOLD</h4>
             <p class="font-weight-bold">
               <span class="display-2 font-weight-bold">15</span>&ensp;Referrals</p>
             <ul class="list-unstyled">
               <li>
-                <strong>Reward:</strong> Lunch with <a href="https://zachlatta.com">Zach Latta</a>, founder of Hack Club!
+                <strong>Reward:</strong> Lunch with
+                <a href="https://zachlatta.com">Zach Latta</a>, founder of Hack Club!
               </li>
             </ul>
           </div>
@@ -338,7 +364,9 @@
                   </tr>
                   <tr>
                     <td>11:30 AM</td>
-                    <td><a class="tip" data-toggle="tooltip" data-placement="right" title="" data-original-title="An early lunch will be served for long distance travelers!">Lunch</a></td>
+                    <td>
+                      <a class="tip" data-toggle="tooltip" data-placement="right" title="" data-original-title="An early lunch will be served for long distance travelers!">Lunch</a>
+                    </td>
                     <!--<td>Location</td>-->
                   </tr>
                   <tr>
@@ -430,7 +458,8 @@
     <!-- Judges -->
     <section id="judges">
       <div class="container">
-        <h2 class="font-weight-bold text-center judges-header">Meet the&nbsp;<hl>coolest</hl>&nbsp;people</h2>
+        <h2 class="font-weight-bold text-center judges-header">Meet the&nbsp;
+          <hl>coolest</hl>&nbsp;people</h2>
         <p class="text-center lead my-4">Have your projects judged by these awesome people from the tech industry!</p>
         <div class="row text-center">
           <figure class="col-md-4 my-3 judge">
@@ -440,7 +469,10 @@
                 <h4 class="my-2">Safia Abdalla</h4>
               </a>
               <figcaption>Founder,
-                <b><a href="https://zarf.co" target="_blank">Zarf</a></b><br>
+                <b>
+                  <a href="https://zarf.co" target="_blank">Zarf</a>
+                </b>
+                <br>
               </figcaption>
             </div>
           </figure>
@@ -450,8 +482,12 @@
                 <img src="img/judges/latta.jpg">
                 <h4 class="my-2">Zach Latta</h4>
               </a>
-              <figcaption><a class="ee" href="/fire">F</a>ounder & Director,
-                <b><a href="https://hackclub.com" target="_blank">Hack Club</a></b><br>
+              <figcaption>
+                <a class="ee" href="/fire">F</a>ounder & Director,
+                <b>
+                  <a href="https://hackclub.com" target="_blank">Hack Club</a>
+                </b>
+                <br>
               </figcaption>
             </div>
           </figure>
@@ -462,7 +498,10 @@
                 <h4 class="my-2">Scott Robbin</h4>
               </a>
               <figcaption>Web Developer,
-                <b><a href="http://srobbin.com" target="_blank">Robbin & Co.</a></b><br>
+                <b>
+                  <a href="http://srobbin.com" target="_blank">Robbin & Co.</a>
+                </b>
+                <br>
               </figcaption>
             </div>
           </figure>
@@ -473,10 +512,14 @@
                 <h4 class="my-2">Neal Sáles-Griffin</h4>
               </a>
               <figcaption>CEO,
-                <strong><a href="https://www.codenow.org" target="_blank">CodeNow</a></strong>
+                <strong>
+                  <a href="https://www.codenow.org" target="_blank">CodeNow</a>
+                </strong>
               </figcaption>
               <figcaption>Adj. Professor,
-                <strong><a href="https://www.northwestern.edu" target="_blank">Northwestern</a></strong>
+                <strong>
+                  <a href="https://www.northwestern.edu" target="_blank">Northwestern</a>
+                </strong>
               </figcaption>
             </div>
           </figure>
@@ -487,7 +530,11 @@
                 <h4 class="my-2">Max Temkin</h4>
               </a>
               <figcaption>Founder,
-                <strong><a href="https://www.cardsagainsthumanity.com" target="_blank">Cards Against Humanity</a></strong><br><br>
+                <strong>
+                  <a href="https://www.cardsagainsthumanity.com" target="_blank">Cards Against Humanity</a>
+                </strong>
+                <br>
+                <br>
               </figcaption>
             </div>
           </figure>
@@ -618,6 +665,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/lib/bs.bundle.min.js"></script>
+    <script src="js/countdown.js"></script>
     <script src="js/lib/aos.js"></script>
     <script src="js/lib/cookie.min.js"></script>
     <script src="js/lib/swal.min.js"></script>
