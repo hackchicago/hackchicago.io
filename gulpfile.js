@@ -62,7 +62,7 @@ gulp.task('js', function() {
 
 gulp.task('img', function() {
   gulp.src('img/**/*')
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest('dist/img'))
     .pipe(reload({
       stream: true
