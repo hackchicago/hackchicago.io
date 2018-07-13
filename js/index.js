@@ -14,11 +14,12 @@ if(Cookies.get('hasSignedUp') == 'true') {
   $('#tagline').addClass('success');
   $('#apply-button').hide();
 } else {
-  var r = Cookies.get('ref');
+  $("#ref").addClass("show");
+  /*const r = Cookies.get('ref');
   if (r != "" && r != null && r != "null" && r != undefined) {
     $("#ref-name").text(r);
     $("#ref").addClass("show");
-  }
+  }*/
 }
 
 $(function () {
