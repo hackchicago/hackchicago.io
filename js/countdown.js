@@ -19,7 +19,7 @@ var introText = [
     "It's coming up!",
     "What the hack?",
     "Yes! Yes! Yes! Yes!",
-    'Get your <a href="/fire" style="decoration: none;color: inherit;">f</a>riends!',
+    'Bring your <a href="/fire" style="decoration: none;color: inherit;">f</a>riends!',
     "Buckle up!"
 ]
 
