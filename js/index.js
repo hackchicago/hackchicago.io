@@ -16,7 +16,7 @@ if(Cookies.get('hasSignedUp') == 'true') {
 } else {
   $("#ref").addClass("show");
   const now = Date.now();
-  const appsClose = Date.parse('13 Jul 2018 16:00:00 PST');
+  const appsClose = Date.parse('13 Jul 2018 17:00:00 PST');
   const hoursRemaining = Math.round(Math.abs(appsClose - now) / 36e5);
   $('#timeUntilClose').text(`in ${hoursRemaining === 0 ? 'less than an hour' : `${hoursRemaining} hour${hoursRemaining !== 1 ? 's' : ''}`}`);
   /*const r = Cookies.get('ref');
