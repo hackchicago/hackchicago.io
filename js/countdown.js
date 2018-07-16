@@ -57,5 +57,5 @@ setTimeout(() => {
     document.getElementById('clockdiv').style.visibility = "";
 }, 1000);
 
-var deadline = new Date(Date.parse("21 Jul 2018 05:00:00 -0600"));
+var deadline = new Date(Date.parse("21 Jul 2018 11:00:00 -0600"));
 initializeClock('clockdiv', deadline);
