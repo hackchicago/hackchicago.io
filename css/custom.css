@@ -427,9 +427,8 @@ figure img {
 }
 
 #ref {
-  display: none;
   color: #5299d3;
-  margin-left: 10px;
+  font-size: 1.1rem;
 }
 
 #ref.show {
