@@ -18,6 +18,7 @@ var introText = [
     "What the hack are you doing?",
     "Keep up the energy!",
     "Did anyone see Megan?",
+    "Sean is bad at league. Don't be like Sean. Build great projects. -Eric",
     "Tired? Enjoy a cup of <a style=\"color: white; text-decoration: underline!important\" href=\"https://www.urbandictionary.com/define.php?term=Latta%20Latte\">Latta Latte</a>.",
     "Feeling hungry? Try some <a style=\"color: white; text-decoration: underline!important\" href=\"https://twitter.com/yevbar/status/1020753055883714561\">Wofford Waffles</a>!"
 ]
