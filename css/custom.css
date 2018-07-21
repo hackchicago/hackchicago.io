@@ -452,10 +452,6 @@ figure img {
 
 @media (max-width: 768px) {
 
-  #clockdiv {
-    display: none!important;
-  }
-
   h2 {
     font-size: 2.2rem!important;
   }
@@ -531,12 +527,14 @@ figure img {
 
 /***** Countdown *****/
 #clockdiv{
+  margin:0 auto;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -200px;
 	font-family: sans-serif;
 	color: #fff;
-	display: inline-block;
+  display: inline-block;
 	font-weight: 100;
 	text-align: center;
   font-size: 30px;
@@ -565,8 +563,13 @@ figure img {
 	font-size: 16px;
 }
 
-.smalltext.intro {
+#cover {
+  z-index: 999999;
+  opacity: .8;
+  background-color: white;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  margin-top: .5rem;
-  right: 1rem;
+  top: 0;
+  left: 0;
 }

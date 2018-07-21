@@ -14,13 +14,12 @@ function getTimeRemaining(endtime) {
 }
 
 var introText = [
-    "Almost there!",
-    "Are you ready to hack?",
-    "It's coming up!",
-    "What the hack?",
-    "Yes! Yes! Yes! Yes!",
-    'Bring your <a href="/fire" style="decoration: none;color: inherit;">f</a>riends!',
-    "Buckle up!"
+    "Don't stop hacking!",
+    "What the hack are you doing?",
+    "Keep up the energy!",
+    "Did anyone see Megan?",
+    "Tired? Enjoy a cup of <a style=\"color: white; text-decoration: underline!important\" href=\"https://www.urbandictionary.com/define.php?term=Latta%20Latte\">Latta Latte</a>.",
+    "Feeling hungry? Try some <a style=\"color: white; text-decoration: underline!important\" href=\"https://twitter.com/yevbar/status/1020753055883714561\">Wofford Waffles</a>!"
 ]
 
 function initializeClock(id, endtime) {
@@ -32,7 +31,12 @@ function initializeClock(id, endtime) {
     var secondsSpan = clock.querySelector('.seconds');
 
     function updateClock() {
+        
         var t = getTimeRemaining(endtime);
+         
+        if (t.total < 0) {
+            closeCD();
+        }
 
         daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -57,5 +61,10 @@ setTimeout(() => {
     document.getElementById('clockdiv').style.visibility = "";
 }, 1000);
 
-var deadline = new Date(Date.parse("21 Jul 2018 11:00:00 -0600"));
+var deadline = new Date(Date.parse("22 Jul 2018 13:00:00 -0400"));
 initializeClock('clockdiv', deadline);
+
+function closeCD() {
+    $("#clockdiv").hide();
+    $("#cover").hide();
+}
