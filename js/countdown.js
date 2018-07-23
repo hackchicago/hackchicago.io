@@ -1,4 +1,4 @@
-function getTimeRemaining(endtime) {
+/*function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
     var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -51,21 +51,21 @@ function initializeClock(id, endtime) {
 
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
-}
+}*/
 
 /* Refresh punch text every 5 seconds */
-setInterval(() => {
+/*setInterval(() => {
     document.getElementById("countdown-intro").innerHTML = introText[Math.floor(Math.random()*introText.length)];
 }, 5000);
 
+var deadline = new Date(Date.parse("22 Jul 2018 13:00:00 -0400"));
+initializeClock('clockdiv', deadline);*/
+
 setTimeout(() => {
-    document.getElementById('clockdiv').style.visibility = "";
+  document.getElementById("clockdiv").style.visibility = "";
 }, 1000);
 
-var deadline = new Date(Date.parse("22 Jul 2018 13:00:00 -0400"));
-initializeClock('clockdiv', deadline);
-
 function closeCD() {
-    $("#clockdiv").hide();
-    $("#cover").hide();
+  $("#clockdiv").hide();
+  $("#cover").hide();
 }
