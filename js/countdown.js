@@ -61,11 +61,10 @@ function initializeClock(id, endtime) {
 var deadline = new Date(Date.parse("22 Jul 2018 13:00:00 -0400"));
 initializeClock('clockdiv', deadline);*/
 
-setTimeout(() => {
-  document.getElementById("clockdiv").style.visibility = "";
-}, 1000);
+document.getElementById("clockdiv").style.visibility = "";
 
 function closeCD() {
-  $("#clockdiv").hide();
-  $("#cover").hide();
+  $("#clockdiv").fadeOut();
+  $("#cover").fadeOut();
+  $("body").css("overflow", "scroll");
 }

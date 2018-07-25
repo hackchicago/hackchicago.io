@@ -1,3 +1,8 @@
+body {
+  overflow: hidden;
+  overflow-x: hidden!important;
+}
+
 .body-wrap {
   overflow:hidden;
 }
@@ -529,7 +534,7 @@ figure img {
 #clockdiv{
   margin:0 auto;
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   margin: -100px 0 0 -200px;
 	font-family: sans-serif;
@@ -542,11 +547,15 @@ figure img {
   opacity: .9;
 }
 
+#clockdiv img {
+  border-radius: 0;
+}
+
 #clockdiv > div{
   padding: 10px;
   margin: 5px!important;
-	border-radius: 3px;
-  background: #5299d3;
+  border-radius: 3px;
+  color: #5299d3;
 	display: inline-block;
 }
 
@@ -565,11 +574,18 @@ figure img {
 
 #cover {
   z-index: 999999;
-  opacity: .8;
   background-color: white;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.badge.volunteer {
+  background-color: #5299d3;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: .5rem;
+  margin-bottom: .5rem;
 }
