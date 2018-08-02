@@ -20,3 +20,12 @@ function getParam(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+function unarchive() {
+  $("#archive").slideDown();
+  $("#copyright").css("background-color", "#f7f9fe");
+  $('html, body').animate({
+    scrollTop: $("#archive").offset().top
+  }, 1000);
+  $("#scroll-switch").hide();
+}

@@ -275,7 +275,7 @@ figure img {
 /********** copyright **********/
 
 #copyright {
-  background: #f7f9fe;
+  background: #fff;
   padding: 2rem 3rem 4rem;
 }
 
@@ -653,4 +653,8 @@ blockquote{
 
 #youtube {
   border-radius: 15px!important;
+}
+
+#archive {
+  display: none;  
 }
