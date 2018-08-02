@@ -517,43 +517,6 @@ figure img {
   }
 }
 
-/***** Countdown *****/
-#clockdiv{
-  margin:0 auto;
-  position: fixed;
-  top: 35%;
-  left: 50%;
-  margin: -100px 0 0 -200px;
-	font-family: sans-serif;
-	color: #fff;
-  display: inline-block;
-	font-weight: 100;
-	text-align: center;
-  font-size: 30px;
-  z-index: 1000000;
-  opacity: .9;
-}
-
-#clockdiv img {
-  border-radius: 0;
-}
-
-#clockdiv > div{
-  padding: 10px;
-  margin: 5px!important;
-  border-radius: 3px;
-  color: #5299d3;
-	display: inline-block;
-}
-
-#clockdiv div > span{
-	padding: 15px;
-  border: 2px solid #FEFBED;
-	border-radius: 3px;
-	background: #5299d3;
-	display: inline-block;
-}
-
 .smalltext{
 	padding-top: 5px;
 	font-size: 16px;
